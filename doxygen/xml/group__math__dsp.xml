@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="group__math__dsp" kind="group">
+    <compoundname>math_dsp</compoundname>
+    <title>DSP (Digital Signal Processing)</title>
+    <innergroup refid="group__math__dsp__basic">Basic Math Functions</innergroup>
+    <innergroup refid="group__math__dsp__utils__shifts">Float/Fixed point shift conversion functions</innergroup>
+    <innergroup refid="group__math__printing">Helper macros for printing Q values.</innergroup>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__math__dsp_1gabd7a2f92dac82261a686447cdf625500" prot="public" static="no">
+        <type><ref refid="stdint_8h_1accbd6432732c88ad6adc5365800433b6" kindref="member">int8_t</ref></type>
+        <definition>q7_t</definition>
+        <argsstring></argsstring>
+        <name>q7_t</name>
+        <briefdescription>
+<para>8-bit fractional data type in 1.7 format. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dsp/types.h" line="23" column="16" bodyfile="zephyr/dsp/types.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__math__dsp_1ga8ec6376001fc2d363020e18e165c4d22" prot="public" static="no">
+        <type><ref refid="stdint_8h_1afe270aee8d96ad7f279a4020b9d58bdf" kindref="member">int16_t</ref></type>
+        <definition>q15_t</definition>
+        <argsstring></argsstring>
+        <name>q15_t</name>
+        <briefdescription>
+<para>16-bit fractional data type in 1.15 format. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dsp/types.h" line="29" column="17" bodyfile="zephyr/dsp/types.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__math__dsp_1gad8c011580ce38d45dc58d831ab145258" prot="public" static="no">
+        <type><ref refid="stdint_8h_1a0c18914b3041c2f583aba76f418399c2" kindref="member">int32_t</ref></type>
+        <definition>q31_t</definition>
+        <argsstring></argsstring>
+        <name>q31_t</name>
+        <briefdescription>
+<para>32-bit fractional data type in 1.31 format. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dsp/types.h" line="35" column="17" bodyfile="zephyr/dsp/types.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__math__dsp_1ga9685e4746688806c65b84d0962635420" prot="public" static="no">
+        <type><ref refid="stdint_8h_1ac714c0d2c1a4adb10e73cab29623314b" kindref="member">int64_t</ref></type>
+        <definition>q63_t</definition>
+        <argsstring></argsstring>
+        <name>q63_t</name>
+        <briefdescription>
+<para>64-bit fractional data type in 1.63 format. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dsp/types.h" line="41" column="17" bodyfile="zephyr/dsp/types.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__math__dsp_1ga68835383d8723821f8a230de8c8b80a1" prot="public" static="no">
+        <type>__fp16</type>
+        <definition>float16_t</definition>
+        <argsstring></argsstring>
+        <name>float16_t</name>
+        <briefdescription>
+<para>16-bit floating point type definition. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dsp/types.h" line="48" column="16" bodyfile="zephyr/dsp/types.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__math__dsp_1ga80dc9595c3622306ecabb5a1cbededaa" prot="public" static="no">
+        <type>float</type>
+        <definition>float32_t</definition>
+        <argsstring></argsstring>
+        <name>float32_t</name>
+        <briefdescription>
+<para>32-bit floating-point type definition. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dsp/types.h" line="55" column="15" bodyfile="zephyr/dsp/types.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__math__dsp_1gad5fa85b5864be8871e67f864cdb7e8d7" prot="public" static="no">
+        <type>double</type>
+        <definition>float64_t</definition>
+        <argsstring></argsstring>
+        <name>float64_t</name>
+        <briefdescription>
+<para>64-bit floating-point type definition. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dsp/types.h" line="61" column="16" bodyfile="zephyr/dsp/types.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Digital Signal Processing (DSP) math functions and utilities. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="since"><para>3.3 </para>
+</simplesect>
+<simplesect kind="version"><para>0.1.0 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

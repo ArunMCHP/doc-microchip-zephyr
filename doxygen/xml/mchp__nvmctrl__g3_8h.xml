@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="mchp__nvmctrl__g3_8h" kind="file" language="C++">
+    <compoundname>mchp_nvmctrl_g3.h</compoundname>
+    <includes refid="include_2zephyr_2types_8h" local="no">zephyr/types.h</includes>
+    <includes refid="stdbool_8h" local="no">stdbool.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>zephyr/drivers/flash/mchp_nvmctrl_g3.h</label>
+        <link refid="mchp__nvmctrl__g3_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>zephyr/types.h</label>
+        <link refid="include_2zephyr_2types_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>stdbool.h</label>
+        <link refid="stdbool_8h"/>
+      </node>
+      <node id="4">
+        <label>stdint.h</label>
+        <link refid="stdint_8h"/>
+      </node>
+      <node id="3">
+        <label>stddef.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structpfm__exop" prot="public">pfm_exop</innerclass>
+    <innerclass refid="structbfm__exop" prot="public">bfm_exop</innerclass>
+    <sectiondef kind="enum">
+      <member refid="group__mchp__flash__interface_1ga4dae21b9b6e0a90faddfa045b30e19a8" kind="enum"><name>flash_mchp_ex_ops_t</name></member>
+      <member refid="group__mchp__flash__interface_1ga68310865b2b4ef28fe8259b0d625bc56" kind="enum"><name>pfm_wp_region</name></member>
+      <member refid="group__mchp__flash__interface_1gae4ce42c1991f6edf715e4aa2b294234b" kind="enum"><name>boot_flash_bank</name></member>
+    </sectiondef>
+    <briefdescription>
+<para>Header file supporting ex_op for Microchip flash-controller G3 driver. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This header provides definitions for additional flash memory operations specific to the Microchip NVMCTRL G3 flash controller. It extends the standard flash driver capabilities by enabling advanced operations such as and region locking/unlocking, clear page buffer, etc.,</para>
+<para><simplesect kind="note"><para>This file should only be included when targeting devices with the NVMCTRL G3 flash controller. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2026<sp/>Microchip<sp/>Technology<sp/>Inc.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>SPDX-License-Identifier:<sp/>Apache-2.0</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>INCLUDE_ZEPHYR_DRIVERS_FLASH_MCHP_NVMCTRL_G3_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INCLUDE_ZEPHYR_DRIVERS_FLASH_MCHP_NVMCTRL_G3_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="include_2zephyr_2types_8h" kindref="compound">zephyr/types.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="stdbool_8h" kindref="compound">stdbool.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="group__mchp__flash__interface_1ga4dae21b9b6e0a90faddfa045b30e19a8" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group__mchp__nvmctrl__g1__flash__ex__op_1ga4dae21b9b6e0a90faddfa045b30e19a8" kindref="member">flash_mchp_ex_ops_t</ref><sp/>{</highlight></codeline>
+<codeline lineno="44" refid="group__mchp__flash__interface_1gga4dae21b9b6e0a90faddfa045b30e19a8a30737465e185532f3400725b533ee3a9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__mchp__flash__interface_1gga4dae21b9b6e0a90faddfa045b30e19a8a30737465e185532f3400725b533ee3a9" kindref="member">FLASH_EX_OP_PFM_REGION_WRITE_PROTECT_ENABLE</ref>,</highlight></codeline>
+<codeline lineno="46" refid="group__mchp__flash__interface_1gga4dae21b9b6e0a90faddfa045b30e19a8aa8818fcf993809f03564ab8e15de3d89" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__mchp__flash__interface_1gga4dae21b9b6e0a90faddfa045b30e19a8aa8818fcf993809f03564ab8e15de3d89" kindref="member">FLASH_EX_OP_PFM_REGION_WRITE_PROTECT_DISABLE</ref>,</highlight></codeline>
+<codeline lineno="48" refid="group__mchp__flash__interface_1gga4dae21b9b6e0a90faddfa045b30e19a8ae20aba272606df44e4e4c5cd76078675" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__mchp__flash__interface_1gga4dae21b9b6e0a90faddfa045b30e19a8ae20aba272606df44e4e4c5cd76078675" kindref="member">FLASH_EX_OP_PFM_REGION_WRITE_PROTECT_LOCK</ref>,</highlight></codeline>
+<codeline lineno="50" refid="group__mchp__flash__interface_1gga4dae21b9b6e0a90faddfa045b30e19a8adf56dd5adcb84bb4a56ea2b112279122" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__mchp__flash__interface_1gga4dae21b9b6e0a90faddfa045b30e19a8adf56dd5adcb84bb4a56ea2b112279122" kindref="member">FLASH_EX_OP_BFM_WRITE_PROTECT_ENABLE</ref>,</highlight></codeline>
+<codeline lineno="52" refid="group__mchp__flash__interface_1gga4dae21b9b6e0a90faddfa045b30e19a8a71054144eabce681da9ee95e852211da" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__mchp__flash__interface_1gga4dae21b9b6e0a90faddfa045b30e19a8a71054144eabce681da9ee95e852211da" kindref="member">FLASH_EX_OP_BFM_WRITE_PROTECT_DISABLE</ref>,</highlight></codeline>
+<codeline lineno="54" refid="group__mchp__flash__interface_1gga4dae21b9b6e0a90faddfa045b30e19a8a8f0b96d19fb3584a24addfc0749b758f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__mchp__flash__interface_1gga4dae21b9b6e0a90faddfa045b30e19a8a8f0b96d19fb3584a24addfc0749b758f" kindref="member">FLASH_EX_OP_BFM_WRITE_PROTECT_LOCK</ref>,</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="group__mchp__flash__interface_1ga68310865b2b4ef28fe8259b0d625bc56" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group__mchp__flash__interface_1ga68310865b2b4ef28fe8259b0d625bc56" kindref="member">pfm_wp_region</ref><sp/>{</highlight></codeline>
+<codeline lineno="65" refid="group__mchp__flash__interface_1gga68310865b2b4ef28fe8259b0d625bc56ae5ed65dd074c8ec6fe07086ece6c6c89" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__mchp__flash__interface_1gga68310865b2b4ef28fe8259b0d625bc56ae5ed65dd074c8ec6fe07086ece6c6c89" kindref="member">PFM_WP_REGION_0</ref>,<sp/></highlight></codeline>
+<codeline lineno="66" refid="group__mchp__flash__interface_1gga68310865b2b4ef28fe8259b0d625bc56a9d007673c8b011e551fd0eaf67ce0a6d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__mchp__flash__interface_1gga68310865b2b4ef28fe8259b0d625bc56a9d007673c8b011e551fd0eaf67ce0a6d" kindref="member">PFM_WP_REGION_1</ref>,<sp/></highlight></codeline>
+<codeline lineno="67" refid="group__mchp__flash__interface_1gga68310865b2b4ef28fe8259b0d625bc56ae71436dcc0d7a89d9d497eb8e21697f9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__mchp__flash__interface_1gga68310865b2b4ef28fe8259b0d625bc56ae71436dcc0d7a89d9d497eb8e21697f9" kindref="member">PFM_WP_REGION_2</ref>,<sp/></highlight></codeline>
+<codeline lineno="68" refid="group__mchp__flash__interface_1gga68310865b2b4ef28fe8259b0d625bc56a7f2214b918478b67a9fb986bb13573ee" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__mchp__flash__interface_1gga68310865b2b4ef28fe8259b0d625bc56a7f2214b918478b67a9fb986bb13573ee" kindref="member">PFM_WP_REGION_3</ref>,<sp/></highlight></codeline>
+<codeline lineno="69" refid="group__mchp__flash__interface_1gga68310865b2b4ef28fe8259b0d625bc56a350b8165b2c0bfc682d8a46ea87593fb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__mchp__flash__interface_1gga68310865b2b4ef28fe8259b0d625bc56a350b8165b2c0bfc682d8a46ea87593fb" kindref="member">PFM_WP_REGION_4</ref>,<sp/></highlight></codeline>
+<codeline lineno="70" refid="group__mchp__flash__interface_1gga68310865b2b4ef28fe8259b0d625bc56a6e913daec2faf0d10082ce1f520ff268" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__mchp__flash__interface_1gga68310865b2b4ef28fe8259b0d625bc56a6e913daec2faf0d10082ce1f520ff268" kindref="member">PFM_WP_REGION_5</ref>,<sp/></highlight></codeline>
+<codeline lineno="71" refid="group__mchp__flash__interface_1gga68310865b2b4ef28fe8259b0d625bc56a24d6f6c04f0013976549e02f03126b6c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__mchp__flash__interface_1gga68310865b2b4ef28fe8259b0d625bc56a24d6f6c04f0013976549e02f03126b6c" kindref="member">PFM_WP_REGION_6</ref>,<sp/></highlight></codeline>
+<codeline lineno="72" refid="group__mchp__flash__interface_1gga68310865b2b4ef28fe8259b0d625bc56a686c824b326a95a54c52c7d2a97ee2e5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__mchp__flash__interface_1gga68310865b2b4ef28fe8259b0d625bc56a686c824b326a95a54c52c7d2a97ee2e5" kindref="member">PFM_WP_REGION_7</ref>,<sp/></highlight></codeline>
+<codeline lineno="73"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="group__mchp__flash__interface_1gae4ce42c1991f6edf715e4aa2b294234b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group__mchp__flash__interface_1gae4ce42c1991f6edf715e4aa2b294234b" kindref="member">boot_flash_bank</ref><sp/>{</highlight></codeline>
+<codeline lineno="83" refid="group__mchp__flash__interface_1ggae4ce42c1991f6edf715e4aa2b294234ba2e23c772674e6e52a08fe8519a7f496d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__mchp__flash__interface_1ggae4ce42c1991f6edf715e4aa2b294234ba2e23c772674e6e52a08fe8519a7f496d" kindref="member">BOOT_FLASH_BANK_1</ref>,<sp/></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__mchp__flash__interface_1ggae4ce42c1991f6edf715e4aa2b294234bab4d24bb75453d95c963ff5d7a529bbbe" kindref="member">BOOT_FLASH_BANK_2</ref><sp/><sp/></highlight></codeline>
+<codeline lineno="85" refid="group__mchp__flash__interface_1ggae4ce42c1991f6edf715e4aa2b294234bab4d24bb75453d95c963ff5d7a529bbbe" refkind="member"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94" refid="structpfm__exop" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpfm__exop" kindref="compound">pfm_exop</ref><sp/>{</highlight></codeline>
+<codeline lineno="96" refid="structpfm__exop_1ae724956923f6d97a5c1bc7064dd94de1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group__mchp__flash__interface_1ga68310865b2b4ef28fe8259b0d625bc56" kindref="member">pfm_wp_region</ref><sp/><ref refid="structpfm__exop_1ae724956923f6d97a5c1bc7064dd94de1" kindref="member">region</ref>;</highlight></codeline>
+<codeline lineno="98" refid="structpfm__exop_1aaf55812dbc58f2f97b97122efc8390dd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdint_8h_1a0a8582351ac627ee8bde2973c825e47f" kindref="member">uint32_t</ref><sp/><ref refid="structpfm__exop_1aaf55812dbc58f2f97b97122efc8390dd" kindref="member">base_addr</ref>;</highlight></codeline>
+<codeline lineno="100" refid="structpfm__exop_1af86d62884866a07344bf0a1e11022d06" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdint_8h_1a0a8582351ac627ee8bde2973c825e47f" kindref="member">uint32_t</ref><sp/><ref refid="structpfm__exop_1af86d62884866a07344bf0a1e11022d06" kindref="member">region_size</ref>;</highlight></codeline>
+<codeline lineno="102" refid="structpfm__exop_1af498df4d30381eb4ee74380e9c2f2639" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structpfm__exop_1af498df4d30381eb4ee74380e9c2f2639" kindref="member">mirror_enable</ref>;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112" refid="structbfm__exop" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structbfm__exop" kindref="compound">bfm_exop</ref><sp/>{</highlight></codeline>
+<codeline lineno="114" refid="structbfm__exop_1a2c16d2c160205b3eaba14b9f0ecb8c37" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group__mchp__flash__interface_1gae4ce42c1991f6edf715e4aa2b294234b" kindref="member">boot_flash_bank</ref><sp/><ref refid="structbfm__exop_1a2c16d2c160205b3eaba14b9f0ecb8c37" kindref="member">boot_bank</ref>;</highlight></codeline>
+<codeline lineno="116" refid="structbfm__exop_1a2b390a2ae33a5690850b95df7b5f8e7d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdint_8h_1a0a8582351ac627ee8bde2973c825e47f" kindref="member">uint32_t</ref><sp/><ref refid="structbfm__exop_1a2b390a2ae33a5690850b95df7b5f8e7d" kindref="member">wp_page</ref>;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*INCLUDE_ZEPHYR_DRIVERS_FLASH_MCHP_NVMCTRL_G3_H_*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="zephyr/drivers/flash/mchp_nvmctrl_g3.h"/>
+  </compounddef>
+</doxygen>

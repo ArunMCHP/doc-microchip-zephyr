@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="mspm0__clock__control_8h" kind="file" language="C++">
+    <compoundname>mspm0_clock_control.h</compoundname>
+    <includes refid="mspm0__clock_8h" local="no">zephyr/dt-bindings/clock/mspm0_clock.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>zephyr/drivers/clock_control/mspm0_clock_control.h</label>
+        <link refid="mspm0__clock__control_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>zephyr/dt-bindings/clock/mspm0_clock.h</label>
+        <link refid="mspm0__clock_8h"/>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structmspm0__sys__clock" prot="public">mspm0_sys_clock</innerclass>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="mspm0__clock__control_8h_1a438e7623f4a0dde8f48ce81cc9ecb4d5" prot="public" static="no">
+        <name>MSPM0_CLOCK_SUBSYS_FN</name>
+        <param><defname>index</defname></param>
+        <initializer>{.clk = <ref refid="group__devicetree-clocks_1gad6a9584690066548b8d61489ad615a45" kindref="member">DT_INST_CLOCKS_CELL</ref>(index, clk)}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/clock_control/mspm0_clock_control.h" line="16" column="9" bodyfile="zephyr/drivers/clock_control/mspm0_clock_control.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2025<sp/>Texas<sp/>Instruments<sp/>Inc.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>SPDX-License-Identifier:<sp/>Apache-2.0</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>ZEPHYR_INCLUDE_DRIVERS_CLOCK_CONTROL_MSPM0_CLOCK_CONTROL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZEPHYR_INCLUDE_DRIVERS_CLOCK_CONTROL_MSPM0_CLOCK_CONTROL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="mspm0__clock_8h" kindref="compound">zephyr/dt-bindings/clock/mspm0_clock.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="structmspm0__sys__clock" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmspm0__sys__clock" kindref="compound">mspm0_sys_clock</ref><sp/>{</highlight></codeline>
+<codeline lineno="13" refid="structmspm0__sys__clock_1ac48292bef828c08f7da17a376e491c79" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdint_8h_1a0a8582351ac627ee8bde2973c825e47f" kindref="member">uint32_t</ref><sp/><ref refid="structmspm0__sys__clock_1ac48292bef828c08f7da17a376e491c79" kindref="member">clk</ref>;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="mspm0__clock__control_8h_1a438e7623f4a0dde8f48ce81cc9ecb4d5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MSPM0_CLOCK_SUBSYS_FN(index)<sp/>{.clk<sp/>=<sp/>DT_INST_CLOCKS_CELL(index,<sp/>clk)}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>ZEPHYR_INCLUDE_DRIVERS_CLOCK_CONTROL_MSPM0_CLOCK_CONTROL<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="zephyr/drivers/clock_control/mspm0_clock_control.h"/>
+  </compounddef>
+</doxygen>

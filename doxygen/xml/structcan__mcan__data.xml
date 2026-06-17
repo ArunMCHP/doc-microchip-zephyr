@@ -1,0 +1,198 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structcan__mcan__data" kind="struct" language="C++" prot="public">
+    <compoundname>can_mcan_data</compoundname>
+    <includes refid="can__mcan_8h" local="no">zephyr/drivers/can/can_mcan.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structcan__mcan__data_1a486500387e6351f68d741f089d57f913" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structcan__driver__data" kindref="compound">can_driver_data</ref></type>
+        <definition>struct can_driver_data can_mcan_data::common</definition>
+        <argsstring></argsstring>
+        <name>common</name>
+        <qualifiedname>can_mcan_data::common</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/can/can_mcan.h" line="1064" column="22" bodyfile="zephyr/drivers/can/can_mcan.h" bodystart="1064" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcan__mcan__data_1a27048362bd5d4288e3ea9018ccc210f6" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structk__mutex" kindref="compound">k_mutex</ref></type>
+        <definition>struct k_mutex can_mcan_data::lock</definition>
+        <argsstring></argsstring>
+        <name>lock</name>
+        <qualifiedname>can_mcan_data::lock</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/can/can_mcan.h" line="1065" column="14" bodyfile="zephyr/drivers/can/can_mcan.h" bodystart="1065" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcan__mcan__data_1a5e0239c7ff45045d4f4ca5c83a41c4dd" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structk__sem" kindref="compound">k_sem</ref></type>
+        <definition>struct k_sem can_mcan_data::tx_sem</definition>
+        <argsstring></argsstring>
+        <name>tx_sem</name>
+        <qualifiedname>can_mcan_data::tx_sem</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/can/can_mcan.h" line="1066" column="12" bodyfile="zephyr/drivers/can/can_mcan.h" bodystart="1066" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcan__mcan__data_1a535ad3150d0c64f11b4dd4e3010d4718" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structk__mutex" kindref="compound">k_mutex</ref></type>
+        <definition>struct k_mutex can_mcan_data::tx_mtx</definition>
+        <argsstring></argsstring>
+        <name>tx_mtx</name>
+        <qualifiedname>can_mcan_data::tx_mtx</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/can/can_mcan.h" line="1067" column="14" bodyfile="zephyr/drivers/can/can_mcan.h" bodystart="1067" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcan__mcan__data_1a4211c8dce9704c43790ac354d124c3ab" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* can_mcan_data::custom</definition>
+        <argsstring></argsstring>
+        <name>custom</name>
+        <qualifiedname>can_mcan_data::custom</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/can/can_mcan.h" line="1068" column="6" bodyfile="zephyr/drivers/can/can_mcan.h" bodystart="1068" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Bosch M_CAN driver internal data structure. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>can_driver_data</label>
+        <link refid="structcan__driver__data"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>state_change_cb</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>can_mcan_data</label>
+        <link refid="structcan__mcan__data"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>common</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>lock</edgelabel>
+          <edgelabel>tx_mtx</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>tx_sem</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>device</label>
+        <link refid="structdevice"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>state</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>ops</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>pm_base</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>pm</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>pm_isr</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>device_ops</label>
+        <link refid="structdevice__ops"/>
+      </node>
+      <node id="4">
+        <label>device_state</label>
+        <link refid="structdevice__state"/>
+      </node>
+      <node id="9">
+        <label>k_event</label>
+        <link refid="structk__event"/>
+      </node>
+      <node id="13">
+        <label>k_mutex</label>
+        <link refid="structk__mutex"/>
+      </node>
+      <node id="8">
+        <label>k_sem</label>
+        <link refid="structk__sem"/>
+      </node>
+      <node id="12">
+        <label>k_spinlock</label>
+        <link refid="structk__spinlock"/>
+      </node>
+      <node id="10">
+        <label>k_work_delayable</label>
+        <link refid="structk__work__delayable"/>
+      </node>
+      <node id="7">
+        <label>pm_device</label>
+        <link refid="structpm__device"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>dev</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>lock</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>event</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>work</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>pm_device_base</label>
+        <link refid="structpm__device__base"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>action_cb</edgelabel>
+        </childnode>
+      </node>
+      <node id="11">
+        <label>pm_device_isr</label>
+        <link refid="structpm__device__isr"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>lock</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="zephyr/drivers/can/can_mcan.h" line="1063" column="1" bodyfile="zephyr/drivers/can/can_mcan.h" bodystart="1063" bodyend="1069"/>
+    <listofallmembers>
+      <member refid="structcan__mcan__data_1a486500387e6351f68d741f089d57f913" prot="public" virt="non-virtual"><scope>can_mcan_data</scope><name>common</name></member>
+      <member refid="structcan__mcan__data_1a4211c8dce9704c43790ac354d124c3ab" prot="public" virt="non-virtual"><scope>can_mcan_data</scope><name>custom</name></member>
+      <member refid="structcan__mcan__data_1a27048362bd5d4288e3ea9018ccc210f6" prot="public" virt="non-virtual"><scope>can_mcan_data</scope><name>lock</name></member>
+      <member refid="structcan__mcan__data_1a535ad3150d0c64f11b4dd4e3010d4718" prot="public" virt="non-virtual"><scope>can_mcan_data</scope><name>tx_mtx</name></member>
+      <member refid="structcan__mcan__data_1a5e0239c7ff45045d4f4ca5c83a41c4dd" prot="public" virt="non-virtual"><scope>can_mcan_data</scope><name>tx_sem</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

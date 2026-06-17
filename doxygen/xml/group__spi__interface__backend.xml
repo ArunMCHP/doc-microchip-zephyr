@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="group__spi__interface__backend" kind="group">
+    <compoundname>spi_interface_backend</compoundname>
+    <title>SPI Driver Backend API</title>
+    <innerclass refid="structspi__driver__api" prot="public">spi_driver_api</innerclass>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__spi__interface__backend_1gaa03a4e0ce32b9fc5f87d8df9e409eaf2" prot="public" static="no">
+        <type>int(*</type>
+        <definition>spi_api_io</definition>
+        <argsstring>)(const struct device *dev, const struct spi_config *config, const struct spi_buf_set *tx_bufs, const struct spi_buf_set *rx_bufs)</argsstring>
+        <name>spi_api_io</name>
+        <briefdescription>
+<para>Callback API for I/O. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>See <ref refid="group__spi__interface_1gad51054c1ba259db5a64619788506a6f5" kindref="member">spi_transceive()</ref> for argument descriptions </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/spi.h" line="872" column="9" bodyfile="zephyr/drivers/spi.h" bodystart="872" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__spi__interface__backend_1ga1db2a410f482d0f26c49f96352aa606d" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* spi_callback_t) (const struct device *dev, int result, void *data)</definition>
+        <argsstring>)(const struct device *dev, int result, void *data)</argsstring>
+        <name>spi_callback_t</name>
+        <briefdescription>
+<para>SPI callback for asynchronous transfer requests. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SPI device which is notifying of transfer completion or error </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>result</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Result code of the transfer request. 0 is success, -errno for failure. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Transfer requester supplied data which is passed along to the callback. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/spi.h" line="884" column="9" bodyfile="zephyr/drivers/spi.h" bodystart="884" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__spi__interface__backend_1ga231822b8730b16000827382e4111d350" prot="public" static="no">
+        <type>int(*</type>
+        <definition>spi_api_io_async</definition>
+        <argsstring>)(const struct device *dev, const struct spi_config *config, const struct spi_buf_set *tx_bufs, const struct spi_buf_set *rx_bufs, spi_callback_t cb, void *userdata)</argsstring>
+        <name>spi_api_io_async</name>
+        <briefdescription>
+<para>Callback API for asynchronous I/O. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>See <ref refid="group__spi__interface_1ga41b8a541257c0d45575fdc4593417edc" kindref="member">spi_transceive_signal()</ref> for argument descriptions </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/spi.h" line="892" column="9" bodyfile="zephyr/drivers/spi.h" bodystart="892" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__spi__interface__backend_1ga84832a82280008ec15c46a9df5db89a6" prot="public" static="no">
+        <type>void(*</type>
+        <definition>spi_api_iodev_submit</definition>
+        <argsstring>)(const struct device *dev, struct rtio_iodev_sqe *iodev_sqe)</argsstring>
+        <name>spi_api_iodev_submit</name>
+        <briefdescription>
+<para>Callback API for submitting work to a SPI device with RTIO. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/spi.h" line="905" column="9" bodyfile="zephyr/drivers/spi.h" bodystart="905" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__spi__interface__backend_1ga86340e5e1a89a61b23b8626adcfb16db" prot="public" static="no">
+        <type>int(*</type>
+        <definition>spi_api_release</definition>
+        <argsstring>)(const struct device *dev, const struct spi_config *config)</argsstring>
+        <name>spi_api_release</name>
+        <briefdescription>
+<para>Callback API for unlocking SPI device. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>See <ref refid="group__spi__interface_1ga0c4f4f0a93bb83a4f58d551a7491164e" kindref="member">spi_release()</ref> for argument descriptions </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/spi.h" line="914" column="9" bodyfile="zephyr/drivers/spi.h" bodystart="914" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This group contains the API type definitions, callback signatures, and other helpers required to implement a SPI driver. </para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

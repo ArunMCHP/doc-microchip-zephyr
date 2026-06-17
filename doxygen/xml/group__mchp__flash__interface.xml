@@ -1,0 +1,265 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="group__mchp__flash__interface" kind="group">
+    <compoundname>mchp_flash_interface</compoundname>
+    <title>Microchip</title>
+    <innerfile refid="mchp__nvmctrl__g2_8h">mchp_nvmctrl_g2.h</innerfile>
+    <innerfile refid="mchp__nvmctrl__g3_8h">mchp_nvmctrl_g3.h</innerfile>
+    <innerclass refid="structpfm__exop" prot="public">pfm_exop</innerclass>
+    <innerclass refid="structbfm__exop" prot="public">bfm_exop</innerclass>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="group__mchp__flash__interface_1ga4dae21b9b6e0a90faddfa045b30e19a8" prot="public" static="no" strong="no">
+        <type></type>
+        <name>flash_mchp_ex_ops_t</name>
+        <enumvalue id="group__mchp__flash__interface_1gga4dae21b9b6e0a90faddfa045b30e19a8a28aeedfece9b637e6698a64ad7e036e8" prot="public">
+          <name>FLASH_EX_OP_REGION_LOCK</name>
+          <briefdescription>
+<para>Lock a specific region. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mchp__flash__interface_1gga4dae21b9b6e0a90faddfa045b30e19a8a412cbb9c36affa8a61e38c8ec77d22e4" prot="public">
+          <name>FLASH_EX_OP_REGION_UNLOCK</name>
+          <briefdescription>
+<para>Unlock a specific region. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mchp__flash__interface_1gga4dae21b9b6e0a90faddfa045b30e19a8a7f180551fd905e7ca4d217932087787a" prot="public">
+          <name>FLASH_EX_OP_SET_PWR_REDUCTION_MODE</name>
+          <briefdescription>
+<para>Sets the Power Reduction mode. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mchp__flash__interface_1gga4dae21b9b6e0a90faddfa045b30e19a8a5b1b658937299999761f59173a16b93e" prot="public">
+          <name>FLASH_EX_OP_CLR_PWR_REDUCTION_MODE</name>
+          <briefdescription>
+<para>Clears the Power Reduction mode. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mchp__flash__interface_1gga4dae21b9b6e0a90faddfa045b30e19a8a953190cedd6519ce991793a07b990cc1" prot="public">
+          <name>FLASH_EX_OP_CLR_PAGE_BUFFER</name>
+          <briefdescription>
+<para>Clears the flash page buffer. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mchp__flash__interface_1gga4dae21b9b6e0a90faddfa045b30e19a8aefa3c18a91556306795f51a14fba9f4b" prot="public">
+          <name>FLASH_EX_OP_SET_SECURITY_BIT</name>
+          <briefdescription>
+<para>Set Security Bit. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mchp__flash__interface_1gga4dae21b9b6e0a90faddfa045b30e19a8acdbe7b8985bb07f8fb0faadee3072dcb" prot="public">
+          <name>FLASH_EX_OP_INVALIDATE_CACHE_LINES</name>
+          <briefdescription>
+<para>Invalidates all cache lines. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mchp__flash__interface_1gga4dae21b9b6e0a90faddfa045b30e19a8a6525dc6f8c6b289b1d2f6402f57ad312" prot="public">
+          <name>FLASH_EX_OP_SET_CHIP_ERASE_HARDLOCK</name>
+          <briefdescription>
+<para>Set Chip Erase Hard Lock. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>This enumeration defines the set of extended operations that can be performed on the flash memory, such as erasing or writing the user row, and locking or unlocking specific flash regions. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/flash/mchp_nvmctrl_g2.h" line="39" column="1" bodyfile="zephyr/drivers/flash/mchp_nvmctrl_g2.h" bodystart="39" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__mchp__flash__interface_1ga4dae21b9b6e0a90faddfa045b30e19a8" prot="public" static="no" strong="no">
+        <type></type>
+        <name>flash_mchp_ex_ops_t</name>
+        <enumvalue id="group__mchp__flash__interface_1gga4dae21b9b6e0a90faddfa045b30e19a8a30737465e185532f3400725b533ee3a9" prot="public">
+          <name>FLASH_EX_OP_PFM_REGION_WRITE_PROTECT_ENABLE</name>
+          <briefdescription>
+<para>Enable write protection for a PFM region. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mchp__flash__interface_1gga4dae21b9b6e0a90faddfa045b30e19a8aa8818fcf993809f03564ab8e15de3d89" prot="public">
+          <name>FLASH_EX_OP_PFM_REGION_WRITE_PROTECT_DISABLE</name>
+          <briefdescription>
+<para>Disable write protection for a PFM region. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mchp__flash__interface_1gga4dae21b9b6e0a90faddfa045b30e19a8ae20aba272606df44e4e4c5cd76078675" prot="public">
+          <name>FLASH_EX_OP_PFM_REGION_WRITE_PROTECT_LOCK</name>
+          <briefdescription>
+<para>Lock write protection settings for a PFM region. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mchp__flash__interface_1gga4dae21b9b6e0a90faddfa045b30e19a8adf56dd5adcb84bb4a56ea2b112279122" prot="public">
+          <name>FLASH_EX_OP_BFM_WRITE_PROTECT_ENABLE</name>
+          <briefdescription>
+<para>Enable write protection for BFM. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mchp__flash__interface_1gga4dae21b9b6e0a90faddfa045b30e19a8a71054144eabce681da9ee95e852211da" prot="public">
+          <name>FLASH_EX_OP_BFM_WRITE_PROTECT_DISABLE</name>
+          <briefdescription>
+<para>Disable write protection for BFM. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mchp__flash__interface_1gga4dae21b9b6e0a90faddfa045b30e19a8a8f0b96d19fb3584a24addfc0749b758f" prot="public">
+          <name>FLASH_EX_OP_BFM_WRITE_PROTECT_LOCK</name>
+          <briefdescription>
+<para>Lock write protection settings for BFM. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>This enumeration defines the set of extended operations that can be performed on the flash memory, such as erasing or writing the user row, and locking or unlocking specific flash regions. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/flash/mchp_nvmctrl_g3.h" line="42" column="1" bodyfile="zephyr/drivers/flash/mchp_nvmctrl_g3.h" bodystart="42" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__mchp__flash__interface_1ga68310865b2b4ef28fe8259b0d625bc56" prot="public" static="no" strong="no">
+        <type></type>
+        <name>pfm_wp_region</name>
+        <enumvalue id="group__mchp__flash__interface_1gga68310865b2b4ef28fe8259b0d625bc56ae5ed65dd074c8ec6fe07086ece6c6c89" prot="public">
+          <name>PFM_WP_REGION_0</name>
+          <briefdescription>
+<para>PFM write protection region 0. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mchp__flash__interface_1gga68310865b2b4ef28fe8259b0d625bc56a9d007673c8b011e551fd0eaf67ce0a6d" prot="public">
+          <name>PFM_WP_REGION_1</name>
+          <briefdescription>
+<para>PFM write protection region 1. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mchp__flash__interface_1gga68310865b2b4ef28fe8259b0d625bc56ae71436dcc0d7a89d9d497eb8e21697f9" prot="public">
+          <name>PFM_WP_REGION_2</name>
+          <briefdescription>
+<para>PFM write protection region 2. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mchp__flash__interface_1gga68310865b2b4ef28fe8259b0d625bc56a7f2214b918478b67a9fb986bb13573ee" prot="public">
+          <name>PFM_WP_REGION_3</name>
+          <briefdescription>
+<para>PFM write protection region 3. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mchp__flash__interface_1gga68310865b2b4ef28fe8259b0d625bc56a350b8165b2c0bfc682d8a46ea87593fb" prot="public">
+          <name>PFM_WP_REGION_4</name>
+          <briefdescription>
+<para>PFM write protection region 4. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mchp__flash__interface_1gga68310865b2b4ef28fe8259b0d625bc56a6e913daec2faf0d10082ce1f520ff268" prot="public">
+          <name>PFM_WP_REGION_5</name>
+          <briefdescription>
+<para>PFM write protection region 5. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mchp__flash__interface_1gga68310865b2b4ef28fe8259b0d625bc56a24d6f6c04f0013976549e02f03126b6c" prot="public">
+          <name>PFM_WP_REGION_6</name>
+          <briefdescription>
+<para>PFM write protection region 6. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mchp__flash__interface_1gga68310865b2b4ef28fe8259b0d625bc56a686c824b326a95a54c52c7d2a97ee2e5" prot="public">
+          <name>PFM_WP_REGION_7</name>
+          <briefdescription>
+<para>PFM write protection region 7. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Program Flash Memory (PFM) write protection regions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This enumeration defines the available write protection regions for the Program Flash Memory. Each region can be independently configured for write protection. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/flash/mchp_nvmctrl_g3.h" line="64" column="1" bodyfile="zephyr/drivers/flash/mchp_nvmctrl_g3.h" bodystart="64" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__mchp__flash__interface_1gae4ce42c1991f6edf715e4aa2b294234b" prot="public" static="no" strong="no">
+        <type></type>
+        <name>boot_flash_bank</name>
+        <enumvalue id="group__mchp__flash__interface_1ggae4ce42c1991f6edf715e4aa2b294234ba2e23c772674e6e52a08fe8519a7f496d" prot="public">
+          <name>BOOT_FLASH_BANK_1</name>
+          <briefdescription>
+<para>Boot Flash Memory Bank/Panel 1. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mchp__flash__interface_1ggae4ce42c1991f6edf715e4aa2b294234bab4d24bb75453d95c963ff5d7a529bbbe" prot="public">
+          <name>BOOT_FLASH_BANK_2</name>
+          <briefdescription>
+<para>Boot Flash Memory Bank/Panel 2. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Boot Flash Memory (BFM) bank selection. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This enumeration defines the available boot flash memory banks/panels. The boot flash memory can be organized into multiple banks for redundancy and fail-safe boot operations. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/flash/mchp_nvmctrl_g3.h" line="82" column="1" bodyfile="zephyr/drivers/flash/mchp_nvmctrl_g3.h" bodystart="82" bodyend="85"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Extended operations for Microchip G3 flash memory controllers. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="since"><para>4.5 </para>
+</simplesect>
+<simplesect kind="version"><para>0.1.0 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

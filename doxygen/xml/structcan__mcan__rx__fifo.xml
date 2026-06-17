@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structcan__mcan__rx__fifo" kind="struct" language="C++" prot="public">
+    <compoundname>can_mcan_rx_fifo</compoundname>
+    <includes refid="can__mcan_8h" local="no">zephyr/drivers/can/can_mcan.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structcan__mcan__rx__fifo_1a8ddf6a5aa6f9847c3b5c0fce66631133" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structcan__mcan__rx__fifo__hdr" kindref="compound">can_mcan_rx_fifo_hdr</ref></type>
+        <definition>struct can_mcan_rx_fifo_hdr can_mcan_rx_fifo::hdr</definition>
+        <argsstring></argsstring>
+        <name>hdr</name>
+        <qualifiedname>can_mcan_rx_fifo::hdr</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/can/can_mcan.h" line="938" column="27" bodyfile="zephyr/drivers/can/can_mcan.h" bodystart="938" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcan__mcan__rx__fifo_1aeafd55c4d4f637c66e5a57d329e42a2b" prot="public" static="no" mutable="no">
+        <type><ref refid="stdint_8h_1a3cb4a16b0e8d6af0af86d4fd6ba5fd9d" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t can_mcan_rx_fifo::data[64]</definition>
+        <argsstring>[64]</argsstring>
+        <name>data</name>
+        <qualifiedname>can_mcan_rx_fifo::data</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/can/can_mcan.h" line="940" column="9" bodyfile="zephyr/drivers/can/can_mcan.h" bodystart="940" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcan__mcan__rx__fifo_1a9a5e7e970f2733b68894edcbaf98cc82" prot="public" static="no" mutable="no">
+        <type><ref refid="stdint_8h_1a0a8582351ac627ee8bde2973c825e47f" kindref="member">uint32_t</ref></type>
+        <definition>uint32_t can_mcan_rx_fifo::data_32[16]</definition>
+        <argsstring>[16]</argsstring>
+        <name>data_32</name>
+        <qualifiedname>can_mcan_rx_fifo::data_32</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/can/can_mcan.h" line="941" column="10" bodyfile="zephyr/drivers/can/can_mcan.h" bodystart="941" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcan__mcan__rx__fifo_1af86f64d5605b34f9a60414ac25486c2b" prot="public" static="no" mutable="no">
+        <type>union <ref refid="structcan__mcan__rx__fifo" kindref="compound">can_mcan_rx_fifo</ref></type>
+        <definition>union can_mcan_rx_fifo can_mcan_rx_fifo</definition>
+        <argsstring></argsstring>
+        <name></name>
+        <qualifiedname>can_mcan_rx_fifo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/can/can_mcan.h" line="942" column="1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Bosch M_CAN Rx Buffer and FIFO Element. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>See Bosch M_CAN Users Manual section 2.4.2 for details. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>can_mcan_rx_fifo</label>
+        <link refid="structcan__mcan__rx__fifo"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>hdr</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>can_mcan_rx_fifo_hdr</label>
+        <link refid="structcan__mcan__rx__fifo__hdr"/>
+      </node>
+    </collaborationgraph>
+    <location file="zephyr/drivers/can/can_mcan.h" line="937" column="1" bodyfile="zephyr/drivers/can/can_mcan.h" bodystart="937" bodyend="943"/>
+    <listofallmembers>
+      <member refid="structcan__mcan__rx__fifo_1aeafd55c4d4f637c66e5a57d329e42a2b" prot="public" virt="non-virtual"><scope>can_mcan_rx_fifo</scope><name>data</name></member>
+      <member refid="structcan__mcan__rx__fifo_1a9a5e7e970f2733b68894edcbaf98cc82" prot="public" virt="non-virtual"><scope>can_mcan_rx_fifo</scope><name>data_32</name></member>
+      <member refid="structcan__mcan__rx__fifo_1a8ddf6a5aa6f9847c3b5c0fce66631133" prot="public" virt="non-virtual"><scope>can_mcan_rx_fifo</scope><name>hdr</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

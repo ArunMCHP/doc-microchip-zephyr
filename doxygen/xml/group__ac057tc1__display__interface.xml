@@ -1,0 +1,199 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="group__ac057tc1__display__interface" kind="group">
+    <compoundname>ac057tc1_display_interface</compoundname>
+    <title>AC057TC1 display controller</title>
+    <sectiondef kind="user-defined">
+      <header>AC057TC1 Color Definitions</header>
+      <memberdef kind="define" id="group__ac057tc1__display__interface_1gaddc8c85260f4711008145f4dc9adfda5" prot="public" static="no">
+        <name>AC057TC1_COLOR_BLACK</name>
+        <initializer>0x00</initializer>
+        <briefdescription>
+<para>Black color index. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/display/ac057tc1.h" line="48" column="9" bodyfile="zephyr/drivers/display/ac057tc1.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ac057tc1__display__interface_1gab14e0c1ddc7cdf1ade0007aa1ddc48e0" prot="public" static="no">
+        <name>AC057TC1_COLOR_WHITE</name>
+        <initializer>0x01</initializer>
+        <briefdescription>
+<para>White color index. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/display/ac057tc1.h" line="49" column="9" bodyfile="zephyr/drivers/display/ac057tc1.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ac057tc1__display__interface_1gad6815dcf9640db77784760fd497d4470" prot="public" static="no">
+        <name>AC057TC1_COLOR_GREEN</name>
+        <initializer>0x02</initializer>
+        <briefdescription>
+<para>Green color index. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/display/ac057tc1.h" line="50" column="9" bodyfile="zephyr/drivers/display/ac057tc1.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ac057tc1__display__interface_1ga4c7ec1517bcf0a759e4d90a50de90322" prot="public" static="no">
+        <name>AC057TC1_COLOR_BLUE</name>
+        <initializer>0x03</initializer>
+        <briefdescription>
+<para>Blue color index. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/display/ac057tc1.h" line="51" column="9" bodyfile="zephyr/drivers/display/ac057tc1.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ac057tc1__display__interface_1ga59e811b002e9625d53ef4865a65a09d1" prot="public" static="no">
+        <name>AC057TC1_COLOR_RED</name>
+        <initializer>0x04</initializer>
+        <briefdescription>
+<para>Red color index. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/display/ac057tc1.h" line="52" column="9" bodyfile="zephyr/drivers/display/ac057tc1.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ac057tc1__display__interface_1ga610ac37a47780ed653c2436a95ffc124" prot="public" static="no">
+        <name>AC057TC1_COLOR_YELLOW</name>
+        <initializer>0x05</initializer>
+        <briefdescription>
+<para>Yellow color index. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/display/ac057tc1.h" line="53" column="9" bodyfile="zephyr/drivers/display/ac057tc1.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ac057tc1__display__interface_1gae55d18fa0a1a32ae917d7da3f2af9298" prot="public" static="no">
+        <name>AC057TC1_COLOR_ORANGE</name>
+        <initializer>0x06</initializer>
+        <briefdescription>
+<para>Orange color index. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/display/ac057tc1.h" line="54" column="9" bodyfile="zephyr/drivers/display/ac057tc1.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="group__ac057tc1__display__interface_1gad77ca42dadb581ea413d9b96d5c3ac28" prot="public" static="no">
+        <name>PIXEL_FORMAT_L_4</name>
+        <initializer>(<ref refid="group__display__interface_1ggac346bc56771052a8fe919c3ec23d7c9caa87e30ffc226713cd2cc0f9ae340ed65" kindref="member">PIXEL_FORMAT_PRIV_START</ref> &lt;&lt; 0)</initializer>
+        <briefdescription>
+<para>AC057TC1 private pixel format. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>4 bits per pixel, 2 pixels per byte (high nibble first). Supports 7 colors indexed 0-6 (3-bit color palette). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/display/ac057tc1.h" line="37" column="9" bodyfile="zephyr/drivers/display/ac057tc1.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ac057tc1__display__interface_1ga4f6fa96e795eab43bd63fa7e81979d79" prot="public" static="no">
+        <name>AC057TC1_BITS_PER_PIXEL</name>
+        <initializer>4</initializer>
+        <briefdescription>
+<para>Bits per pixel for AC057TC1 format. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/display/ac057tc1.h" line="42" column="9" bodyfile="zephyr/drivers/display/ac057tc1.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ac057tc1__display__interface_1gad6484b117b89270fc138a14eb311da83" prot="public" static="no">
+        <name>AC057TC1_PACK_PIXELS</name>
+        <param><defname>pixel1</defname></param>
+        <param><defname>pixel2</defname></param>
+        <initializer>(((pixel1) &lt;&lt; 4) | ((pixel2) &amp; 0x0F))</initializer>
+        <briefdescription>
+<para>Pack two AC057TC1 pixels into a single byte. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pixel1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>First pixel (high nibble, left pixel) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pixel2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Second pixel (low nibble, right pixel) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Packed byte containing both pixels </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/display/ac057tc1.h" line="64" column="9" bodyfile="zephyr/drivers/display/ac057tc1.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ac057tc1__display__interface_1ga0f890ce312b691654fa459a4b603d74c" prot="public" static="no">
+        <name>AC057TC1_BUFFER_SIZE</name>
+        <param><defname>width</defname></param>
+        <param><defname>height</defname></param>
+        <initializer>(((width) * (height)) / 2)</initializer>
+        <briefdescription>
+<para>Calculate buffer size needed for AC057TC1 framebuffer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Display width in pixels </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>height</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Display height in pixels </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Size in bytes needed for framebuffer </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/display/ac057tc1.h" line="73" column="9" bodyfile="zephyr/drivers/display/ac057tc1.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>AC057TC1 7-color e-ink display controller device-specific API extension. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="since"><para>4.4.0 </para>
+</simplesect>
+<simplesect kind="version"><para>0.1.0 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

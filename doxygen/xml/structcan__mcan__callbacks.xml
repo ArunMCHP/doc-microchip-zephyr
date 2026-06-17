@@ -1,0 +1,213 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structcan__mcan__callbacks" kind="struct" language="C++" prot="public">
+    <compoundname>can_mcan_callbacks</compoundname>
+    <includes refid="can__mcan_8h" local="no">zephyr/drivers/can/can_mcan.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structcan__mcan__callbacks_1ad2ee7f63634cc67160f4eb75f05babd2" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structcan__mcan__tx__callback" kindref="compound">can_mcan_tx_callback</ref> *</type>
+        <definition>struct can_mcan_tx_callback* can_mcan_callbacks::tx</definition>
+        <argsstring></argsstring>
+        <name>tx</name>
+        <qualifiedname>can_mcan_callbacks::tx</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/can/can_mcan.h" line="1173" column="27" bodyfile="zephyr/drivers/can/can_mcan.h" bodystart="1173" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcan__mcan__callbacks_1ae225638097e1ddb5270de06401490a7f" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structcan__mcan__rx__callback" kindref="compound">can_mcan_rx_callback</ref> *</type>
+        <definition>struct can_mcan_rx_callback* can_mcan_callbacks::std</definition>
+        <argsstring></argsstring>
+        <name>std</name>
+        <qualifiedname>can_mcan_callbacks::std</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/can/can_mcan.h" line="1174" column="27" bodyfile="zephyr/drivers/can/can_mcan.h" bodystart="1174" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcan__mcan__callbacks_1ab29bb0963a78fcc68677ff5e4589f004" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structcan__mcan__rx__callback" kindref="compound">can_mcan_rx_callback</ref> *</type>
+        <definition>struct can_mcan_rx_callback* can_mcan_callbacks::ext</definition>
+        <argsstring></argsstring>
+        <name>ext</name>
+        <qualifiedname>can_mcan_callbacks::ext</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/can/can_mcan.h" line="1175" column="27" bodyfile="zephyr/drivers/can/can_mcan.h" bodystart="1175" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcan__mcan__callbacks_1aad1b8f0b76637e7a53ef5c88118d7bd1" prot="public" static="no" mutable="no">
+        <type><ref refid="stdint_8h_1a3cb4a16b0e8d6af0af86d4fd6ba5fd9d" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t can_mcan_callbacks::num_tx</definition>
+        <argsstring></argsstring>
+        <name>num_tx</name>
+        <qualifiedname>can_mcan_callbacks::num_tx</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/can/can_mcan.h" line="1176" column="9" bodyfile="zephyr/drivers/can/can_mcan.h" bodystart="1176" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcan__mcan__callbacks_1a0388e27fc1852d7e7c7ac6f062cab3e1" prot="public" static="no" mutable="no">
+        <type><ref refid="stdint_8h_1a3cb4a16b0e8d6af0af86d4fd6ba5fd9d" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t can_mcan_callbacks::num_std</definition>
+        <argsstring></argsstring>
+        <name>num_std</name>
+        <qualifiedname>can_mcan_callbacks::num_std</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/can/can_mcan.h" line="1177" column="9" bodyfile="zephyr/drivers/can/can_mcan.h" bodystart="1177" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcan__mcan__callbacks_1a9edfccadf0ef4006ac5eb7926772ca85" prot="public" static="no" mutable="no">
+        <type><ref refid="stdint_8h_1a3cb4a16b0e8d6af0af86d4fd6ba5fd9d" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t can_mcan_callbacks::num_ext</definition>
+        <argsstring></argsstring>
+        <name>num_ext</name>
+        <qualifiedname>can_mcan_callbacks::num_ext</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/can/can_mcan.h" line="1178" column="9" bodyfile="zephyr/drivers/can/can_mcan.h" bodystart="1178" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Bosch M_CAN driver internal Tx + Rx callbacks structure. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>can_mcan_callbacks</label>
+        <link refid="structcan__mcan__callbacks"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>tx</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>ext</edgelabel>
+          <edgelabel>std</edgelabel>
+        </childnode>
+      </node>
+      <node id="13">
+        <label>can_mcan_rx_callback</label>
+        <link refid="structcan__mcan__rx__callback"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>function</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>can_mcan_tx_callback</label>
+        <link refid="structcan__mcan__tx__callback"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>function</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>device</label>
+        <link refid="structdevice"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>state</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>ops</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>pm_base</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>pm</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>pm_isr</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>device_ops</label>
+        <link refid="structdevice__ops"/>
+      </node>
+      <node id="4">
+        <label>device_state</label>
+        <link refid="structdevice__state"/>
+      </node>
+      <node id="9">
+        <label>k_event</label>
+        <link refid="structk__event"/>
+      </node>
+      <node id="8">
+        <label>k_sem</label>
+        <link refid="structk__sem"/>
+      </node>
+      <node id="12">
+        <label>k_spinlock</label>
+        <link refid="structk__spinlock"/>
+      </node>
+      <node id="10">
+        <label>k_work_delayable</label>
+        <link refid="structk__work__delayable"/>
+      </node>
+      <node id="7">
+        <label>pm_device</label>
+        <link refid="structpm__device"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>dev</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>lock</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>event</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>work</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>pm_device_base</label>
+        <link refid="structpm__device__base"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>action_cb</edgelabel>
+        </childnode>
+      </node>
+      <node id="11">
+        <label>pm_device_isr</label>
+        <link refid="structpm__device__isr"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>lock</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="zephyr/drivers/can/can_mcan.h" line="1172" column="1" bodyfile="zephyr/drivers/can/can_mcan.h" bodystart="1172" bodyend="1179"/>
+    <listofallmembers>
+      <member refid="structcan__mcan__callbacks_1ab29bb0963a78fcc68677ff5e4589f004" prot="public" virt="non-virtual"><scope>can_mcan_callbacks</scope><name>ext</name></member>
+      <member refid="structcan__mcan__callbacks_1a9edfccadf0ef4006ac5eb7926772ca85" prot="public" virt="non-virtual"><scope>can_mcan_callbacks</scope><name>num_ext</name></member>
+      <member refid="structcan__mcan__callbacks_1a0388e27fc1852d7e7c7ac6f062cab3e1" prot="public" virt="non-virtual"><scope>can_mcan_callbacks</scope><name>num_std</name></member>
+      <member refid="structcan__mcan__callbacks_1aad1b8f0b76637e7a53ef5c88118d7bd1" prot="public" virt="non-virtual"><scope>can_mcan_callbacks</scope><name>num_tx</name></member>
+      <member refid="structcan__mcan__callbacks_1ae225638097e1ddb5270de06401490a7f" prot="public" virt="non-virtual"><scope>can_mcan_callbacks</scope><name>std</name></member>
+      <member refid="structcan__mcan__callbacks_1ad2ee7f63634cc67160f4eb75f05babd2" prot="public" virt="non-virtual"><scope>can_mcan_callbacks</scope><name>tx</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

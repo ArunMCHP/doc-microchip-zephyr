@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="panel_8h" kind="file" language="C++">
+    <compoundname>panel.h</compoundname>
+    <includedby refid="drivers_2display_8h" local="no">zephyr/drivers/display.h</includedby>
+    <invincdepgraph>
+      <node id="3">
+        <label>zephyr/display/cfb.h</label>
+        <link refid="cfb_8h"/>
+      </node>
+      <node id="4">
+        <label>zephyr/display/ssd16xx.h</label>
+        <link refid="ssd16xx_8h"/>
+      </node>
+      <node id="2">
+        <label>zephyr/drivers/display.h</label>
+        <link refid="drivers_2display_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>zephyr/drivers/display/ac057tc1.h</label>
+        <link refid="ac057tc1_8h"/>
+      </node>
+      <node id="6">
+        <label>zephyr/drivers/mipi_dbi.h</label>
+        <link refid="drivers_2mipi__dbi_8h"/>
+      </node>
+      <node id="1">
+        <label>zephyr/dt-bindings/display/panel.h</label>
+        <link refid="panel_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <sectiondef kind="define">
+      <member refid="group__lcd__interface_1ga4775abe39fd68a2d64b4edb649790915" kind="define"><name>PANEL_PIXEL_FORMAT_RGB_888</name></member>
+      <member refid="group__lcd__interface_1ga6712b7424ad89a33e04f66e76d3678ce" kind="define"><name>PANEL_PIXEL_FORMAT_MONO01</name></member>
+      <member refid="group__lcd__interface_1ga6311ee67721bd6e7209bbdc1b6788eb6" kind="define"><name>PANEL_PIXEL_FORMAT_MONO10</name></member>
+      <member refid="group__lcd__interface_1gac86c839997816ecfe501b14d240a6f2a" kind="define"><name>PANEL_PIXEL_FORMAT_ARGB_8888</name></member>
+      <member refid="group__lcd__interface_1gad8d20eb4c243e11080d31df41026475b" kind="define"><name>PANEL_PIXEL_FORMAT_RGB_565</name></member>
+      <member refid="group__lcd__interface_1gaf8271408694ee534466e7915309b6440" kind="define"><name>PANEL_PIXEL_FORMAT_RGB_565X</name></member>
+      <member refid="group__lcd__interface_1ga4a78444ac708085a699cd6ccaf7d7817" kind="define"><name>PANEL_PIXEL_FORMAT_L_8</name></member>
+      <member refid="group__lcd__interface_1ga5ee3faa8a6ddb4d59cbd4aafde40021a" kind="define"><name>PANEL_PIXEL_FORMAT_AL_88</name></member>
+      <member refid="group__lcd__interface_1ga1b25099c1904059561ea29f2c2f82750" kind="define"><name>PANEL_PIXEL_FORMAT_XRGB_8888</name></member>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2023<sp/>NXP</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>SPDX-License-Identifier:<sp/>Apache-2.0</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>ZEPHYR_INCLUDE_DT_BINDINGS_DISPLAY_PANEL_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZEPHYR_INCLUDE_DT_BINDINGS_DISPLAY_PANEL_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="group__lcd__interface_1ga4775abe39fd68a2d64b4edb649790915" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PANEL_PIXEL_FORMAT_RGB_888<sp/><sp/><sp/>(0x1<sp/>&lt;&lt;<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="group__lcd__interface_1ga6712b7424ad89a33e04f66e76d3678ce" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PANEL_PIXEL_FORMAT_MONO01<sp/><sp/><sp/><sp/>(0x1<sp/>&lt;&lt;<sp/>1)<sp/></highlight><highlight class="comment">/*<sp/>0=Black<sp/>1=White<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="group__lcd__interface_1ga6311ee67721bd6e7209bbdc1b6788eb6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PANEL_PIXEL_FORMAT_MONO10<sp/><sp/><sp/><sp/>(0x1<sp/>&lt;&lt;<sp/>2)<sp/></highlight><highlight class="comment">/*<sp/>1=Black<sp/>0=White<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="group__lcd__interface_1gac86c839997816ecfe501b14d240a6f2a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PANEL_PIXEL_FORMAT_ARGB_8888<sp/>(0x1<sp/>&lt;&lt;<sp/>3)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="group__lcd__interface_1gad8d20eb4c243e11080d31df41026475b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PANEL_PIXEL_FORMAT_RGB_565<sp/><sp/><sp/>(0x1<sp/>&lt;&lt;<sp/>4)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="group__lcd__interface_1gaf8271408694ee534466e7915309b6440" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PANEL_PIXEL_FORMAT_RGB_565X<sp/><sp/>(0x1<sp/>&lt;&lt;<sp/>5)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="group__lcd__interface_1ga4a78444ac708085a699cd6ccaf7d7817" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PANEL_PIXEL_FORMAT_L_8<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(0x1<sp/>&lt;&lt;<sp/>6)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="group__lcd__interface_1ga5ee3faa8a6ddb4d59cbd4aafde40021a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PANEL_PIXEL_FORMAT_AL_88<sp/><sp/><sp/><sp/><sp/>(0x1<sp/>&lt;&lt;<sp/>7)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="group__lcd__interface_1ga1b25099c1904059561ea29f2c2f82750" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PANEL_PIXEL_FORMAT_XRGB_8888<sp/>(0x1<sp/>&lt;&lt;<sp/>8)<sp/></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>ZEPHYR_INCLUDE_DT_BINDINGS_DISPLAY_PANEL_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="zephyr/dt-bindings/display/panel.h"/>
+  </compounddef>
+</doxygen>

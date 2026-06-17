@@ -1,0 +1,340 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="group__syscon__interface" kind="group">
+    <compoundname>syscon_interface</compoundname>
+    <title>System control (SYSCON)</title>
+    <innerfile refid="syscon_8h">syscon.h</innerfile>
+    <innerclass refid="structsyscon__driver__api" prot="public">syscon_driver_api</innerclass>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__syscon__interface_1ga51cf97235e40c0fa63d5c91fcee62819" prot="public" static="no">
+        <type>int(*</type>
+        <definition>typedef int(* syscon_api_get_base) (const struct device *dev, uintptr_t *addr)</definition>
+        <argsstring>)(const struct device *dev, uintptr_t *addr)</argsstring>
+        <name>syscon_api_get_base</name>
+        <briefdescription>
+<para>API template to get the base address of the syscon region. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="group__syscon__interface_1ga14c9c3bb09cec4c297a22f1ec751ceff" kindref="member">syscon_get_base</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/syscon.h" line="37" column="9" bodyfile="zephyr/drivers/syscon.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__syscon__interface_1gab23dbb591174dcb5944ce534c851eea8" prot="public" static="no">
+        <type>int(*</type>
+        <definition>typedef int(* syscon_api_read_reg) (const struct device *dev, uint16_t reg, uint32_t *val)</definition>
+        <argsstring>)(const struct device *dev, uint16_t reg, uint32_t *val)</argsstring>
+        <name>syscon_api_read_reg</name>
+        <briefdescription>
+<para>API template to read a single register. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="group__syscon__interface_1ga2b912d694cce403011212b83e98a7426" kindref="member">syscon_read_reg</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/syscon.h" line="44" column="9" bodyfile="zephyr/drivers/syscon.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__syscon__interface_1ga1939885e191dbf49ef1698425085ee56" prot="public" static="no">
+        <type>int(*</type>
+        <definition>typedef int(* syscon_api_write_reg) (const struct device *dev, uint16_t reg, uint32_t val)</definition>
+        <argsstring>)(const struct device *dev, uint16_t reg, uint32_t val)</argsstring>
+        <name>syscon_api_write_reg</name>
+        <briefdescription>
+<para>API template to write a single register. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="group__syscon__interface_1gad38b74cf372f8cdeb0439d6524af7da8" kindref="member">syscon_write_reg</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/syscon.h" line="51" column="9" bodyfile="zephyr/drivers/syscon.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__syscon__interface_1gae09207fe29a18f32f9e52a77c8c1695f" prot="public" static="no">
+        <type>int(*</type>
+        <definition>typedef int(* syscon_api_get_size) (const struct device *dev, size_t *size)</definition>
+        <argsstring>)(const struct device *dev, size_t *size)</argsstring>
+        <name>syscon_api_get_size</name>
+        <briefdescription>
+<para>API template to get the size of the syscon register. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="group__syscon__interface_1ga431adee943fe536fc0c4abe7e169bdf5" kindref="member">syscon_get_size</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/syscon.h" line="58" column="9" bodyfile="zephyr/drivers/syscon.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="group__syscon__interface_1ga14c9c3bb09cec4c297a22f1ec751ceff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int syscon_get_base</definition>
+        <argsstring>(const struct device *dev, uintptr_t *addr)</argsstring>
+        <name>syscon_get_base</name>
+        <param>
+          <type>const struct <ref refid="structdevice" kindref="compound">device</ref> *</type>
+          <declname>dev</declname>
+        </param>
+        <param>
+          <type><ref refid="stdint_8h_1a4788399d1d0b37ccf098a7da82254808" kindref="member">uintptr_t</ref> *</type>
+          <declname>addr</declname>
+        </param>
+        <briefdescription>
+<para>Get the syscon base address. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The device to get the register size for. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Where to write the base address.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>When <emphasis>addr</emphasis> was written to. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-ENOSYS</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If the API or function isn&apos;t implemented. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/syscon.h" line="79" column="6" declfile="zephyr/drivers/syscon.h" declline="79" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__syscon__interface_1ga2b912d694cce403011212b83e98a7426" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int syscon_read_reg</definition>
+        <argsstring>(const struct device *dev, uint16_t reg, uint32_t *val)</argsstring>
+        <name>syscon_read_reg</name>
+        <param>
+          <type>const struct <ref refid="structdevice" kindref="compound">device</ref> *</type>
+          <declname>dev</declname>
+        </param>
+        <param>
+          <type><ref refid="stdint_8h_1a5debae8b2a1ec20a6694c0c443ee399e" kindref="member">uint16_t</ref></type>
+          <declname>reg</declname>
+        </param>
+        <param>
+          <type><ref refid="stdint_8h_1a0a8582351ac627ee8bde2973c825e47f" kindref="member">uint32_t</ref> *</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+<para>Read from syscon register. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function reads from a specific register in the syscon area</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The device to get the register size for. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>reg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The register offset </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The returned value read from the syscon register</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>on success. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-ENOSYS</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If the API or function isn&apos;t implemented. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/syscon.h" line="105" column="6" declfile="zephyr/drivers/syscon.h" declline="105" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__syscon__interface_1gad38b74cf372f8cdeb0439d6524af7da8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int syscon_write_reg</definition>
+        <argsstring>(const struct device *dev, uint16_t reg, uint32_t val)</argsstring>
+        <name>syscon_write_reg</name>
+        <param>
+          <type>const struct <ref refid="structdevice" kindref="compound">device</ref> *</type>
+          <declname>dev</declname>
+        </param>
+        <param>
+          <type><ref refid="stdint_8h_1a5debae8b2a1ec20a6694c0c443ee399e" kindref="member">uint16_t</ref></type>
+          <declname>reg</declname>
+        </param>
+        <param>
+          <type><ref refid="stdint_8h_1a0a8582351ac627ee8bde2973c825e47f" kindref="member">uint32_t</ref></type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+<para>Write to syscon register. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function writes to a specific register in the syscon area</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The device to get the register size for. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>reg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The register offset </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to be written in the register</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>on success. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-ENOSYS</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If the API or function isn&apos;t implemented. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/syscon.h" line="131" column="6" declfile="zephyr/drivers/syscon.h" declline="131" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__syscon__interface_1ga431adee943fe536fc0c4abe7e169bdf5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int syscon_get_size</definition>
+        <argsstring>(const struct device *dev, size_t *size)</argsstring>
+        <name>syscon_get_size</name>
+        <param>
+          <type>const struct <ref refid="structdevice" kindref="compound">device</ref> *</type>
+          <declname>dev</declname>
+        </param>
+        <param>
+          <type><ref refid="retained__mem_8h_1a36713c339c3c5ec6d6bd481480bdb6f9" kindref="member">size_t</ref> *</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Get the size of the syscon register in bytes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The device to get the register size for. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to write the size to.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>on success. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-ENOSYS</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If the API or function isn&apos;t implemented. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/syscon.h" line="153" column="6" declfile="zephyr/drivers/syscon.h" declline="153" declcolumn="6"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Interfaces for system control registers. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

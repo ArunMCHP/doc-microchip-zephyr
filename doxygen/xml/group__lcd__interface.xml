@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="group__lcd__interface" kind="group">
+    <compoundname>lcd_interface</compoundname>
+    <title>LCD Interface</title>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="group__lcd__interface_1ga4775abe39fd68a2d64b4edb649790915" prot="public" static="no">
+        <name>PANEL_PIXEL_FORMAT_RGB_888</name>
+        <initializer>(0x1 &lt;&lt; 0)</initializer>
+        <briefdescription>
+<para>Display pixel formats. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Display pixel format enumeration.</para>
+<para>These defines must match those present in the display_pixel_format enum. They are required because the enum cannot be reused within devicetree, since C enums are not valid devicetree syntax. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/display/panel.h" line="26" column="9" bodyfile="zephyr/dt-bindings/display/panel.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__lcd__interface_1ga6712b7424ad89a33e04f66e76d3678ce" prot="public" static="no">
+        <name>PANEL_PIXEL_FORMAT_MONO01</name>
+        <initializer>(0x1 &lt;&lt; 1) /* 0=Black 1=White */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/display/panel.h" line="27" column="9" bodyfile="zephyr/dt-bindings/display/panel.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__lcd__interface_1ga6311ee67721bd6e7209bbdc1b6788eb6" prot="public" static="no">
+        <name>PANEL_PIXEL_FORMAT_MONO10</name>
+        <initializer>(0x1 &lt;&lt; 2) /* 1=Black 0=White */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/display/panel.h" line="28" column="9" bodyfile="zephyr/dt-bindings/display/panel.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__lcd__interface_1gac86c839997816ecfe501b14d240a6f2a" prot="public" static="no">
+        <name>PANEL_PIXEL_FORMAT_ARGB_8888</name>
+        <initializer>(0x1 &lt;&lt; 3)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/display/panel.h" line="29" column="9" bodyfile="zephyr/dt-bindings/display/panel.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__lcd__interface_1gad8d20eb4c243e11080d31df41026475b" prot="public" static="no">
+        <name>PANEL_PIXEL_FORMAT_RGB_565</name>
+        <initializer>(0x1 &lt;&lt; 4)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/display/panel.h" line="30" column="9" bodyfile="zephyr/dt-bindings/display/panel.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__lcd__interface_1gaf8271408694ee534466e7915309b6440" prot="public" static="no">
+        <name>PANEL_PIXEL_FORMAT_RGB_565X</name>
+        <initializer>(0x1 &lt;&lt; 5)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/display/panel.h" line="31" column="9" bodyfile="zephyr/dt-bindings/display/panel.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__lcd__interface_1ga4a78444ac708085a699cd6ccaf7d7817" prot="public" static="no">
+        <name>PANEL_PIXEL_FORMAT_L_8</name>
+        <initializer>(0x1 &lt;&lt; 6)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/display/panel.h" line="32" column="9" bodyfile="zephyr/dt-bindings/display/panel.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__lcd__interface_1ga5ee3faa8a6ddb4d59cbd4aafde40021a" prot="public" static="no">
+        <name>PANEL_PIXEL_FORMAT_AL_88</name>
+        <initializer>(0x1 &lt;&lt; 7)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/display/panel.h" line="33" column="9" bodyfile="zephyr/dt-bindings/display/panel.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__lcd__interface_1ga1b25099c1904059561ea29f2c2f82750" prot="public" static="no">
+        <name>PANEL_PIXEL_FORMAT_XRGB_8888</name>
+        <initializer>(0x1 &lt;&lt; 8)</initializer>
+        <briefdescription>
+<para>32-bit ARGB </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/display/panel.h" line="34" column="9" bodyfile="zephyr/dt-bindings/display/panel.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>LCD Interface. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

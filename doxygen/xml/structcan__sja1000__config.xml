@@ -1,0 +1,206 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structcan__sja1000__config" kind="struct" language="C++" prot="public">
+    <compoundname>can_sja1000_config</compoundname>
+    <includes refid="can__sja1000_8h" local="no">zephyr/drivers/can/can_sja1000.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structcan__sja1000__config_1a5f6b844c34defd6d63149629843e9dbb" prot="public" static="no" mutable="no">
+        <type>const struct <ref refid="structcan__driver__config" kindref="compound">can_driver_config</ref></type>
+        <definition>const struct can_driver_config can_sja1000_config::common</definition>
+        <argsstring></argsstring>
+        <name>common</name>
+        <qualifiedname>can_sja1000_config::common</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/can/can_sja1000.h" line="105" column="30" bodyfile="zephyr/drivers/can/can_sja1000.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcan__sja1000__config_1a7db8fc3fbb3dfdb95d6f4d5999ec5646" prot="public" static="no" mutable="no">
+        <type><ref refid="can__sja1000_8h_1a62d5b661f7b39f84f93a9597d2371341" kindref="member">can_sja1000_read_reg_t</ref></type>
+        <definition>can_sja1000_read_reg_t can_sja1000_config::read_reg</definition>
+        <argsstring></argsstring>
+        <name>read_reg</name>
+        <qualifiedname>can_sja1000_config::read_reg</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/can/can_sja1000.h" line="106" column="24" bodyfile="zephyr/drivers/can/can_sja1000.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcan__sja1000__config_1ab7a864dc361c9b4a9b5917df7566c403" prot="public" static="no" mutable="no">
+        <type><ref refid="can__sja1000_8h_1a7f71e5009721c00f2d6821a7db4c49cb" kindref="member">can_sja1000_write_reg_t</ref></type>
+        <definition>can_sja1000_write_reg_t can_sja1000_config::write_reg</definition>
+        <argsstring></argsstring>
+        <name>write_reg</name>
+        <qualifiedname>can_sja1000_config::write_reg</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/can/can_sja1000.h" line="107" column="25" bodyfile="zephyr/drivers/can/can_sja1000.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcan__sja1000__config_1a7949f91e0d855d701771ff4f59669b42" prot="public" static="no" mutable="no">
+        <type><ref refid="stdint_8h_1a3cb4a16b0e8d6af0af86d4fd6ba5fd9d" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t can_sja1000_config::ocr</definition>
+        <argsstring></argsstring>
+        <name>ocr</name>
+        <qualifiedname>can_sja1000_config::ocr</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/can/can_sja1000.h" line="108" column="9" bodyfile="zephyr/drivers/can/can_sja1000.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcan__sja1000__config_1a66f62e4f7efadf3b0454173e3795886d" prot="public" static="no" mutable="no">
+        <type><ref refid="stdint_8h_1a3cb4a16b0e8d6af0af86d4fd6ba5fd9d" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t can_sja1000_config::cdr</definition>
+        <argsstring></argsstring>
+        <name>cdr</name>
+        <qualifiedname>can_sja1000_config::cdr</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/can/can_sja1000.h" line="109" column="9" bodyfile="zephyr/drivers/can/can_sja1000.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcan__sja1000__config_1a31b21d7556a6c7d176cc955029310400" prot="public" static="no" mutable="no">
+        <type>const void *</type>
+        <definition>const void* can_sja1000_config::custom</definition>
+        <argsstring></argsstring>
+        <name>custom</name>
+        <qualifiedname>can_sja1000_config::custom</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/can/can_sja1000.h" line="110" column="12" bodyfile="zephyr/drivers/can/can_sja1000.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>SJA1000 driver internal configuration structure. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>can_driver_config</label>
+        <link refid="structcan__driver__config"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>phy</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>can_sja1000_config</label>
+        <link refid="structcan__sja1000__config"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>common</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>read_reg</edgelabel>
+          <edgelabel>write_reg</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>device</label>
+        <link refid="structdevice"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>state</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>ops</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>pm_base</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>pm</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>pm_isr</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>device_ops</label>
+        <link refid="structdevice__ops"/>
+      </node>
+      <node id="4">
+        <label>device_state</label>
+        <link refid="structdevice__state"/>
+      </node>
+      <node id="9">
+        <label>k_event</label>
+        <link refid="structk__event"/>
+      </node>
+      <node id="8">
+        <label>k_sem</label>
+        <link refid="structk__sem"/>
+      </node>
+      <node id="12">
+        <label>k_spinlock</label>
+        <link refid="structk__spinlock"/>
+      </node>
+      <node id="10">
+        <label>k_work_delayable</label>
+        <link refid="structk__work__delayable"/>
+      </node>
+      <node id="7">
+        <label>pm_device</label>
+        <link refid="structpm__device"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>dev</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>lock</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>event</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>work</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>pm_device_base</label>
+        <link refid="structpm__device__base"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>action_cb</edgelabel>
+        </childnode>
+      </node>
+      <node id="11">
+        <label>pm_device_isr</label>
+        <link refid="structpm__device__isr"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>lock</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="zephyr/drivers/can/can_sja1000.h" line="104" column="1" bodyfile="zephyr/drivers/can/can_sja1000.h" bodystart="104" bodyend="111"/>
+    <listofallmembers>
+      <member refid="structcan__sja1000__config_1a66f62e4f7efadf3b0454173e3795886d" prot="public" virt="non-virtual"><scope>can_sja1000_config</scope><name>cdr</name></member>
+      <member refid="structcan__sja1000__config_1a5f6b844c34defd6d63149629843e9dbb" prot="public" virt="non-virtual"><scope>can_sja1000_config</scope><name>common</name></member>
+      <member refid="structcan__sja1000__config_1a31b21d7556a6c7d176cc955029310400" prot="public" virt="non-virtual"><scope>can_sja1000_config</scope><name>custom</name></member>
+      <member refid="structcan__sja1000__config_1a7949f91e0d855d701771ff4f59669b42" prot="public" virt="non-virtual"><scope>can_sja1000_config</scope><name>ocr</name></member>
+      <member refid="structcan__sja1000__config_1a7db8fc3fbb3dfdb95d6f4d5999ec5646" prot="public" virt="non-virtual"><scope>can_sja1000_config</scope><name>read_reg</name></member>
+      <member refid="structcan__sja1000__config_1ab7a864dc361c9b4a9b5917df7566c403" prot="public" virt="non-virtual"><scope>can_sja1000_config</scope><name>write_reg</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

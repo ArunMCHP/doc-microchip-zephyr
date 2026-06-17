@@ -1,0 +1,954 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SAM E54 Xplained Pro &mdash; Zephyr Project Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/graphviz.css?v=4ae1632d" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/doxytooltip.css?v=07852572" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/togglebutton.css?v=9c3e77be" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/css/custom.css?v=b2ece5be" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/css/board.css?v=df47193c" />
+
+  
+    <link rel="shortcut icon" href="../../../../../_static/favicon.png"/>
+    <link rel="canonical" href="https://docs.zephyrproject.org/latest/boards/microchip/sam/sam_e54_xpro/doc/index.html" />
+      <script src="../../../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../../../_static/documentation_options.js?v=2f20d6c1"></script>
+      <script src="../../../../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../../../../_static/tippy/popper.min.js?v=f051b558"></script>
+      <script src="../../../../../_static/tippy/tippy-bundle.umd.min.js?v=873d6056"></script>
+      <script src="../../../../../_static/doxytooltip.js?v=ab77ca7a"></script>
+      <script src="../../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../../../../_static/copybutton.js?v=761fddf6"></script>
+      <script src="../../../../../_static/js/custom.js?v=1603dd89"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../../../../_static/togglebutton.js?v=b8b12719"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../../../../../_static/js/board.js?v=69b4ef71"></script>
+    <script src="../../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+    <link rel="next" title="SAMA7D65 Curiosity Kit" href="../../sama7d65_curiosity/doc/index.html" />
+    <link rel="prev" title="SAM E54 Curiosity Ultra" href="../../sam_e54_cult/doc/index.html" />
+  <meta name="color-scheme" content="dark light">
+  
+  <noscript id="dark-mode-toggle-stylesheets">
+    <link rel="stylesheet" href="../../../../../_static/css/light.css" type="text/css" media="(prefers-color-scheme: light)"/>
+    <link rel="stylesheet" href="../../../../../_static/css/dark.css" type="text/css" media="(prefers-color-scheme: dark)"/>
+  </noscript>
+  <script src="../../../../../_static/js/dark-mode-toggle-stylesheets-loader.min.js"></script>
+  <script type="module" src="../../../../../_static/js/dark-mode-toggle.min.mjs"></script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../../index.html">
+            
+              <img src="../../../../../_static/logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div class="search-container" role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="search" name="q" placeholder="Search docs"
+           aria-label="Search docs" />
+    <span id="search-se-settings-icon" class="fa fa-gear" role="button" tabindex="0"
+          title="Search settings" aria-label="Search settings"
+          aria-haspopup="menu" aria-controls="search-se-menu" aria-expanded="false"
+          onclick="toggleSearchEngineSettingsMenu()">
+    </span>
+    <div id="search-se-menu" role="menu" aria-labelledby="search-se-settings-icon">
+      <ul>
+        <li id="search-se-menuitem-sphinx" role="menuitemradio" tabindex="-1"
+            aria-label="Built-in search" onclick="switchSearchEngine('sphinx')">
+          Built-in search <span class="fa fa-check"></span>
+        </li>
+        <li id="search-se-menuitem-google" role="menuitemradio" tabindex="-1"
+            aria-label="Google search" onclick="switchSearchEngine('google')">
+          Google search <span class="fa fa-check"></span>
+        </li>
+      </ul>
+    </div>
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+<script>
+(function () {
+  var form = document.getElementById("rtd-search-form");
+  var searchMenu = document.getElementById("search-se-menu");
+  var isBrowsingLatest = window.location.pathname.startsWith("/latest");
+  var preferenceKey = "search-se-" + (isBrowsingLatest ? "latest" : "default");
+  var query = new URLSearchParams(window.location.search).get("q");
+
+  if (query !== null) {
+    form.q.value = query;
+    form.q.focus();
+  }
+
+  // Load the saved search preference. Defaults to Google when browsing "/latest" documentation,
+  // built-in Sphinx search otherwise.
+  var engine = localStorage.getItem(preferenceKey);
+  if (engine === null) {
+    engine = isBrowsingLatest ? "google" : "sphinx";
+  }
+  setActiveSearchEngine(engine);
+
+  setSearchEngineSettingsMenuVisibility = function (visible) {
+    searchMenu.style.display = visible ? "block" : "none";
+    document
+      .getElementById("search-se-settings-icon")
+      .setAttribute("aria-expanded", visible ? "true" : "false");
+  };
+  setSearchEngineSettingsMenuVisibility(false);
+
+  window.toggleSearchEngineSettingsMenu = function () {
+    isVisible = searchMenu.style.display === "block";
+    setSearchEngineSettingsMenuVisibility(!isVisible);
+  };
+
+  function setActiveSearchEngine(engine) {
+    if(engine === "sphinx") {
+      form.action = "../../../../../search.html";
+      form.q.placeholder = "Search docs (built-in search)";
+    } else {
+      form.action = "../../../../../gsearch.html";
+      form.q.placeholder = "Search docs (powered by Google)";
+    }
+
+    var selectedElement = document.getElementById("search-se-menuitem-" + engine);
+    var otherElement = document.getElementById(
+      "search-se-menuitem-" + (engine === "sphinx" ? "google" : "sphinx")
+    );
+
+    selectedElement.classList.add("selected");
+    selectedElement.setAttribute("aria-checked", "true");
+    otherElement.classList.remove("selected");
+    otherElement.setAttribute("aria-checked", "false");
+  }
+
+  window.switchSearchEngine = function (engine) {
+    setActiveSearchEngine(engine);
+    localStorage.setItem(preferenceKey, engine);
+    setSearchEngineSettingsMenuVisibility(false);
+    form.q.focus();
+    if (form.q.value !== "") {
+      form.submit();
+    }
+  };
+
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function (event) {
+    if (!event.target.matches("#search-se-settings-icon")) {
+      if (searchMenu.style.display === "block") {
+        setSearchEngineSettingsMenuVisibility(false);
+      }
+    }
+  };
+
+  document.addEventListener("keydown", function (event) {
+    if(searchMenu.style.display === "none") return;
+
+    let menuItems = document.querySelectorAll('[role="menuitemradio"]');
+    let currentIndex = Array.from(menuItems).findIndex((item) => item === document.activeElement);
+
+    if (event.key === "ArrowDown" || event.key === "ArrowUp") {
+      let nextIndex = event.key === "ArrowDown" ? currentIndex + 1 : currentIndex - 1;
+
+      if (nextIndex >= menuItems.length) nextIndex = 0;
+      if (nextIndex < 0) nextIndex = menuItems.length - 1;
+
+      menuItems[nextIndex].focus();
+      event.preventDefault();
+    } else if (event.key === "Enter") {
+      let activeItem = document.activeElement;
+      if (activeItem && activeItem.getAttribute("role") === "menuitemradio") {
+        activeItem.click();
+        event.preventDefault();
+      }
+    }
+  });
+})();
+</script>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+  <div data-nosnippet>
+    
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book"> Zephyr Project</span>
+      v: latest
+      <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+      <dl>
+        <dt>Document Release Versions</dt>
+        
+          <dd><a href="/">latest</a></dd>
+        
+          <dd><a href="/4.4.0/">4.4.0</a></dd>
+        
+          <dd><a href="/4.3.0/">4.3.0</a></dd>
+        
+          <dd><a href="/3.7.0/">3.7.0 (LTS)</a></dd>
+        
+      </dl>
+      <dl>
+        <dt>Downloads</dt>
+        
+        <dd><a href="/latest/zephyr.pdf">PDF</a></dd>
+      </dl>
+      <dl>
+        <dt>zephyrproject.org Links</dt>
+          <dd>
+            <a href="https://www.zephyrproject.org/">Project Home</a>
+          </dd>
+          <dd>
+            <a href="https://github.com/zephyrproject-rtos/sdk-ng/releases">SDK</a>
+          </dd>
+          <dd>
+            <a href="https://github.com/zephyrproject-rtos/zephyr/releases">Releases</a>
+          </dd>
+      </dl>
+    </div>
+  </div>
+    
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../introduction/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../develop/index.html">Developing with Zephyr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../kernel/index.html">Kernel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../services/index.html">OS Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../build/index.html">Build and Configuration Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../connectivity/index.html">Connectivity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../hardware/index.html">Hardware Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../contribute/index.html">Contributing to Zephyr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../project/index.html">Project and Governance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../security/index.html">Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../safety/index.html">Safety</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../samples/index.html">Samples and Demos</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../index.html">Supported Boards and Shields</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../../01space/index.html">01space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../96boards/index.html">96Boards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../aconno/index.html">Aconno</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../acrn/index.html">Project ACRN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../actinius/index.html">Actinius</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../adafruit/index.html">Adafruit Industries LLC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../adi/index.html">Analog Devices, Inc.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../aesc/index.html">Aesc Silicon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../aithinker/index.html">Ai-Thinker Co.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../alientek/index.html">Alientek</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../alif/index.html">Alif Semiconductor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../ambiq/index.html">Ambiq</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../amd/index.html">Advanced Micro Devices (AMD), Inc.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../andestech/index.html">Andes Technology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../antmicro/index.html">Antmicro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../arduino/index.html">Arduino</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../arm/index.html">ARM Ltd.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../aspeed/index.html">ASPEED Technology Inc.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../atmarktechno/index.html">Atmark Techno</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../atmel/index.html">Atmel Corporation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../bbc/index.html">BBC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../bcdevices/index.html">Blue Clover Devices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../beagle/index.html">BeagleBoard.org Foundation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../bflb/index.html">Bouffalo Lab Intelligent Technology (Nanjing) Co., Ltd.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../blackberry/index.html">BlackBerry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../blues/index.html">Blues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../brcm/index.html">Broadcom Corporation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../bytesatwork/index.html">bytesatwork</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../cdns/index.html">Cadence Design Systems Inc.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../circuitdojo/index.html">Circuit Dojo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../cirrus/index.html">Cirrus Logic, Inc.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../contextualelectronics/index.html">Contextual Electronics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../coredevices/index.html">Core Devices LLC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../croxel/index.html">Croxel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../ct/index.html">CTHINGS.CO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../cypress/index.html">Cypress</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../cytron/index.html">Cytron</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../dfrobot/index.html">DFRobot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../digilent/index.html">Digilent, Inc.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../doiting/index.html">Doctors of Intelligence &amp; Technology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../dptechnics/index.html">DPTechnics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../dragino/index.html">Dragino</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../ebyte/index.html">Chengdu Ebyte Electronic Technology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../efinix/index.html">Efinix, Inc.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../egis/index.html">Egis Technology Inc.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../elan/index.html">Elan Microelectronics Corp.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../electronut/index.html">Electronut Labs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../element14/index.html">Element 14</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../embedsky/index.html">Guangdong Embedsky Technology Co., Ltd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../ene/index.html">ENE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../enjoydigital/index.html">EnjoyDigital</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../espressif/index.html">Espressif</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../ezurio/index.html">Ezurio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../fanke/index.html">Fanke</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../firefly/index.html">Firefly</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../fobe/index.html">FoBE Studio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../framework/index.html">Framework Computer Inc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../franzininho/index.html">Franzininho</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../fysetc/index.html">FYSETC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../gaisler/index.html">Gaisler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../gardena/index.html">GARDENA GmbH</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../gd/index.html">GigaDevice Semiconductor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../google/index.html">Google, Inc.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../hardkernel/index.html">HardKernel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../heltec/index.html">Heltec</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../holyiot/index.html">Shenzhen Holyiot Technology Co.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../iar/index.html">IAR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../infineon/index.html">Infineon Technologies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../innblue/index.html">innblue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../intel/index.html">Intel Corporation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../ite/index.html">ITE Tech. Inc.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../khadas/index.html">Khadas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../kincony/index.html">Kincony</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../kws/index.html">KWS Computersysteme Gmbh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../lilygo/index.html">Lilygo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../longan/index.html">Longan Labs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../lowrisc/index.html">lowRISC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../luatos/index.html">Luatos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../m5stack/index.html">M5Stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../madmachine/index.html">Mad Machine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../makerbase/index.html">Makerbase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../makerdiary/index.html">Maker Diary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../mediatek/index.html">Mediatek Audio DSPs</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../index.html">Microchip Technology Inc.</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../../ev11l78a/doc/index.html">UPD301C Basic Sink Application Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../m2gl025_miv/doc/index.html">M2GL025 Mi-V</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../mec1501modular_assy6885/doc/index.html">MEC1501 Modular card ASSY6885</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../mec15xxevb_assy6853/doc/index.html">MEC15xxEVB ASSY6853</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../mec172xevb_assy6906/doc/index.html">MEC172xEVB ASSY6906</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../mec172xmodular_assy6930/doc/mec172xmodular_assy6930.html">MEC172x Modular Card ASSY6930 (Rev. B)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../mec_assy6941/doc/index.html">MEC17xxEVB ASSY6941</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../mpfs_icicle/doc/index.html">mpfs_icicle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pic32c/pic32ck_gc01_cult/doc/index.html">PIC32CK GC01 Curiosity Ultra</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pic32c/pic32ck_sg01_cult/doc/index.html">PIC32CK SG01 Curiosity Ultra</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pic32c/pic32cm_gc00_cpro/doc/index.html">PIC32CM GC00 Curiosity Pro</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pic32c/pic32cm_jh01_cnano/doc/index.html">PIC32CM JH01 Curiosity Nano+ Touch Evaluation Kit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pic32c/pic32cm_jh01_cpro/doc/index.html">PIC32CM JH01 Curiosity Pro</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pic32c/pic32cm_pl10_cnano/doc/index.html">PIC32CM PL10 Curiosity Nano</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pic32c/pic32cm_sg00_cpro/doc/index.html">PIC32CM SG00 Curiosity Pro</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pic32c/pic32cx_sg41_cult/doc/index.html">PIC32CX SG41 Curiosity Ultra</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pic32c/pic32cx_sg61_cult/doc/index.html">PIC32CX SG61 Curiosity Ultra</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pic32c/pic32cz_ca80_cult/doc/index.html">PIC32CZ CA80 Curiosity Ultra</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pic32c/pic32cz_ca90_cult/doc/index.html">PIC32CZ CA90 Curiosity Ultra</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pic64gx_curiosity_kit/doc/index.html">pic64gx_curiosity_kit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../sam9x75_curiosity/doc/index.html">SAM9X75 Curiosity LAN Kit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../sam_e54_cult/doc/index.html">SAM E54 Curiosity Ultra</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">SAM E54 Xplained Pro</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hardware">Hardware</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#supported-features">Supported Features</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#connections-and-ios">Connections and IOs</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#programming-and-debugging">Programming and Debugging</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#references">References</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../sama7d65_curiosity/doc/index.html">SAMA7D65 Curiosity Kit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../sama7g54_ek/doc/index.html">SAMA7G54 Evaluation Kit</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../mikroe/index.html">MikroElektronika d.o.o.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../mxchip/index.html">MXCHIP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../native/index.html">POSIX/Native Boards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../nordic/index.html">Nordic Semiconductor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../norik/index.html">Norik Systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../nuvoton/index.html">Nuvoton Technology Corporation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../nxp/index.html">NXP Semiconductors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../oct/index.html">Octavo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../olimex/index.html">OLIMEX Ltd.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../openhwgroup/index.html">OpenHW Group</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../openisa/index.html">OpenISA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../others/index.html">Other and unknown vendors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../panasonic/index.html">Panasonic Corporation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../particle/index.html">Particle Industries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../pcbcupid/index.html">PCB Cupid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../peregrine/index.html">Peregrine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../phytec/index.html">PHYTEC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../pimoroni/index.html">Pimoroni Ltd.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../pine64/index.html">Pine64</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../pjrc/index.html">PJRC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../qcom/index.html">Qualcomm Technologies, Inc.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../qemu/index.html">QEMU</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../qorvo/index.html">Qorvo, Inc.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../quicklogic/index.html">QuickLogic Corp.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rakwireless/index.html">RAKwireless</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../raspberrypi/index.html">Raspberry Pi Foundation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../raytac/index.html">Raytac Corporation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../realtek/index.html">Realtek</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../renesas/index.html">Renesas Electronics Corporation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../renode/index.html">Renode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../retronix/index.html">Retronix Technology Inc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../ronoth/index.html">Ronoth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../ruiside/index.html">Ruiside</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../ruuvi/index.html">Ruuvi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../sc/index.html">Space Cubics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../seagate/index.html">Seagate Technology PLC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../seco/index.html">SECO SpA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../seeed/index.html">Seeed Technology Co., Ltd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../segger/index.html">SEGGER Microcontroller GmbH</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../sensry/index.html">Sensry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../shields/index.html">Shields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../sifive/index.html">SiFive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../sifli/index.html">SiFli Technologies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../silabs/index.html">Silicon Labs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../sipeed/index.html">Sipeed</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../snps/index.html">Synopsys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../solderedelectronics/index.html">Soldered Electronics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../sparkfun/index.html">SparkFun Electronics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../st/index.html">STMicroelectronics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../starfive/index.html">StarFive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../steelseries/index.html">SteelSeries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../syna/index.html">Synaptics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../tdk/index.html">TDK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../technexion/index.html">TECHNEXION</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../telink/index.html">Telink Semiconductor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../thirdreality/index.html">Third Reality, Inc.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../ti/index.html">Texas Instruments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../toradex/index.html">Toradex</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../u-blox/index.html">u-blox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../udoo/index.html">UDOO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../up-bridge-the-gap/index.html">UP Bridge the Gap.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../variscite/index.html">Variscite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../vcc-gnd/index.html">VCC-GND</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../vicharak/index.html">Vicharak</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../viewe/index.html">VIEWE Display Co., Ltd.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../vngiotlab/index.html">VNG Corporation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../waveshare/index.html">Waveshare Electronics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../wch/index.html">WCH - Nanjing Qinheng Microelectronics Co.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../we/index.html">Würth Elektronik</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../weact/index.html">WeAct Studio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../wemos/index.html">Wemos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../witte/index.html">Witte</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../wiznet/index.html">WIZnet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../xen/index.html">Xen Hypervisor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../xunlong/index.html">Shenzhen Xunlong Software Co., Limited</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../releases/index.html">Releases</a></li>
+</ul>
+
+    
+    <div class="toctree-wrapper compound">
+      <p class="caption"><span class="caption-text">Reference</span></p>
+      <ul>
+        
+        <li class="toctree-l1">
+          <a class="reference internal" href="/doxygen/html/index.html">API</a>
+        </li>
+        
+        <li class="toctree-l1">
+          <a class="reference internal" href="/kconfig.html">Kconfig Options</a>
+        </li>
+        
+        <li class="toctree-l1">
+          <a class="reference internal" href="/build/dts/api/bindings.html">Devicetree Bindings</a>
+        </li>
+        
+        <li class="toctree-l1">
+          <a class="reference internal" href="/develop/manifest/index.html">West Projects</a>
+        </li>
+        
+        <li class="toctree-l1">
+          <a class="reference internal" href="/glossary.html">Glossary</a>
+        </li>
+        
+      </ul>
+    </div>
+    
+  </div>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">Zephyr Project</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+  <!-- Docs / Latest -->
+  
+  
+
+  <li><a href="../../../../../index.html">Docs / Latest</a> &raquo;</li>
+  
+     <li><a href="../../../../index.html">Supported Boards and Shields</a> &raquo;</li>
+  
+     <li><a href="../../../index.html">Microchip Technology Inc.</a> &raquo;</li>
+  
+  <li>SAM E54 Xplained Pro</li>
+
+
+  <li class="wy-breadcrumbs-aside">
+    <dark-mode-toggle id="dark-mode-toggle" appearance="three-way" permanent="true"/>
+  </li>
+  <li class="wy-breadcrumbs-aside">
+      
+      
+        <a href="https://github.com/zephyrproject-rtos/zephyr/blob/main//boards/microchip/sam/sam_e54_xpro/doc/index.rst" class="fa fa-github"> Open on GitHub</a>
+      
+        <a href="https://github.com/zephyrproject-rtos/zephyr/issues/new?template=001_bug_report.yml&title=doc%3A+Documentation+issue+in+%27boards%2Fmicrochip%2Fsam%2Fsam_e54_xpro%2Fdoc%2Findex%27&labels=bug%2Carea%3A+Documentation%2Carea%3A+Boards%2FSoCs&env=-+Page%3A+boards%2Fmicrochip%2Fsam%2Fsam_e54_xpro%2Fdoc%2Findex%0A-+Version%3A+main%0A-+SHA-1%3A+8d44550d4c58063d3145d9c97d422ac7c3f662fc&context=This+issue+was+reported+from+the+online+documentation+page+using+the+%27Report+an+issue%27+button." class="fa fa-bug">
+          Report an issue with this page
+        </a>
+      
+    
+  </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+  
+  
+           <div itemprop="articleBody">
+             
+  <section id="sam_e54_xpro">
+<h1>SAM E54 Xplained Pro<a class="headerlink" href="#sam_e54_xpro" title="Link to this heading"></a></h1>
+<aside class="board-overview sidebar">
+<p class="sidebar-title">Board Overview</p>
+<figure class="align-default" id="id1">
+<a class="reference internal image-reference" href="../../../../../_images/sam_e54_xpro.webp"><img alt="../../../../../_images/sam_e54_xpro.webp" height="543" src="../../../../../_images/sam_e54_xpro.webp" width="800" />
+</a>
+<figcaption>
+<p><span class="caption-text">SAM E54 Xplained Pro</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<dl class="field-list">
+<dt class="field-odd">Name<span class="colon">:</span></dt>
+<dd class="field-odd"><code class="docutils literal notranslate"><span class="pre">sam_e54_xpro</span></code></dd>
+<dt class="field-even">Vendor<span class="colon">:</span></dt>
+<dd class="field-even"><p>Microchip Technology Inc.</p>
+</dd>
+<dt class="field-odd">Status<span class="colon">:</span></dt>
+<dd class="field-odd"><p><abbr title="No active maintainer on file, but contributions are welcome">Not actively maintained</abbr></p>
+</dd>
+<dt class="field-even">Architecture<span class="colon">:</span></dt>
+<dd class="field-even"><p>arm</p>
+</dd>
+<dt class="field-odd">SoC<span class="colon">:</span></dt>
+<dd class="field-odd"><p>atsame54p20a</p>
+</dd>
+</dl>
+
+                <div id="board-github-link">
+                    <a href="https://github.com/zephyrproject-rtos/zephyr/blob/main//boards/microchip/sam/sam_e54_xpro/doc/index.rst/../.." class="btn btn-info fa fa-github"
+                        target="_blank">
+                        Browse board sources
+                    </a>
+                </div>
+                </aside>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>The SAM E54 Xplained Pro evaluation kit is ideal for evaluation and
+prototyping with the SAM E54 Cortex®-M4F processor-based
+microcontrollers. The kit includes Microchip’s Embedded Debugger (EDBG),
+which provides a full debug interface without the need for additional
+hardware.</p>
+</section>
+<section id="hardware">
+<h2>Hardware<a class="headerlink" href="#hardware" title="Link to this heading"></a></h2>
+<ul>
+<li><p>ATSAME54P20A ARM Cortex-M4F processor at 120 MHz</p></li>
+<li><p>32.768 kHz crystal oscillator</p></li>
+<li><p>12 MHz crystal oscillator</p></li>
+<li><p>1024 KiB flash memory and 256 KiB of RAM</p></li>
+<li><p>One yellow user LED</p></li>
+<li><p>One mechanical user push button</p></li>
+<li><p>One reset button</p></li>
+<li><p>On-board USB based EDBG unit with serial console</p></li>
+<li><p>One QTouch® PTC button</p></li>
+<li><p>32 MiB QSPI Flash</p></li>
+<li><p>ATECC508 CryptoAuthentication™  device</p></li>
+<li><p>AT24MAC402 serial EEPROM with EUI-48™ MAC address</p></li>
+<li><p>Ethernet</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>RJ45 connector with built-in magnetics</p></li>
+<li><p>KSZ8091RNA PHY</p></li>
+<li><p>10Base-T/100Base-TX IEE 802.3 compliant Ethernet transceiver</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>USB interface, host, and device</p></li>
+<li><p>SD/SDIO card connector</p></li>
+</ul>
+<section id="supported-features">
+<h3>Supported Features<a class="headerlink" href="#supported-features" title="Link to this heading"></a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">sam_e54_xpro</span></code> board supports the hardware features listed below.</p>
+<div class="legend admonition">
+  <dl class="supported-hardware field-list">
+    <dt>
+      <span class="location-chip onchip">on-chip</span> /
+      <span class="location-chip onboard">on-board</span>
+    </dt>
+    <dd>
+      Feature integrated in the SoC / present on the board.
+    </dd>
+    <dt>
+      <span class="count okay-count">2</span> /
+      <span class="count disabled-count">2</span>
+    </dt>
+    <dd>
+      Number of instances that are enabled / disabled. <br/>
+      Click on the label to see the first instance of this feature in the board/SoC DTS files.
+    </dd>
+    <dt>
+      <code class="docutils literal notranslate"><span class="pre">vnd,foo</span></code>
+    </dt>
+    <dd>
+      Compatible string for the Devicetree binding matching the feature. <br/>
+      Click on the link to view the binding documentation.
+    </dd>
+  </dl>
+</div><div class="docutils container" id="sam_e54_xpro-hw-features">
+<section id="sam_e54_xpro-sam_e54_xpro/atsame54p20a-hw-features-section">
+<h4><code class="docutils literal notranslate"><span class="pre">sam_e54_xpro/atsame54p20a</span></code> target<a class="headerlink" href="#sam_e54_xpro-sam_e54_xpro/atsame54p20a-hw-features-section" title="Link to this heading"></a></h4>
+</section>
+<table class="hardware-features docutils align-default" id="sam_e54_xpro-sam_e54_xpro/atsame54p20a-hw-features-table">
+<colgroup class="compatible">
+<col class="type" style="width: 15.0%" />
+<col class="location" style="width: 12.0%" />
+<col class="description" style="width: 53.0%" />
+<col class="compatible" style="width: 20.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head type"><p>Type</p></th>
+<th class="head location"><p>Location</p></th>
+<th class="head description"><p>Description</p></th>
+<th class="head compatible"><p>Compatible</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="type" rowspan="1"><p><span><abbr title="Central Processing Unit">CPU</abbr></span></p></td>
+<td class="location"><p><span class="location-chip onchip">on-chip</span></p></td>
+<td class="description"><p class="status">ARM Cortex-M4F CPU<a class="count okay-count reference external" href="https://github.com/Zephyr4Microchip/microchip-zephyr/blob/fa2816afd28db4863e22ab4b6385bad4aec8c977/dts/arm/microchip/sam/sam_d5x_e5x/common/samd5xe5x.dtsi?plain=1#L22">1</a></p></td>
+<td class="compatible"><p><a class="reference internal" href="../../../../../build/dts/api/bindings/cpu/arm%2Ccortex-m4f.html#std-dtcompatible-arm-cortex-m4f"><code class="docutils literal notranslate"><span class="pre">arm,cortex-m4f</span></code></a></p></td>
+</tr>
+<tr class="row-odd"><td class="type" rowspan="1"><p><span><abbr title="Analog to Digital Converter">ADC</abbr></span></p></td>
+<td class="location"><p><span class="location-chip onchip">on-chip</span></p></td>
+<td class="description"><p class="status"><span>Microchip ADC G1 Driver</span><a class="count disabled-count reference external" href="https://github.com/Zephyr4Microchip/microchip-zephyr/blob/fa2816afd28db4863e22ab4b6385bad4aec8c977/dts/arm/microchip/sam/sam_d5x_e5x/common/samd5xe5x.dtsi?plain=1#L409">2</a></p></td>
+<td class="compatible"><p><a class="reference internal" href="../../../../../build/dts/api/bindings/adc/microchip%2Cadc-g1.html#std-dtcompatible-microchip-adc-g1"><code class="docutils literal notranslate"><span class="pre">microchip,adc-g1</span></code></a></p></td>
+</tr>
+<tr class="row-even"><td class="type" rowspan="1"><p><span>ARM architecture</span></p></td>
+<td class="location"><p><span class="location-chip onchip">on-chip</span></p></td>
+<td class="description"><p class="status"><span>Microchip <abbr title="Serial Communication">SERCOM</abbr> module</span><a class="count disabled-count reference external" href="https://github.com/Zephyr4Microchip/microchip-zephyr/blob/fa2816afd28db4863e22ab4b6385bad4aec8c977/dts/arm/microchip/sam/sam_d5x_e5x/common/samd5xe5x.dtsi?plain=1#L299">2</a></p></td>
+<td class="compatible"><p><a class="reference internal" href="../../../../../build/dts/api/bindings/arm/microchip%2Csercom-g1.html#std-dtcompatible-microchip-sercom-g1"><code class="docutils literal notranslate"><span class="pre">microchip,sercom-g1</span></code></a></p></td>
+</tr>
+<tr class="row-odd"><td class="type" rowspan="10"><p><span>Clock control</span></p></td>
+<td class="location"><p><span class="location-chip onchip">on-chip</span></p></td>
+<td class="description"><p class="status"><span>Microchip SAM_D5x_E5x SOC family clock</span><a class="count okay-count reference external" href="https://github.com/Zephyr4Microchip/microchip-zephyr/blob/fa2816afd28db4863e22ab4b6385bad4aec8c977/dts/arm/microchip/sam/sam_d5x_e5x/common/samd5xe5x.dtsi?plain=1#L49">1</a></p></td>
+<td class="compatible"><p><a class="reference internal" href="../../../../../build/dts/api/bindings/clock/microchip/sam_d5x_e5x/microchip%2Csam-d5x-e5x-clock.html#std-dtcompatible-microchip-sam-d5x-e5x-clock"><code class="docutils literal notranslate"><span class="pre">microchip,sam-d5x-e5x-clock</span></code></a></p></td>
+</tr>
+<tr class="row-even"><td class="location"><p><span class="location-chip onchip">on-chip</span></p></td>
+<td class="description"><p class="status"><span>SAM_D5x_E5x Crystal Oscillator (XOSC)</span><a class="count okay-count reference external" href="https://github.com/Zephyr4Microchip/microchip-zephyr/blob/fa2816afd28db4863e22ab4b6385bad4aec8c977/dts/arm/microchip/sam/sam_d5x_e5x/common/samd5xe5x.dtsi?plain=1#L60">1</a></p></td>
+<td class="compatible"><p><a class="reference internal" href="../../../../../build/dts/api/bindings/clock/microchip/sam_d5x_e5x/microchip%2Csam-d5x-e5x-xosc.html#std-dtcompatible-microchip-sam-d5x-e5x-xosc"><code class="docutils literal notranslate"><span class="pre">microchip,sam-d5x-e5x-xosc</span></code></a></p></td>
+</tr>
+<tr class="row-odd"><td class="location"><p><span class="location-chip onchip">on-chip</span></p></td>
+<td class="description"><p class="status"><span>SAM_D5x_E5x Internal Oscillator (OSC48M)</span><a class="count okay-count reference external" href="https://github.com/Zephyr4Microchip/microchip-zephyr/blob/fa2816afd28db4863e22ab4b6385bad4aec8c977/dts/arm/microchip/sam/sam_d5x_e5x/common/samd5xe5x.dtsi?plain=1#L64">1</a></p></td>
+<td class="compatible"><p><a class="reference internal" href="../../../../../build/dts/api/bindings/clock/microchip/sam_d5x_e5x/microchip%2Csam-d5x-e5x-dfll.html#std-dtcompatible-microchip-sam-d5x-e5x-dfll"><code class="docutils literal notranslate"><span class="pre">microchip,sam-d5x-e5x-dfll</span></code></a></p></td>
+</tr>
+<tr class="row-even"><td class="location"><p><span class="location-chip onchip">on-chip</span></p></td>
+<td class="description"><p class="status"><span>SAM_D5x_E5x FDPLL clock</span><a class="count okay-count reference external" href="https://github.com/Zephyr4Microchip/microchip-zephyr/blob/fa2816afd28db4863e22ab4b6385bad4aec8c977/dts/arm/microchip/sam/sam_d5x_e5x/common/samd5xe5x.dtsi?plain=1#L68">1</a></p></td>
+<td class="compatible"><p><a class="reference internal" href="../../../../../build/dts/api/bindings/clock/microchip/sam_d5x_e5x/microchip%2Csam-d5x-e5x-fdpll.html#std-dtcompatible-microchip-sam-d5x-e5x-fdpll"><code class="docutils literal notranslate"><span class="pre">microchip,sam-d5x-e5x-fdpll</span></code></a></p></td>
+</tr>
+<tr class="row-odd"><td class="location"><p><span class="location-chip onchip">on-chip</span></p></td>
+<td class="description"><p class="status"><span>SAM_D5x_E5x RTC clock</span><a class="count okay-count reference external" href="https://github.com/Zephyr4Microchip/microchip-zephyr/blob/fa2816afd28db4863e22ab4b6385bad4aec8c977/dts/arm/microchip/sam/sam_d5x_e5x/common/samd5xe5x.dtsi?plain=1#L72">1</a></p></td>
+<td class="compatible"><p><a class="reference internal" href="../../../../../build/dts/api/bindings/clock/microchip/sam_d5x_e5x/microchip%2Csam-d5x-e5x-rtc.html#std-dtcompatible-microchip-sam-d5x-e5x-rtc"><code class="docutils literal notranslate"><span class="pre">microchip,sam-d5x-e5x-rtc</span></code></a></p></td>
+</tr>
+<tr class="row-even"><td class="location"><p><span class="location-chip onchip">on-chip</span></p></td>
+<td class="description"><p class="status"><span>SAM_D5x_E5x External Crystal Oscillator (XOSC32K)</span><a class="count okay-count reference external" href="https://github.com/Zephyr4Microchip/microchip-zephyr/blob/fa2816afd28db4863e22ab4b6385bad4aec8c977/dts/arm/microchip/sam/sam_d5x_e5x/common/samd5xe5x.dtsi?plain=1#L77">1</a></p></td>
+<td class="compatible"><p><a class="reference internal" href="../../../../../build/dts/api/bindings/clock/microchip/sam_d5x_e5x/microchip%2Csam-d5x-e5x-xosc32k.html#std-dtcompatible-microchip-sam-d5x-e5x-xosc32k"><code class="docutils literal notranslate"><span class="pre">microchip,sam-d5x-e5x-xosc32k</span></code></a></p></td>
+</tr>
+<tr class="row-odd"><td class="location"><p><span class="location-chip onchip">on-chip</span></p></td>
+<td class="description"><p class="status"><span>SAM_D5x_E5x Generic clock generator</span><a class="count okay-count reference external" href="https://github.com/Zephyr4Microchip/microchip-zephyr/blob/fa2816afd28db4863e22ab4b6385bad4aec8c977/dts/arm/microchip/sam/sam_d5x_e5x/common/samd5xe5x.dtsi?plain=1#L81">1</a></p></td>
+<td class="compatible"><p><a class="reference internal" href="../../../../../build/dts/api/bindings/clock/microchip/sam_d5x_e5x/microchip%2Csam-d5x-e5x-gclkgen.html#std-dtcompatible-microchip-sam-d5x-e5x-gclkgen"><code class="docutils literal notranslate"><span class="pre">microchip,sam-d5x-e5x-gclkgen</span></code></a></p></td>
+</tr>
+<tr class="row-even"><td class="location"><p><span class="location-chip onchip">on-chip</span></p></td>
+<td class="description"><p class="status"><span>SAM_D5x_E5x Generic clock peripheral</span><a class="count okay-count reference external" href="https://github.com/Zephyr4Microchip/microchip-zephyr/blob/fa2816afd28db4863e22ab4b6385bad4aec8c977/dts/arm/microchip/sam/sam_d5x_e5x/common/samd5xe5x.dtsi?plain=1#L85">1</a></p></td>
+<td class="compatible"><p><a class="reference internal" href="../../../../../build/dts/api/bindings/clock/microchip/sam_d5x_e5x/microchip%2Csam-d5x-e5x-gclkperiph.html#std-dtcompatible-microchip-sam-d5x-e5x-gclkperiph"><code class="docutils literal notranslate"><span class="pre">microchip,sam-d5x-e5x-gclkperiph</span></code></a></p></td>
+</tr>
+<tr class="row-odd"><td class="location"><p><span class="location-chip onchip">on-chip</span></p></td>
+<td class="description"><p class="status"><span>SAM_D5x_E5x Main clock for CPU</span><a class="count okay-count reference external" href="https://github.com/Zephyr4Microchip/microchip-zephyr/blob/fa2816afd28db4863e22ab4b6385bad4aec8c977/dts/arm/microchip/sam/sam_d5x_e5x/common/samd5xe5x.dtsi?plain=1#L90">1</a></p></td>
+<td class="compatible"><p><a class="reference internal" href="../../../../../build/dts/api/bindings/clock/microchip/sam_d5x_e5x/microchip%2Csam-d5x-e5x-mclkcpu.html#std-dtcompatible-microchip-sam-d5x-e5x-mclkcpu"><code class="docutils literal notranslate"><span class="pre">microchip,sam-d5x-e5x-mclkcpu</span></code></a></p></td>
+</tr>
+<tr class="row-even"><td class="location"><p><span class="location-chip onchip">on-chip</span></p></td>
+<td class="description"><p class="status"><span>SAM_D5x_E5x <abbr title="Main Clock">MCLK</abbr> peripheral</span><a class="count okay-count reference external" href="https://github.com/Zephyr4Microchip/microchip-zephyr/blob/fa2816afd28db4863e22ab4b6385bad4aec8c977/dts/arm/microchip/sam/sam_d5x_e5x/common/samd5xe5x.dtsi?plain=1#L95">1</a></p></td>
+<td class="compatible"><p><a class="reference internal" href="../../../../../build/dts/api/bindings/clock/microchip/sam_d5x_e5x/microchip%2Csam-d5x-e5x-mclkperiph.html#std-dtcompatible-microchip-sam-d5x-e5x-mclkperiph"><code class="docutils literal notranslate"><span class="pre">microchip,sam-d5x-e5x-mclkperiph</span></code></a></p></td>
+</tr>
+<tr class="row-odd"><td class="type" rowspan="1"><p><span>Comparator</span></p></td>
+<td class="location"><p><span class="location-chip onchip">on-chip</span></p></td>
+<td class="description"><p class="status"><span>Microchip G1 Analog Comparator</span><a class="count disabled-count reference external" href="https://github.com/Zephyr4Microchip/microchip-zephyr/blob/fa2816afd28db4863e22ab4b6385bad4aec8c977/dts/arm/microchip/sam/sam_d5x_e5x/common/samd5xe5x.dtsi?plain=1#L370">1</a></p></td>
+<td class="compatible"><p><a class="reference internal" href="../../../../../build/dts/api/bindings/comparator/microchip%2Cac-g1-comparator.html#std-dtcompatible-microchip-ac-g1-comparator"><code class="docutils literal notranslate"><span class="pre">microchip,ac-g1-comparator</span></code></a></p></td>
+</tr>
+<tr class="row-even"><td class="type" rowspan="2"><p><span>Counter</span></p></td>
+<td class="location"><p><span class="location-chip onchip">on-chip</span></p></td>
+<td class="description"><p class="status"><span>Microchip TC g1 peripheral.</span><a class="count disabled-count reference external" href="https://github.com/Zephyr4Microchip/microchip-zephyr/blob/fa2816afd28db4863e22ab4b6385bad4aec8c977/dts/arm/microchip/sam/sam_d5x_e5x/common/samd5xe5x.dtsi?plain=1#L192">7</a></p></td>
+<td class="compatible"><p><a class="reference internal" href="../../../../../build/dts/api/bindings/counter/microchip%2Ctc-g1.html#std-dtcompatible-microchip-tc-g1"><code class="docutils literal notranslate"><span class="pre">microchip,tc-g1</span></code></a></p></td>
+</tr>
+<tr class="row-odd"><td class="location"><p><span class="location-chip onchip">on-chip</span></p></td>
+<td class="description"><p class="status"><span>Microchip TCC G1 timer counter peripheral.</span><a class="count okay-count reference external" href="https://github.com/Zephyr4Microchip/microchip-zephyr/blob/fa2816afd28db4863e22ab4b6385bad4aec8c977/dts/arm/microchip/sam/sam_d5x_e5x/common/samd5xe5x.dtsi?plain=1#L359">3</a><a class="count disabled-count reference external" href="https://github.com/Zephyr4Microchip/microchip-zephyr/blob/fa2816afd28db4863e22ab4b6385bad4aec8c977/dts/arm/microchip/sam/sam_d5x_e5x/common/samd5xe5x.dtsi?plain=1#L320">1</a></p></td>
+<td class="compatible"><p><a class="reference internal" href="../../../../../build/dts/api/bindings/counter/microchip%2Ctcc-g1.html#std-dtcompatible-microchip-tcc-g1"><code class="docutils literal notranslate"><span class="pre">microchip,tcc-g1</span></code></a></p></td>
+</tr>
+<tr class="row-even"><td class="type" rowspan="1"><p><span><abbr title="Digital to Analog Converter">DAC</abbr></span></p></td>
+<td class="location"><p><span class="location-chip onchip">on-chip</span></p></td>
+<td class="description"><p class="status"><span>Microchip G1 DAC</span><a class="count disabled-count reference external" href="https://github.com/Zephyr4Microchip/microchip-zephyr/blob/fa2816afd28db4863e22ab4b6385bad4aec8c977/dts/arm/microchip/sam/sam_d5x_e5x/common/samd5xe5x.dtsi?plain=1#L445">1</a></p></td>
+<td class="compatible"><p><a class="reference internal" href="../../../../../build/dts/api/bindings/dac/microchip%2Cdac-g1.html#std-dtcompatible-microchip-dac-g1"><code class="docutils literal notranslate"><span class="pre">microchip,dac-g1</span></code></a></p></td>
+</tr>
+<tr class="row-odd"><td class="type" rowspan="1"><p><span><abbr title="Direct Memory Access">DMA</abbr></span></p></td>
+<td class="location"><p><span class="location-chip onchip">on-chip</span></p></td>
+<td class="description"><p class="status"><span>Microchip G1 DMA Controller</span><a class="count okay-count reference external" href="https://github.com/Zephyr4Microchip/microchip-zephyr/blob/fa2816afd28db4863e22ab4b6385bad4aec8c977/dts/arm/microchip/sam/sam_d5x_e5x/common/samd5xe5x.dtsi?plain=1#L278">1</a></p></td>
+<td class="compatible"><p><a class="reference internal" href="../../../../../build/dts/api/bindings/dma/microchip%2Cdmac-g1-dma.html#std-dtcompatible-microchip-dmac-g1-dma"><code class="docutils literal notranslate"><span class="pre">microchip,dmac-g1-dma</span></code></a></p></td>
+</tr>
+<tr class="row-even"><td class="type" rowspan="3"><p><span>Ethernet</span></p></td>
+<td class="location"><p><span class="location-chip onchip">on-chip</span></p></td>
+<td class="description"><p class="status">Microchip GMAC Ethernet binding<a class="count okay-count reference external" href="https://github.com/Zephyr4Microchip/microchip-zephyr/blob/fa2816afd28db4863e22ab4b6385bad4aec8c977/dts/arm/microchip/sam/sam_d5x_e5x/common/same54.dtsi?plain=1#L9">1</a></p></td>
+<td class="compatible"><p><a class="reference internal" href="../../../../../build/dts/api/bindings/ethernet/microchip%2Cgmac-g1-eth.html#std-dtcompatible-microchip-gmac-g1-eth"><code class="docutils literal notranslate"><span class="pre">microchip,gmac-g1-eth</span></code></a></p></td>
+</tr>
+<tr class="row-odd"><td class="location"><p><span class="location-chip onchip">on-chip</span></p></td>
+<td class="description"><p class="status">Microchip GMAC MDIO binding<a class="count okay-count reference external" href="https://github.com/Zephyr4Microchip/microchip-zephyr/blob/fa2816afd28db4863e22ab4b6385bad4aec8c977/dts/arm/microchip/sam/sam_d5x_e5x/common/same54.dtsi?plain=1#L20">1</a></p></td>
+<td class="compatible"><p><a class="reference internal" href="../../../../../build/dts/api/bindings/ethernet/mdio/microchip%2Cgmac-g1-mdio.html#std-dtcompatible-microchip-gmac-g1-mdio"><code class="docutils literal notranslate"><span class="pre">microchip,gmac-g1-mdio</span></code></a></p></td>
+</tr>
+<tr class="row-even"><td class="location"><p><span class="location-chip onboard">on-board</span></p></td>
+<td class="description"><p class="status">Generic MII PHY<a class="count okay-count reference external" href="https://github.com/Zephyr4Microchip/microchip-zephyr/blob/fa2816afd28db4863e22ab4b6385bad4aec8c977/boards/microchip/sam/sam_e54_xpro/sam_e54_xpro.dts?plain=1#L511">1</a></p></td>
+<td class="compatible"><p><a class="reference internal" href="../../../../../build/dts/api/bindings/ethernet/phy/ethernet-phy.html#std-dtcompatible-ethernet-phy"><code class="docutils literal notranslate"><span class="pre">ethernet-phy</span></code></a></p></td>
+</tr>
+<tr class="row-odd"><td class="type" rowspan="1"><p><span>Flash controller</span></p></td>
+<td class="location"><p><span class="location-chip onchip">on-chip</span></p></td>
+<td class="description"><p class="status"><span>Microchip <abbr title="Nonvolatile Memory Controller">NVMCTRL</abbr></span><a class="count okay-count reference external" href="https://github.com/Zephyr4Microchip/microchip-zephyr/blob/fa2816afd28db4863e22ab4b6385bad4aec8c977/dts/arm/microchip/sam/sam_d5x_e5x/common/samd5xe5x_20.dtsi?plain=1#L13">1</a></p></td>
+<td class="compatible"><p><a class="reference internal" href="../../../../../build/dts/api/bindings/flash_controller/microchip%2Cnvmctrl-g1-flash.html#std-dtcompatible-microchip-nvmctrl-g1-flash"><code class="docutils literal notranslate"><span class="pre">microchip,nvmctrl-g1-flash</span></code></a></p></td>
+</tr>
+<tr class="row-even"><td class="type" rowspan="2"><p><span><abbr title="General Purpose Input/Output">GPIO</abbr> &amp; Headers</span></p></td>
+<td class="location"><p><span class="location-chip onchip">on-chip</span></p></td>
+<td class="description"><p class="status"><span>Microchip Port G1 GPIO</span><a class="count okay-count reference external" href="https://github.com/Zephyr4Microchip/microchip-zephyr/blob/fa2816afd28db4863e22ab4b6385bad4aec8c977/dts/arm/microchip/sam/sam_d5x_e5x/common/samd5xe5x.dtsi?plain=1#L268">2</a><a class="count disabled-count reference external" href="https://github.com/Zephyr4Microchip/microchip-zephyr/blob/fa2816afd28db4863e22ab4b6385bad4aec8c977/dts/arm/microchip/sam/sam_d5x_e5x/common/samd5xe5x.dtsi?plain=1#L259">2</a></p></td>
+<td class="compatible"><p><a class="reference internal" href="../../../../../build/dts/api/bindings/gpio/microchip%2Cport-g1-gpio.html#std-dtcompatible-microchip-port-g1-gpio"><code class="docutils literal notranslate"><span class="pre">microchip,port-g1-gpio</span></code></a></p></td>
+</tr>
+<tr class="row-odd"><td class="location"><p><span class="location-chip onboard">on-board</span></p></td>
+<td class="description"><p class="status">GPIO pins exposed on Microchip Xplained Pro headers<a class="count okay-count reference external" href="https://github.com/Zephyr4Microchip/microchip-zephyr/blob/fa2816afd28db4863e22ab4b6385bad4aec8c977/boards/microchip/sam/sam_e54_xpro/sam_e54_xpro.dts?plain=1#L64">3</a></p></td>
+<td class="compatible"><p><a class="reference internal" href="../../../../../build/dts/api/bindings/gpio/microchip%2Cxpro-header.html#std-dtcompatible-microchip-xpro-header"><code class="docutils literal notranslate"><span class="pre">microchip,xpro-header</span></code></a></p></td>
+</tr>
+<tr class="row-even"><td class="type" rowspan="1"><p><span>Hardware information</span></p></td>
+<td class="location"><p><span class="location-chip onchip">on-chip</span></p></td>
+<td class="description"><p class="status"><span>Microchip G1 hwinfo driver</span><a class="count okay-count reference external" href="https://github.com/Zephyr4Microchip/microchip-zephyr/blob/fa2816afd28db4863e22ab4b6385bad4aec8c977/dts/arm/microchip/sam/sam_d5x_e5x/common/samd5xe5x.dtsi?plain=1#L37">1</a></p></td>
+<td class="compatible"><p><a class="reference internal" href="../../../../../build/dts/api/bindings/hwinfo/microchip%2Chwinfo-g1.html#std-dtcompatible-microchip-hwinfo-g1"><code class="docutils literal notranslate"><span class="pre">microchip,hwinfo-g1</span></code></a></p></td>
+</tr>
+<tr class="row-odd"><td class="type" rowspan="1"><p><span><abbr title="Inter-Integrated Circuit">I2C</abbr></span></p></td>
+<td class="location"><p><span class="location-chip onchip">on-chip</span></p></td>
+<td class="description"><p class="status"><span>Microchip SERCOM G1 I2C driver</span><a class="count okay-count reference external" href="https://github.com/Zephyr4Microchip/microchip-zephyr/blob/fa2816afd28db4863e22ab4b6385bad4aec8c977/dts/arm/microchip/sam/sam_d5x_e5x/common/samd5xe5x_p.dtsi?plain=1#L56">1</a></p></td>
+<td class="compatible"><p><a class="reference internal" href="../../../../../build/dts/api/bindings/i2c/microchip%2Csercom-g1-i2c.html#std-dtcompatible-microchip-sercom-g1-i2c"><code class="docutils literal notranslate"><span class="pre">microchip,sercom-g1-i2c</span></code></a></p></td>
+</tr>
+<tr class="row-even"><td class="type" rowspan="1"><p><span>Input</span></p></td>
+<td class="location"><p><span class="location-chip onboard">on-board</span></p></td>
+<td class="description"><p class="status">Group of GPIO-bound input keys<a class="count okay-count reference external" href="https://github.com/Zephyr4Microchip/microchip-zephyr/blob/fa2816afd28db4863e22ab4b6385bad4aec8c977/boards/microchip/sam/sam_e54_xpro/sam_e54_xpro.dts?plain=1#L54">1</a></p></td>
+<td class="compatible"><p><a class="reference internal" href="../../../../../build/dts/api/bindings/input/gpio-keys.html#std-dtcompatible-gpio-keys"><code class="docutils literal notranslate"><span class="pre">gpio-keys</span></code></a></p></td>
+</tr>
+<tr class="row-odd"><td class="type" rowspan="2"><p><span>Interrupt controller</span></p></td>
+<td class="location"><p><span class="location-chip onchip">on-chip</span></p></td>
+<td class="description"><p class="status">ARMv7-M NVIC (Nested Vectored Interrupt Controller)<a class="count okay-count reference external" href="https://github.com/Zephyr4Microchip/microchip-zephyr/blob/fa2816afd28db4863e22ab4b6385bad4aec8c977/dts/arm/armv7-m.dtsi?plain=1#L13">1</a></p></td>
+<td class="compatible"><p><a class="reference internal" href="../../../../../build/dts/api/bindings/interrupt-controller/arm%2Cv7m-nvic.html#std-dtcompatible-arm-v7m-nvic"><code class="docutils literal notranslate"><span class="pre">arm,v7m-nvic</span></code></a></p></td>
+</tr>
+<tr class="row-even"><td class="location"><p><span class="location-chip onchip">on-chip</span></p></td>
+<td class="description"><p class="status">Microchip External Interrupt Controller for g1 peripherals<a class="count okay-count reference external" href="https://github.com/Zephyr4Microchip/microchip-zephyr/blob/fa2816afd28db4863e22ab4b6385bad4aec8c977/dts/arm/microchip/sam/sam_d5x_e5x/common/samd5xe5x.dtsi?plain=1#L133">1</a></p></td>
+<td class="compatible"><p><a class="reference internal" href="../../../../../build/dts/api/bindings/interrupt-controller/microchip%2Ceic-g1-intc.html#std-dtcompatible-microchip-eic-g1-intc"><code class="docutils literal notranslate"><span class="pre">microchip,eic-g1-intc</span></code></a></p></td>
+</tr>
+<tr class="row-odd"><td class="type" rowspan="2"><p><span><abbr title="Light Emitting Diode">LED</abbr></span></p></td>
+<td class="location"><p><span class="location-chip onboard">on-board</span></p></td>
+<td class="description"><p class="status">Group of GPIO-controlled LEDs<a class="count okay-count reference external" href="https://github.com/Zephyr4Microchip/microchip-zephyr/blob/fa2816afd28db4863e22ab4b6385bad4aec8c977/boards/microchip/sam/sam_e54_xpro/sam_e54_xpro.dts?plain=1#L36">1</a></p></td>
+<td class="compatible"><p><a class="reference internal" href="../../../../../build/dts/api/bindings/led/gpio-leds.html#std-dtcompatible-gpio-leds"><code class="docutils literal notranslate"><span class="pre">gpio-leds</span></code></a></p></td>
+</tr>
+<tr class="row-even"><td class="location"><p><span class="location-chip onboard">on-board</span></p></td>
+<td class="description"><p class="status">Group of PWM-controlled LEDs<a class="count okay-count reference external" href="https://github.com/Zephyr4Microchip/microchip-zephyr/blob/fa2816afd28db4863e22ab4b6385bad4aec8c977/boards/microchip/sam/sam_e54_xpro/sam_e54_xpro.dts?plain=1#L45">1</a></p></td>
+<td class="compatible"><p><a class="reference internal" href="../../../../../build/dts/api/bindings/led/pwm-leds.html#std-dtcompatible-pwm-leds"><code class="docutils literal notranslate"><span class="pre">pwm-leds</span></code></a></p></td>
+</tr>
+<tr class="row-odd"><td class="type" rowspan="1"><p><span><abbr title="Memory Management Unit">MMU</abbr> / <abbr title="Memory Protection Unit">MPU</abbr></span></p></td>
+<td class="location"><p><span class="location-chip onchip">on-chip</span></p></td>
+<td class="description"><p class="status">ARMv7-M Memory Protection Unit (MPU)<a class="count okay-count reference external" href="https://github.com/Zephyr4Microchip/microchip-zephyr/blob/fa2816afd28db4863e22ab4b6385bad4aec8c977/dts/arm/microchip/sam/sam_d5x_e5x/common/samd5xe5x.dtsi?plain=1#L29">1</a></p></td>
+<td class="compatible"><p><a class="reference internal" href="../../../../../build/dts/api/bindings/mmu_mpu/arm%2Carmv7m-mpu.html#std-dtcompatible-arm-armv7m-mpu"><code class="docutils literal notranslate"><span class="pre">arm,armv7m-mpu</span></code></a></p></td>
+</tr>
+<tr class="row-even"><td class="type" rowspan="3"><p><span><abbr title="Memory Technology Device">MTD</abbr></span></p></td>
+<td class="location"><p><span class="location-chip onchip">on-chip</span></p></td>
+<td class="description"><p class="status">Flash node<a class="count okay-count reference external" href="https://github.com/Zephyr4Microchip/microchip-zephyr/blob/fa2816afd28db4863e22ab4b6385bad4aec8c977/dts/arm/microchip/sam/sam_d5x_e5x/common/samd5xe5x_20.dtsi?plain=1#L14">2</a></p></td>
+<td class="compatible"><p><a class="reference internal" href="../../../../../build/dts/api/bindings/mtd/soc-nv-flash.html#std-dtcompatible-soc-nv-flash"><code class="docutils literal notranslate"><span class="pre">soc-nv-flash</span></code></a></p></td>
+</tr>
+<tr class="row-odd"><td class="location"><p><span class="location-chip onboard">on-board</span></p></td>
+<td class="description"><p class="status">Fixed partitions of a flash (or other non-volatile storage) memory<a class="count okay-count reference external" href="https://github.com/Zephyr4Microchip/microchip-zephyr/blob/fa2816afd28db4863e22ab4b6385bad4aec8c977/boards/microchip/sam/sam_e54_xpro/sam_e54_xpro.dts?plain=1#L158">1</a></p></td>
+<td class="compatible"><p><a class="reference internal" href="../../../../../build/dts/api/bindings/mtd/fixed-partitions.html#std-dtcompatible-fixed-partitions"><code class="docutils literal notranslate"><span class="pre">fixed-partitions</span></code></a></p></td>
+</tr>
+<tr class="row-even"><td class="location"><p><span class="location-chip onboard">on-board</span></p></td>
+<td class="description"><p class="status">I2C EEPROMs compatible with Atmel’s AT24 family<a class="count okay-count reference external" href="https://github.com/Zephyr4Microchip/microchip-zephyr/blob/fa2816afd28db4863e22ab4b6385bad4aec8c977/boards/microchip/sam/sam_e54_xpro/sam_e54_xpro.dts?plain=1#L410">1</a></p></td>
+<td class="compatible"><p><a class="reference internal" href="../../../../../build/dts/api/bindings/mtd/atmel%2Cat24.html#std-dtcompatible-atmel-at24"><code class="docutils literal notranslate"><span class="pre">atmel,at24</span></code></a></p></td>
+</tr>
+<tr class="row-odd"><td class="type" rowspan="1"><p><span><abbr title="Non-Volatile Memory">NVMEM</abbr></span></p></td>
+<td class="location"><p><span class="location-chip onboard">on-board</span></p></td>
+<td class="description"><p class="status">Fixed layout for Non-Volatile memory<a class="count okay-count reference external" href="https://github.com/Zephyr4Microchip/microchip-zephyr/blob/fa2816afd28db4863e22ab4b6385bad4aec8c977/boards/microchip/sam/sam_e54_xpro/sam_e54_xpro.dts?plain=1#L418">1</a></p></td>
+<td class="compatible"><p><a class="reference internal" href="../../../../../build/dts/api/bindings/nvmem/fixed-layout.html#std-dtcompatible-fixed-layout"><code class="docutils literal notranslate"><span class="pre">fixed-layout</span></code></a></p></td>
+</tr>
+<tr class="row-even"><td class="type" rowspan="1"><p><span>Pin control</span></p></td>
+<td class="location"><p><span class="location-chip onchip">on-chip</span></p></td>
+<td class="description"><p class="status"><span>Microchip PORT Pinctrl container node</span><a class="count okay-count reference external" href="https://github.com/Zephyr4Microchip/microchip-zephyr/blob/fa2816afd28db4863e22ab4b6385bad4aec8c977/dts/arm/microchip/sam/sam_d5x_e5x/common/samd5xe5x.dtsi?plain=1#L252">1</a></p></td>
+<td class="compatible"><p><a class="reference internal" href="../../../../../build/dts/api/bindings/pinctrl/microchip%2Cport-g1-pinctrl.html#std-dtcompatible-microchip-port-g1-pinctrl"><code class="docutils literal notranslate"><span class="pre">microchip,port-g1-pinctrl</span></code></a></p></td>
+</tr>
+<tr class="row-odd"><td class="type" rowspan="2"><p><span><abbr title="Pulse Width Modulation">PWM</abbr></span></p></td>
+<td class="location"><p><span class="location-chip onchip">on-chip</span></p></td>
+<td class="description"><p class="status"><span>Microchip PWM TC g1 driver.</span><a class="count disabled-count reference external" href="https://github.com/Zephyr4Microchip/microchip-zephyr/blob/fa2816afd28db4863e22ab4b6385bad4aec8c977/dts/arm/microchip/sam/sam_d5x_e5x/common/samd5xe5x.dtsi?plain=1#L178">1</a></p></td>
+<td class="compatible"><p><a class="reference internal" href="../../../../../build/dts/api/bindings/pwm/microchip%2Ctc-g1-pwm.html#std-dtcompatible-microchip-tc-g1-pwm"><code class="docutils literal notranslate"><span class="pre">microchip,tc-g1-pwm</span></code></a></p></td>
+</tr>
+<tr class="row-even"><td class="location"><p><span class="location-chip onchip">on-chip</span></p></td>
+<td class="description"><p class="status"><span>Microchip G1 TCC pwm driver.</span><a class="count okay-count reference external" href="https://github.com/Zephyr4Microchip/microchip-zephyr/blob/fa2816afd28db4863e22ab4b6385bad4aec8c977/dts/arm/microchip/sam/sam_d5x_e5x/common/samd5xe5x.dtsi?plain=1#L309">1</a></p></td>
+<td class="compatible"><p><a class="reference internal" href="../../../../../build/dts/api/bindings/pwm/microchip%2Ctcc-g1-pwm.html#std-dtcompatible-microchip-tcc-g1-pwm"><code class="docutils literal notranslate"><span class="pre">microchip,tcc-g1-pwm</span></code></a></p></td>
+</tr>
+<tr class="row-odd"><td class="type" rowspan="1"><p><span>Reset controller</span></p></td>
+<td class="location"><p><span class="location-chip onchip">on-chip</span></p></td>
+<td class="description"><p class="status"><span>Microchip RSTC Reset driver</span><a class="count okay-count reference external" href="https://github.com/Zephyr4Microchip/microchip-zephyr/blob/fa2816afd28db4863e22ab4b6385bad4aec8c977/dts/arm/microchip/sam/sam_d5x_e5x/common/samd5xe5x.dtsi?plain=1#L101">1</a></p></td>
+<td class="compatible"><p><a class="reference internal" href="../../../../../build/dts/api/bindings/reset/microchip%2Crstc-g1-reset.html#std-dtcompatible-microchip-rstc-g1-reset"><code class="docutils literal notranslate"><span class="pre">microchip,rstc-g1-reset</span></code></a></p></td>
+</tr>
+<tr class="row-even"><td class="type" rowspan="1"><p><span><abbr title="Random Number Generator">RNG</abbr></span></p></td>
+<td class="location"><p><span class="location-chip onchip">on-chip</span></p></td>
+<td class="description"><p class="status"><span>Microchip TRNG G1 entropy driver</span><a class="count okay-count reference external" href="https://github.com/Zephyr4Microchip/microchip-zephyr/blob/fa2816afd28db4863e22ab4b6385bad4aec8c977/dts/arm/microchip/sam/sam_d5x_e5x/common/samd5xe5x.dtsi?plain=1#L380">1</a></p></td>
+<td class="compatible"><p><a class="reference internal" href="../../../../../build/dts/api/bindings/rng/microchip%2Ctrng-g1-entropy.html#std-dtcompatible-microchip-trng-g1-entropy"><code class="docutils literal notranslate"><span class="pre">microchip,trng-g1-entropy</span></code></a></p></td>
+</tr>
+<tr class="row-odd"><td class="type" rowspan="1"><p><span><abbr title="Real Time Clock">RTC</abbr></span></p></td>
+<td class="location"><p><span class="location-chip onchip">on-chip</span></p></td>
+<td class="description"><p class="status"><span>Microchip G1 RTC driver</span><a class="count okay-count reference external" href="https://github.com/Zephyr4Microchip/microchip-zephyr/blob/fa2816afd28db4863e22ab4b6385bad4aec8c977/dts/arm/microchip/sam/sam_d5x_e5x/common/samd5xe5x.dtsi?plain=1#L120">1</a></p></td>
+<td class="compatible"><p><a class="reference internal" href="../../../../../build/dts/api/bindings/rtc/microchip%2Crtc-g1.html#std-dtcompatible-microchip-rtc-g1"><code class="docutils literal notranslate"><span class="pre">microchip,rtc-g1</span></code></a></p></td>
+</tr>
+<tr class="row-even"><td class="type" rowspan="1"><p><span><abbr title="Secure Digital High Capacity">SDHC</abbr></span></p></td>
+<td class="location"><p><span class="location-chip onchip">on-chip</span></p></td>
+<td class="description"><p class="status"><span>Microchip SDHC controller</span><a class="count okay-count reference external" href="https://github.com/Zephyr4Microchip/microchip-zephyr/blob/fa2816afd28db4863e22ab4b6385bad4aec8c977/dts/arm/microchip/sam/sam_d5x_e5x/common/samd5xe5x.dtsi?plain=1#L474">1</a><a class="count disabled-count reference external" href="https://github.com/Zephyr4Microchip/microchip-zephyr/blob/fa2816afd28db4863e22ab4b6385bad4aec8c977/dts/arm/microchip/sam/sam_d5x_e5x/common/samd5xe5x.dtsi?plain=1#L461">1</a></p></td>
+<td class="compatible"><p><a class="reference internal" href="../../../../../build/dts/api/bindings/sdhc/microchip%2Csdhc-g1.html#std-dtcompatible-microchip-sdhc-g1"><code class="docutils literal notranslate"><span class="pre">microchip,sdhc-g1</span></code></a></p></td>
+</tr>
+<tr class="row-odd"><td class="type" rowspan="1"><p><span>Serial controller</span></p></td>
+<td class="location"><p><span class="location-chip onchip">on-chip</span></p></td>
+<td class="description"><p class="status"><span>Microchip SERCOM UART controller</span><a class="count okay-count reference external" href="https://github.com/Zephyr4Microchip/microchip-zephyr/blob/fa2816afd28db4863e22ab4b6385bad4aec8c977/dts/arm/microchip/sam/sam_d5x_e5x/common/samd5xe5x.dtsi?plain=1#L158">4</a></p></td>
+<td class="compatible"><p><a class="reference internal" href="../../../../../build/dts/api/bindings/serial/microchip%2Csercom-g1-uart.html#std-dtcompatible-microchip-sercom-g1-uart"><code class="docutils literal notranslate"><span class="pre">microchip,sercom-g1-uart</span></code></a></p></td>
+</tr>
+<tr class="row-even"><td class="type" rowspan="1"><p><span><abbr title="Serial Peripheral Interface">SPI</abbr></span></p></td>
+<td class="location"><p><span class="location-chip onchip">on-chip</span></p></td>
+<td class="description"><p class="status">Microchip SERCOM SPI<a class="count okay-count reference external" href="https://github.com/Zephyr4Microchip/microchip-zephyr/blob/fa2816afd28db4863e22ab4b6385bad4aec8c977/dts/arm/microchip/sam/sam_d5x_e5x/common/samd5xe5x_p.dtsi?plain=1#L46">1</a></p></td>
+<td class="compatible"><p><a class="reference internal" href="../../../../../build/dts/api/bindings/spi/microchip%2Csercom-g1-spi.html#std-dtcompatible-microchip-sercom-g1-spi"><code class="docutils literal notranslate"><span class="pre">microchip,sercom-g1-spi</span></code></a></p></td>
+</tr>
+<tr class="row-odd"><td class="type" rowspan="1"><p><span><abbr title="Static Random Access Memory">SRAM</abbr></span></p></td>
+<td class="location"><p><span class="location-chip onchip">on-chip</span></p></td>
+<td class="description"><p class="status">Generic on-chip SRAM<a class="count okay-count reference external" href="https://github.com/Zephyr4Microchip/microchip-zephyr/blob/fa2816afd28db4863e22ab4b6385bad4aec8c977/dts/arm/microchip/sam/sam_d5x_e5x/common/samd5xe5x_20.dtsi?plain=1#L9">1</a></p></td>
+<td class="compatible"><p><a class="reference internal" href="../../../../../build/dts/api/bindings/sram/mmio-sram.html#std-dtcompatible-mmio-sram"><code class="docutils literal notranslate"><span class="pre">mmio-sram</span></code></a></p></td>
+</tr>
+<tr class="row-even"><td class="type" rowspan="1"><p><span>Timer</span></p></td>
+<td class="location"><p><span class="location-chip onchip">on-chip</span></p></td>
+<td class="description"><p class="status">ARMv7-M System Tick<a class="count okay-count reference external" href="https://github.com/Zephyr4Microchip/microchip-zephyr/blob/fa2816afd28db4863e22ab4b6385bad4aec8c977/dts/arm/armv7-m.dtsi?plain=1#L21">1</a></p></td>
+<td class="compatible"><p><a class="reference internal" href="../../../../../build/dts/api/bindings/timer/arm%2Carmv7m-systick.html#std-dtcompatible-arm-armv7m-systick"><code class="docutils literal notranslate"><span class="pre">arm,armv7m-systick</span></code></a></p></td>
+</tr>
+<tr class="row-odd"><td class="type" rowspan="1"><p><span><abbr title="Universal Serial Bus">USB</abbr></span></p></td>
+<td class="location"><p><span class="location-chip onchip">on-chip</span></p></td>
+<td class="description"><p class="status"><span>Microchip USB G1 driver</span><a class="count okay-count reference external" href="https://github.com/Zephyr4Microchip/microchip-zephyr/blob/fa2816afd28db4863e22ab4b6385bad4aec8c977/dts/arm/microchip/sam/sam_d5x_e5x/common/samd5xe5x.dtsi?plain=1#L205">1</a></p></td>
+<td class="compatible"><p><a class="reference internal" href="../../../../../build/dts/api/bindings/usb/microchip%2Cusb-g1.html#std-dtcompatible-microchip-usb-g1"><code class="docutils literal notranslate"><span class="pre">microchip,usb-g1</span></code></a></p></td>
+</tr>
+<tr class="row-even"><td class="type" rowspan="1"><p><span>Watchdog</span></p></td>
+<td class="location"><p><span class="location-chip onchip">on-chip</span></p></td>
+<td class="description"><p class="status"><span>Microchip Watchdog g1 driver</span><a class="count disabled-count reference external" href="https://github.com/Zephyr4Microchip/microchip-zephyr/blob/fa2816afd28db4863e22ab4b6385bad4aec8c977/dts/arm/microchip/sam/sam_d5x_e5x/common/samd5xe5x.dtsi?plain=1#L106">1</a></p></td>
+<td class="compatible"><p><a class="reference internal" href="../../../../../build/dts/api/bindings/watchdog/microchip%2Cwdt-g1.html#std-dtcompatible-microchip-wdt-g1"><code class="docutils literal notranslate"><span class="pre">microchip,wdt-g1</span></code></a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<script>board_data = {"board_name": "sam_e54_xpro", "revision_default": null, "targets": ["sam_e54_xpro/atsame54p20a"]}</script></section>
+<section id="connections-and-ios">
+<h3>Connections and IOs<a class="headerlink" href="#connections-and-ios" title="Link to this heading"></a></h3>
+<p>The <a class="reference external" href="https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/UserGuides/70005321A.pdf">SAM E54 Xplained Pro User Guide</a> has detailed information about board connections.</p>
+</section>
+</section>
+<section id="programming-and-debugging">
+<h2>Programming and Debugging<a class="headerlink" href="#programming-and-debugging" title="Link to this heading"></a></h2>
+<p>The SAM E54 Xplained Pro features an on-board Microchip Embedded Debugger (EDBG),
+which provides both a standard debug interface and a virtual serial port used as the Zephyr console.
+SERCOM2 of the ATSAME54P20A MCU is configured as a USART for console output.</p>
+<ol class="arabic">
+<li><p>Connect the board to your host machine using the debug USB port.</p></li>
+<li><p>Open a terminal and start a serial console on the corresponding port.
+On Linux, this is typically <code class="docutils literal notranslate"><span class="pre">/dev/ttyACM0</span></code>. For example:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>minicom<span class="w"> </span>-D<span class="w"> </span>/dev/ttyACM0<span class="w"> </span>-o
+</pre></div>
+</div>
+<p>The -o option tells minicom not to send the modem initialization
+string. Connection should be configured as follows:</p>
+<ul class="simple">
+<li><p>Speed: 115200</p></li>
+<li><p>Data: 8 bits</p></li>
+<li><p>Parity: None</p></li>
+<li><p>Stop bits: 1</p></li>
+</ul>
+</li>
+<li><p>Build and flash the Zephyr <code class="docutils literal notranslate"><span class="pre">hello_world</span></code> sample application:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>west<span class="w"> </span>build<span class="w"> </span>-b<span class="w"> </span>sam_e54_xpro<span class="w"> </span>samples/hello_world
+west<span class="w"> </span>flash
+</pre></div>
+</div>
+</li>
+<li><p>Observe output on the terminal. If everything is set up correctly, you should see:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Hello World! same_54_xpro</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>SAM E54 Product Page:</dt><dd><p><a class="reference external" href="https://www.microchip.com/en-us/product/ATSAME54P20A">https://www.microchip.com/en-us/product/ATSAME54P20A</a></p>
+</dd>
+<dt>SAM E54 Xplained Pro evaluation kit Page:</dt><dd><p><a class="reference external" href="https://www.microchip.com/en-us/development-tool/ATSAME54-XPRO">https://www.microchip.com/en-us/development-tool/ATSAME54-XPRO</a></p>
+</dd>
+</dl>
+</section>
+</section>
+
+
+           </div>
+          </div>
+
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+<p>
+  &#169; Copyright 2015-2026 Zephyr Project members and individual contributors.
+  <div class="lastupdated">
+    Last generated: Jun 16, 2026.
+    Last source update: Jul 10, 2025.
+  </div></p>
+
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

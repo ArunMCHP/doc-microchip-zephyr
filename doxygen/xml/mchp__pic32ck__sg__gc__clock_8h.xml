@@ -1,0 +1,2007 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="mchp__pic32ck__sg__gc__clock_8h" kind="file" language="C++">
+    <compoundname>mchp_pic32ck_sg_gc_clock.h</compoundname>
+    <includedby refid="mchp__clock__pic32ck__sg__gc_8h" local="no">zephyr/drivers/clock_control/mchp_clock_pic32ck_sg_gc.h</includedby>
+    <invincdepgraph>
+      <node id="2">
+        <label>zephyr/drivers/clock_control/mchp_clock_pic32ck_sg_gc.h</label>
+        <link refid="mchp__clock__pic32ck__sg__gc_8h"/>
+      </node>
+      <node id="1">
+        <label>zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h</label>
+        <link refid="mchp__pic32ck__sg__gc__clock_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" prot="public" static="no">
+        <name>MCHP_CLOCK_DERIVE_ID</name>
+        <param><defname>type</defname></param>
+        <param><defname>mclkmaskreg</defname></param>
+        <param><defname>mclkmaskbit</defname></param>
+        <param><defname>gclkperiph</defname></param>
+        <param><defname>inst</defname></param>
+        <initializer>	(((type) &lt;&lt; 26) | ((mclkmaskreg) &lt;&lt; 20) | ((mclkmaskbit) &lt;&lt; 14) | ((gclkperiph) &lt;&lt; 8) |    \
+	 inst)</initializer>
+        <briefdescription>
+<para>Encode clock type, mclk bus, mclk mask bit, gclk pch and instance number, to clock subsystem. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>00..07 (8 bits): inst</para>
+</listitem><listitem><para>08..13 (6 bits): gclkperiph (values from 0 to 47)</para>
+</listitem><listitem><para>14..19 (6 bits): mclkmaskbit (values from 0 to 31)</para>
+</listitem><listitem><para>20..25 (6 bits): mclkmaskreg following values MCLKMSK0 (0) MCLKMSK1 (1) MCLKMSK2 (2)</para>
+</listitem><listitem><para>26..31 (6 bits): type following values SUBSYS_TYPE_XOSC (0) SUBSYS_TYPE_DFLL48M (1) SUBSYS_TYPE_PLL (2) SUBSYS_TYPE_PLL_OUT (3) SUBSYS_TYPE_RTC (4) SUBSYS_TYPE_XOSC32K (5) SUBSYS_TYPE_GCLKGEN (6) SUBSYS_TYPE_GCLKPERIPH (7) SUBSYS_TYPE_MCLKDOMAIN (8) SUBSYS_TYPE_MCLKPERIPH (9)</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>clock subsystem type </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mclkmaskreg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>select from the AHBx and the APBx buses </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mclkmaskbit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>select the module connected to AHBx or APBx bus (0 to 31) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>gclkperiph</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>gclk peripheral channel number m in PCHTRLm (0 to 63) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>inst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>instance number of the specified clock type </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="54" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="54" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a201012bb3a82a346aa0a98a5de91f320" prot="public" static="no">
+        <name>CLOCK_MCHP_XOSC_ID</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(0, 0x3f, 0x3f, 0x3f, 0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="59" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a301af797e998ab83173d2a2e66a1ea38" prot="public" static="no">
+        <name>CLOCK_MCHP_XOSC_ID_MAX</name>
+        <initializer>(0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="60" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a42e64149c30379ebe4bd72a501d08f23" prot="public" static="no">
+        <name>CLOCK_MCHP_DFLL48M_ID</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(1, 0x3f, 0x3f, 0, 0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="63" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a16b646af4fc7f989c4c7cc781a82e1b7" prot="public" static="no">
+        <name>CLOCK_MCHP_DFLL48M_ID_MAX</name>
+        <initializer>(0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="64" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1acd48cc8da0678862a2d8e0af37799e1e" prot="public" static="no">
+        <name>CLOCK_MCHP_PLL_ID_PLL0</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(2, 0x3f, 0x3f, 0, 0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="67" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a5ef027c132316e0aa9fe06cc2e0f3b63" prot="public" static="no">
+        <name>CLOCK_MCHP_PLL_ID_MAX</name>
+        <initializer>(0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="68" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a12ddd4213583b011cf2ec8e5802ac3f2" prot="public" static="no">
+        <name>CLOCK_MCHP_PLL0_ID_OUT0</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(3, 0x3f, 0x3f, 0x3f, 0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="71" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a24937208d2f707d32917b2293fe9e9e3" prot="public" static="no">
+        <name>CLOCK_MCHP_PLL0_ID_OUT1</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(3, 0x3f, 0x3f, 0x3f, 1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="72" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a9d67b9354cc244fc98303556530d711f" prot="public" static="no">
+        <name>CLOCK_MCHP_PLL0_ID_OUT2</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(3, 0x3f, 0x3f, 0x3f, 2)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="73" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1aaba7d7ef85c02109d97d6c1098f84bc8" prot="public" static="no">
+        <name>CLOCK_MCHP_PLL0_ID_OUT3</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(3, 0x3f, 0x3f, 0x3f, 3)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="74" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a8c05b54dae36aa1f2c04a5dd05d12531" prot="public" static="no">
+        <name>CLOCK_MCHP_PLL0_ID_OUT4</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(3, 0x3f, 0x3f, 0x3f, 4)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="75" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1aa71217a134f7ad7b2ec49463fcf739f1" prot="public" static="no">
+        <name>CLOCK_MCHP_PLL0_ID_OUT5</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(3, 0x3f, 0x3f, 0x3f, 5)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="76" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a1566da9a6867acb8da4a3e4cf7e7ab5d" prot="public" static="no">
+        <name>CLOCK_MCHP_PLL0_OUT_ID_MAX</name>
+        <initializer>(5)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="77" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1aed47d2a2eccaea5ed5f5e99fa41afbbb" prot="public" static="no">
+        <name>CLOCK_MCHP_RTC_ID</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(4, 0x3f, 0x3f, 0x3f, 0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="80" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1aa6dc48a4e2e1047734e02f8c060e9369" prot="public" static="no">
+        <name>CLOCK_MCHP_RTC_ID_MAX</name>
+        <initializer>(0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="81" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a3262be48f6349821c62498b0521226ff" prot="public" static="no">
+        <name>CLOCK_MCHP_XOSC32K_ID</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(5, 0x3f, 0x3f, 0x3f, 0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="84" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a09e1e2095d902fe6c82d7992a2eac5da" prot="public" static="no">
+        <name>CLOCK_MCHP_XOSC32K_ID_MAX</name>
+        <initializer>(0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="85" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1adc730b78bbb79a2de524288fb8f2a90f" prot="public" static="no">
+        <name>CLOCK_MCHP_GCLKGEN_ID_GEN0</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(6, 0x3f, 0x3f, 0x3f, 0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="88" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a7d1c402859c4f053d487b78002f0b16d" prot="public" static="no">
+        <name>CLOCK_MCHP_GCLKGEN_ID_GEN1</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(6, 0x3f, 0x3f, 0x3f, 1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="89" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a2dda06b2509f1d33896bf82927da6f84" prot="public" static="no">
+        <name>CLOCK_MCHP_GCLKGEN_ID_GEN2</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(6, 0x3f, 0x3f, 0x3f, 2)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="90" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1ac6c91333d8e736f9c25c765f05f4be66" prot="public" static="no">
+        <name>CLOCK_MCHP_GCLKGEN_ID_GEN3</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(6, 0x3f, 0x3f, 0x3f, 3)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="91" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a6bd03b027dab2c82624de849d355e3c7" prot="public" static="no">
+        <name>CLOCK_MCHP_GCLKGEN_ID_GEN4</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(6, 0x3f, 0x3f, 0x3f, 4)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="92" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1ae018b90957ec659f5225363264173348" prot="public" static="no">
+        <name>CLOCK_MCHP_GCLKGEN_ID_GEN5</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(6, 0x3f, 0x3f, 0x3f, 5)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="93" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a648ca2df6a086f43bbd79c76726b8acf" prot="public" static="no">
+        <name>CLOCK_MCHP_GCLKGEN_ID_GEN6</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(6, 0x3f, 0x3f, 0x3f, 6)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="94" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1adcfc04767ae03fef19c1fa01adf73c60" prot="public" static="no">
+        <name>CLOCK_MCHP_GCLKGEN_ID_GEN7</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(6, 0x3f, 0x3f, 0x3f, 7)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="95" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a0e06ddf395b54a0c7b9b2d3f284e8449" prot="public" static="no">
+        <name>CLOCK_MCHP_GCLKGEN_ID_GEN8</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(6, 0x3f, 0x3f, 0x3f, 8)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="96" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a3da646cdf217d24807332b782c2056c9" prot="public" static="no">
+        <name>CLOCK_MCHP_GCLKGEN_ID_GEN9</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(6, 0x3f, 0x3f, 0x3f, 9)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="97" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1ab9a58178e0fd1faa6804f35709ac4e94" prot="public" static="no">
+        <name>CLOCK_MCHP_GCLKGEN_ID_GEN10</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(6, 0x3f, 0x3f, 0x3f, 10)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="98" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a8fad76e8d57aa754d1237f4fae8be6ed" prot="public" static="no">
+        <name>CLOCK_MCHP_GCLKGEN_ID_GEN11</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(6, 0x3f, 0x3f, 0x3f, 11)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="99" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a67296972320d7cb9295cd67c9cf25c54" prot="public" static="no">
+        <name>CLOCK_MCHP_GCLKGEN_ID_MAX</name>
+        <initializer>(11)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="100" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a9447de6351b7f09b6a30d8df8e586d85" prot="public" static="no">
+        <name>CLOCK_MCHP_GCLKPERIPH_ID_FREQM_MSR0</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(7, 0x3f, 0x3f, 2, 0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="103" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1ac6fc7ade933679db0f47c23fb27c6988" prot="public" static="no">
+        <name>CLOCK_MCHP_GCLKPERIPH_ID_FREQM_MSR1</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(7, 0x3f, 0x3f, 3, 1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="104" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a0da9e951ad59ea7ffa1b3a0586203202" prot="public" static="no">
+        <name>CLOCK_MCHP_GCLKPERIPH_ID_FREQM_REF</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(7, 0x3f, 0x3f, 4, 2)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="105" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1aeaeb9a032e3fa5a00199ef27c2a5ec30" prot="public" static="no">
+        <name>CLOCK_MCHP_GCLKPERIPH_ID_EIC</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(7, 0x3f, 0x3f, 5, 3)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="106" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a31aa9472c7182d16249ba7950b452c14" prot="public" static="no">
+        <name>CLOCK_MCHP_GCLKPERIPH_ID_EVSYS_CH0</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(7, 0x3f, 0x3f, 6, 4)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="107" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a370930d5d12099ec34871a27cee5c8e2" prot="public" static="no">
+        <name>CLOCK_MCHP_GCLKPERIPH_ID_EVSYS_CH1</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(7, 0x3f, 0x3f, 7, 5)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="108" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a6966d71c9da4ce1803c48dc088818401" prot="public" static="no">
+        <name>CLOCK_MCHP_GCLKPERIPH_ID_EVSYS_CH2</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(7, 0x3f, 0x3f, 8, 6)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="109" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a5d98273862a2323e050874755da0c840" prot="public" static="no">
+        <name>CLOCK_MCHP_GCLKPERIPH_ID_EVSYS_CH3</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(7, 0x3f, 0x3f, 9, 7)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="110" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a24855b6b55dc3eb9efba6476d6d930e8" prot="public" static="no">
+        <name>CLOCK_MCHP_GCLKPERIPH_ID_EVSYS_CH4</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(7, 0x3f, 0x3f, 10, 8)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="111" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a6bb92b5d57c58e6b1ab083504bbb3756" prot="public" static="no">
+        <name>CLOCK_MCHP_GCLKPERIPH_ID_EVSYS_CH5</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(7, 0x3f, 0x3f, 11, 9)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="112" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1ae2404c8e3bce6bd9b01903a9ad942d35" prot="public" static="no">
+        <name>CLOCK_MCHP_GCLKPERIPH_ID_EVSYS_CH6</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(7, 0x3f, 0x3f, 12, 10)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="113" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a852a5424cc73a5e75fcd7b151e7dd767" prot="public" static="no">
+        <name>CLOCK_MCHP_GCLKPERIPH_ID_EVSYS_CH7</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(7, 0x3f, 0x3f, 13, 11)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="114" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a9ff8a7f89700d95e431e6d0c12869b56" prot="public" static="no">
+        <name>CLOCK_MCHP_GCLKPERIPH_ID_EVSYS_CH8</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(7, 0x3f, 0x3f, 14, 12)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="115" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1ad7112111ef68955636866ec0adb0e71e" prot="public" static="no">
+        <name>CLOCK_MCHP_GCLKPERIPH_ID_EVSYS_CH9</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(7, 0x3f, 0x3f, 15, 13)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="116" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1aeb43cfd70588d9f660e8965516480191" prot="public" static="no">
+        <name>CLOCK_MCHP_GCLKPERIPH_ID_EVSYS_CH10</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(7, 0x3f, 0x3f, 16, 14)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="117" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a93e2a650425a0bb9014c56d848c039bb" prot="public" static="no">
+        <name>CLOCK_MCHP_GCLKPERIPH_ID_EVSYS_CH11</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(7, 0x3f, 0x3f, 17, 15)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="118" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1af5855721c29be7a03686059ae3ca7f5e" prot="public" static="no">
+        <name>CLOCK_MCHP_GCLKPERIPH_ID_SDMMC0_SLOW</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(7, 0x3f, 0x3f, 18, 16)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="119" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a1f495a4359379169060d5e1ac071aa1c" prot="public" static="no">
+        <name>CLOCK_MCHP_GCLKPERIPH_ID_SDMMC1_SLOW</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(7, 0x3f, 0x3f, 18, 17)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="120" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a2bb7a4f72e45c2fb5f449b6b3f1b4520" prot="public" static="no">
+        <name>CLOCK_MCHP_GCLKPERIPH_ID_SERCOM0_SLOW</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(7, 0x3f, 0x3f, 18, 18)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="121" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a726fe192480ed57fbdc3e77cc1133c89" prot="public" static="no">
+        <name>CLOCK_MCHP_GCLKPERIPH_ID_SERCOM1_SLOW</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(7, 0x3f, 0x3f, 18, 19)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="122" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1accbd9b23f933a8bae611a00019c5eb50" prot="public" static="no">
+        <name>CLOCK_MCHP_GCLKPERIPH_ID_SERCOM4_SLOW</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(7, 0x3f, 0x3f, 18, 20)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="123" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a99d3f0a1c9e10f405c761ae6f3bf2744" prot="public" static="no">
+        <name>CLOCK_MCHP_GCLKPERIPH_ID_SERCOM2_SLOW</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(7, 0x3f, 0x3f, 18, 21)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="124" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a08fb53b9b65e5743900bd6a4179925d3" prot="public" static="no">
+        <name>CLOCK_MCHP_GCLKPERIPH_ID_SERCOM3_SLOW</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(7, 0x3f, 0x3f, 18, 22)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="125" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a680eff3630a7446292705a3c29098510" prot="public" static="no">
+        <name>CLOCK_MCHP_GCLKPERIPH_ID_SERCOM5_SLOW</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(7, 0x3f, 0x3f, 18, 23)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="126" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a8aaeb571901ab3b932c93aea8f67f39a" prot="public" static="no">
+        <name>CLOCK_MCHP_GCLKPERIPH_ID_SERCOM6_SLOW</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(7, 0x3f, 0x3f, 18, 24)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="127" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a277cd1054793077c5c67551bf4a38df5" prot="public" static="no">
+        <name>CLOCK_MCHP_GCLKPERIPH_ID_SERCOM7_SLOW</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(7, 0x3f, 0x3f, 18, 25)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="128" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a88f1128166176ebfc0a41dd496186300" prot="public" static="no">
+        <name>CLOCK_MCHP_GCLKPERIPH_ID_SERCOM0_CORE</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(7, 0x3f, 0x3f, 19, 26)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="129" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1ab3ef99c62a821f4e5fe1f800de6561c2" prot="public" static="no">
+        <name>CLOCK_MCHP_GCLKPERIPH_ID_SERCOM1_CORE</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(7, 0x3f, 0x3f, 20, 27)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="130" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1ab0668a32e7385c8629b26cd396e6beaa" prot="public" static="no">
+        <name>CLOCK_MCHP_GCLKPERIPH_ID_SERCOM2_CORE</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(7, 0x3f, 0x3f, 21, 28)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="131" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a155a02aa8799940dd0c59efac25e5bbc" prot="public" static="no">
+        <name>CLOCK_MCHP_GCLKPERIPH_ID_SERCOM3_CORE</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(7, 0x3f, 0x3f, 22, 29)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="132" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1af3614ec46e49df22dc37768df6e9c12b" prot="public" static="no">
+        <name>CLOCK_MCHP_GCLKPERIPH_ID_TCC0</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(7, 0x3f, 0x3f, 23, 30)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="133" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a253908d056c2ac97302065d9c0eb1cc4" prot="public" static="no">
+        <name>CLOCK_MCHP_GCLKPERIPH_ID_TCC1</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(7, 0x3f, 0x3f, 23, 31)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="134" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1ae4ebf71771a1435faa34293290ed06f0" prot="public" static="no">
+        <name>CLOCK_MCHP_GCLKPERIPH_ID_TCC2</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(7, 0x3f, 0x3f, 24, 32)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="135" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a363610cff7033e1bb7036d3b4ed21a0c" prot="public" static="no">
+        <name>CLOCK_MCHP_GCLKPERIPH_ID_TCC3</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(7, 0x3f, 0x3f, 24, 33)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="136" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a77eb95730d000556c3b32a7bcf152913" prot="public" static="no">
+        <name>CLOCK_MCHP_GCLKPERIPH_ID_SERCOM4_CORE</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(7, 0x3f, 0x3f, 25, 34)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="137" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a4b1126fa67b001d9d086874d8536fb48" prot="public" static="no">
+        <name>CLOCK_MCHP_GCLKPERIPH_ID_SERCOM5_CORE</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(7, 0x3f, 0x3f, 26, 35)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="138" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a8b7161f3cedb7e5e39cc5d98498e262c" prot="public" static="no">
+        <name>CLOCK_MCHP_GCLKPERIPH_ID_SERCOM6_CORE</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(7, 0x3f, 0x3f, 27, 36)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="139" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a12909dbedec1469b89c431395b9fb6eb" prot="public" static="no">
+        <name>CLOCK_MCHP_GCLKPERIPH_ID_SERCOM7_CORE</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(7, 0x3f, 0x3f, 28, 37)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="140" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a341713f50727d73e4275cc093061487e" prot="public" static="no">
+        <name>CLOCK_MCHP_GCLKPERIPH_ID_TCC4</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(7, 0x3f, 0x3f, 29, 38)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="141" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a1cb0b9600a335a01ff00c7eaa64a1229" prot="public" static="no">
+        <name>CLOCK_MCHP_GCLKPERIPH_ID_TCC5</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(7, 0x3f, 0x3f, 30, 39)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="142" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a14a655c0aead0534f6915a1994a6ed1d" prot="public" static="no">
+        <name>CLOCK_MCHP_GCLKPERIPH_ID_TCC6</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(7, 0x3f, 0x3f, 31, 40)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="143" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a89967af8e20803cdb7e41890c4a4a143" prot="public" static="no">
+        <name>CLOCK_MCHP_GCLKPERIPH_ID_TCC7</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(7, 0x3f, 0x3f, 32, 41)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="144" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a845a53053a861de67ebfa150bff389ff" prot="public" static="no">
+        <name>CLOCK_MCHP_GCLKPERIPH_ID_ADC</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(7, 0x3f, 0x3f, 33, 42)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="145" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a8558308cb89c99326b165a7b12b14ff1" prot="public" static="no">
+        <name>CLOCK_MCHP_GCLKPERIPH_ID_AC</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(7, 0x3f, 0x3f, 34, 43)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="146" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a65c9bc79d0b5edd7dcc8a6178a600127" prot="public" static="no">
+        <name>CLOCK_MCHP_GCLKPERIPH_ID_PTC</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(7, 0x3f, 0x3f, 35, 44)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="147" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="147" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a0730543904f07b779d0a4ecea9bb8b3e" prot="public" static="no">
+        <name>CLOCK_MCHP_GCLKPERIPH_ID_SPI_IXS</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(7, 0x3f, 0x3f, 36, 45)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="148" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="148" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a9f9af8bd8013d7536389a108851b0925" prot="public" static="no">
+        <name>CLOCK_MCHP_GCLKPERIPH_ID_CCL</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(7, 0x3f, 0x3f, 37, 46)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="149" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1abf9396d20ea2356d9963326cab64df02" prot="public" static="no">
+        <name>CLOCK_MCHP_GCLKPERIPH_ID_PDEC</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(7, 0x3f, 0x3f, 38, 47)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="150" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="150" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1ae251d4719eb378734e3cb01c9f5828d8" prot="public" static="no">
+        <name>CLOCK_MCHP_GCLKPERIPH_ID_CAN0</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(7, 0x3f, 0x3f, 39, 48)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="151" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="151" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a2e77a06b25293f4152b0f2399ab32982" prot="public" static="no">
+        <name>CLOCK_MCHP_GCLKPERIPH_ID_CAN1</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(7, 0x3f, 0x3f, 40, 49)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="152" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a43d835c163dac2527c083c001fffd9aa" prot="public" static="no">
+        <name>CLOCK_MCHP_GCLKPERIPH_ID_ETH_TX</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(7, 0x3f, 0x3f, 41, 50)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="153" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="153" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1aa72adfa1befae033f3111e544978a621" prot="public" static="no">
+        <name>CLOCK_MCHP_GCLKPERIPH_ID_ETH_TSU</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(7, 0x3f, 0x3f, 42, 51)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="154" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="154" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a1e5c49e89ef93f44610556597c2be205" prot="public" static="no">
+        <name>CLOCK_MCHP_GCLKPERIPH_ID_SQI</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(7, 0x3f, 0x3f, 43, 52)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="155" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a40318aa3aa6c1098d0432d2abfa46f0c" prot="public" static="no">
+        <name>CLOCK_MCHP_GCLKPERIPH_ID_SDMMC0</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(7, 0x3f, 0x3f, 44, 53)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="156" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a6c822629f1075df52bc4ba09021a9788" prot="public" static="no">
+        <name>CLOCK_MCHP_GCLKPERIPH_ID_SDMMC1</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(7, 0x3f, 0x3f, 45, 54)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="157" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a566c7babd5641f337fc00adb20367833" prot="public" static="no">
+        <name>CLOCK_MCHP_GCLKPERIPH_ID_USB</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(7, 0x3f, 0x3f, 46, 55)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="158" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="158" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a5f974f3ec705d29f83a0c41aeeff0169" prot="public" static="no">
+        <name>CLOCK_MCHP_GCLKPERIPH_ID_CPU0_TRACE</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(7, 0x3f, 0x3f, 47, 56)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="159" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a9fb0644f504a830a4e324f792815ae98" prot="public" static="no">
+        <name>CLOCK_MCHP_GCLKPERIPH_ID_MAX</name>
+        <initializer>(56)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="160" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a6de8b0b73f5ad847d3b4a1c2898ba534" prot="public" static="no">
+        <name>CLOCK_MCHP_MCLKCPU_ID</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(8, 0x3f, 0x3f, 0x3f, 0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="163" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="163" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1ad164589a2abc31000c96bd45a7eac9ba" prot="public" static="no">
+        <name>CLOCK_MCHP_MCLKCPU_MAX</name>
+        <initializer>(0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="164" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a5f1c9309e3eb0586eb1f765536b4346e" prot="public" static="no">
+        <name>CLOCK_MCHP_MCLKPERIPH_ID_DSU_AHB</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(9, 0, 3, 0x3f, 0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="167" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="167" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1af85028f923174b11e44d1fc9043c5c75" prot="public" static="no">
+        <name>CLOCK_MCHP_MCLKPERIPH_ID_FCR_AHB</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(9, 0, 4, 0x3f, 1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="168" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="168" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a55391bcfa4db8dfdf6d7fbfbfbc9626f" prot="public" static="no">
+        <name>CLOCK_MCHP_MCLKPERIPH_ID_FCW_AHB</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(9, 0, 5, 0x3f, 2)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="169" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="169" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1ad63bf9ad8a02a102f6cc0b4ebcecd8ae" prot="public" static="no">
+        <name>CLOCK_MCHP_MCLKPERIPH_ID_PAC_AHB</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(9, 0, 6, 0x3f, 3)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="170" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="170" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a98a4fedf80bb2756cf890d8c33dc98cf" prot="public" static="no">
+        <name>CLOCK_MCHP_MCLKPERIPH_ID_DMA0_AHB</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(9, 0, 8, 0x3f, 4)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="171" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="171" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1aefad014e192ff33d0a75ed69d3e99997" prot="public" static="no">
+        <name>CLOCK_MCHP_MCLKPERIPH_ID_DMA1_AHB</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(9, 0, 9, 0x3f, 5)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="172" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="172" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a362ebd80cf078c91d39f7e37078445a9" prot="public" static="no">
+        <name>CLOCK_MCHP_MCLKPERIPH_ID_PRM_AHB</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(9, 0, 12, 0x3f, 6)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="173" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="173" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a020e0dd01728bbb323fd174eccb1509f" prot="public" static="no">
+        <name>CLOCK_MCHP_MCLKPERIPH_ID_CAN0_AHB</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(9, 0, 13, 0x3f, 7)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="174" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a82eab8ef6506c116079b31528651ac8e" prot="public" static="no">
+        <name>CLOCK_MCHP_MCLKPERIPH_ID_CAN1_AHB</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(9, 0, 14, 0x3f, 8)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="175" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="175" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1aa4f92ad099bb80accb050b39876688c3" prot="public" static="no">
+        <name>CLOCK_MCHP_MCLKPERIPH_ID_ETH_AHB</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(9, 0, 15, 0x3f, 9)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="176" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="176" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a29100f869118c250054725cdf72d58f8" prot="public" static="no">
+        <name>CLOCK_MCHP_MCLKPERIPH_ID_SQI_AHB</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(9, 0, 16, 0x3f, 10)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="177" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="177" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a4cd460b34dac65adf8e9c19fc7072149" prot="public" static="no">
+        <name>CLOCK_MCHP_MCLKPERIPH_ID_SDMMC0_AHB</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(9, 0, 17, 0x3f, 11)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="178" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="178" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a0ff819df13afc3af15b8e593f9a027c4" prot="public" static="no">
+        <name>CLOCK_MCHP_MCLKPERIPH_ID_SDMMC1_AHB</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(9, 0, 18, 0x3f, 12)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="179" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="179" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a03f03076ce38c08aff0158f36e552bdb" prot="public" static="no">
+        <name>CLOCK_MCHP_MCLKPERIPH_ID_USBFS_AHB</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(9, 0, 19, 0x3f, 13)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="180" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="180" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a311c2b3b6b7c998cd03a0ad4caaf9b68" prot="public" static="no">
+        <name>CLOCK_MCHP_MCLKPERIPH_ID_USBHS_AHB</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(9, 0, 20, 0x3f, 14)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="181" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="181" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1ada6c6291b51b7fe41ee0925e31628ff9" prot="public" static="no">
+        <name>CLOCK_MCHP_MCLKPERIPH_ID_EBI_AHB</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(9, 0, 21, 0x3f, 15)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="182" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="182" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a37acd5942b619f4410efdebad1a29651" prot="public" static="no">
+        <name>CLOCK_MCHP_MCLKPERIPH_ID_HSM_AHB</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(9, 0, 22, 0x3f, 16)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="183" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="183" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a25521d18a70eacc1ad5cc347feb0765e" prot="public" static="no">
+        <name>CLOCK_MCHP_MCLKPERIPH_ID_DSU_APB</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(9, 1, 0, 0x3f, 17)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="185" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="185" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a8427e8e5faebe7f66dbfe1554d024c6e" prot="public" static="no">
+        <name>CLOCK_MCHP_MCLKPERIPH_ID_FCR_APB</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(9, 1, 1, 0x3f, 18)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="186" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="186" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a979b800be2dabf8c744fef8295cf1bcc" prot="public" static="no">
+        <name>CLOCK_MCHP_MCLKPERIPH_ID_FCW_APB</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(9, 1, 2, 0x3f, 19)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="187" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="187" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1acd7a900e83eb1f4440f1a3bb19b64c87" prot="public" static="no">
+        <name>CLOCK_MCHP_MCLKPERIPH_ID_RSTC_APB</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(9, 1, 5, 0x3f, 20)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="188" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="188" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1af1c5abfaa99c29512de8ad86d50436fa" prot="public" static="no">
+        <name>CLOCK_MCHP_MCLKPERIPH_ID_OSCCTRL_APB</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(9, 1, 6, 0x3f, 21)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="189" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="189" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a1d56390d443e73b0a3ff50b5375d053d" prot="public" static="no">
+        <name>CLOCK_MCHP_MCLKPERIPH_ID_OSC32KCTRL_APB</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(9, 1, 7, 0x3f, 22)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="190" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="190" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a7683dd70a6fd67b23950255a318a92c5" prot="public" static="no">
+        <name>CLOCK_MCHP_MCLKPERIPH_ID_FREQM_APB</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(9, 1, 10, 0x3f, 23)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="191" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="191" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1aea2b6485e25c10b439400ce5104a7be6" prot="public" static="no">
+        <name>CLOCK_MCHP_MCLKPERIPH_ID_WDT_APB</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(9, 1, 11, 0x3f, 24)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="192" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="192" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1ad712b633caa2592437efda6d5fa9fddf" prot="public" static="no">
+        <name>CLOCK_MCHP_MCLKPERIPH_ID_RTC_APB</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(9, 1, 12, 0x3f, 25)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="193" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="193" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a96f372b19d6097849c37795933d0822f" prot="public" static="no">
+        <name>CLOCK_MCHP_MCLKPERIPH_ID_EIC_APB</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(9, 1, 13, 0x3f, 26)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="194" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="194" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a574e9bee5faec84626fa1e9ef679e71a" prot="public" static="no">
+        <name>CLOCK_MCHP_MCLKPERIPH_ID_PAC_APB</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(9, 1, 14, 0x3f, 27)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="195" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="195" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a24b1be03ee41ef4d3e4ba72694d863b5" prot="public" static="no">
+        <name>CLOCK_MCHP_MCLKPERIPH_ID_TRAM_APB</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(9, 1, 15, 0x3f, 28)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="196" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="196" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a0d19557ec776183aa0734c97d38cdbc6" prot="public" static="no">
+        <name>CLOCK_MCHP_MCLKPERIPH_ID_MBISTINTF_APB</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(9, 1, 18, 0x3f, 29)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="197" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="197" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1ac8d026bae71eb4c033b8fd93b2e0fa2c" prot="public" static="no">
+        <name>CLOCK_MCHP_MCLKPERIPH_ID_TDM_APB</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(9, 1, 19, 0x3f, 30)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="198" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="198" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1acadb93a9913d4622db5b6e0b7d375ef1" prot="public" static="no">
+        <name>CLOCK_MCHP_MCLKPERIPH_ID_PORT_APB</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(9, 2, 0, 0x3f, 31)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="200" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="200" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a003cccbd09694978168d83d06b25995f" prot="public" static="no">
+        <name>CLOCK_MCHP_MCLKPERIPH_ID_DMA0_APB</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(9, 2, 1, 0x3f, 32)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="201" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="201" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1aea8d908b0ffd05877a425b9b5085b6c8" prot="public" static="no">
+        <name>CLOCK_MCHP_MCLKPERIPH_ID_DMA1_APB</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(9, 2, 2, 0x3f, 33)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="202" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="202" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a06eb4d6cb2bec066a15857648c259223" prot="public" static="no">
+        <name>CLOCK_MCHP_MCLKPERIPH_ID_PRM_APB</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(9, 2, 4, 0x3f, 34)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="203" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="203" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1ae43a1ae1b9502fa64d0f2d679937a759" prot="public" static="no">
+        <name>CLOCK_MCHP_MCLKPERIPH_ID_IDAU_APB</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(9, 2, 5, 0x3f, 35)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="204" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="204" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a0beb2098f964c3ca55a9dca232e2f280" prot="public" static="no">
+        <name>CLOCK_MCHP_MCLKPERIPH_ID_EVSYS_APB</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(9, 2, 6, 0x3f, 36)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="205" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="205" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a47f3b5aa5a51664bb754a6bd409110a4" prot="public" static="no">
+        <name>CLOCK_MCHP_MCLKPERIPH_ID_SERCOM0_APB</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(9, 2, 7, 0x3f, 37)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="206" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="206" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1af797c727eb17090ccefc52a22c5f5b51" prot="public" static="no">
+        <name>CLOCK_MCHP_MCLKPERIPH_ID_SERCOM1_APB</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(9, 2, 8, 0x3f, 38)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="207" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="207" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1ad809db56498079a4d2b01e393af7bd04" prot="public" static="no">
+        <name>CLOCK_MCHP_MCLKPERIPH_ID_SERCOM2_APB</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(9, 2, 9, 0x3f, 39)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="208" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="208" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1aff58338e2aa80841b910bebca63ca132" prot="public" static="no">
+        <name>CLOCK_MCHP_MCLKPERIPH_ID_SERCOM3_APB</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(9, 2, 10, 0x3f, 40)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="209" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="209" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a09ddda66170546df3264fa6630c21ad9" prot="public" static="no">
+        <name>CLOCK_MCHP_MCLKPERIPH_ID_TCC0_APB</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(9, 2, 11, 0x3f, 41)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="210" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="210" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a426ad19aeeb116ceed471a6ffbe27ba6" prot="public" static="no">
+        <name>CLOCK_MCHP_MCLKPERIPH_ID_TCC1_APB</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(9, 2, 12, 0x3f, 42)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="211" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="211" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a0c54ce51de3b7012abcfe6822cd81a58" prot="public" static="no">
+        <name>CLOCK_MCHP_MCLKPERIPH_ID_TCC2_APB</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(9, 2, 13, 0x3f, 43)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="212" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="212" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a1e301cdd4b8a60bff8b52eff03dcd6e6" prot="public" static="no">
+        <name>CLOCK_MCHP_MCLKPERIPH_ID_TCC3_APB</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(9, 2, 14, 0x3f, 44)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="213" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="213" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a75c42c1ce5bd4831739973617e5fedd4" prot="public" static="no">
+        <name>CLOCK_MCHP_MCLKPERIPH_ID_SERCOM4_APB</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(9, 3, 0, 0x3f, 45)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="215" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="215" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1ac3f06e5a5b8a2d43465ff0ce073427e0" prot="public" static="no">
+        <name>CLOCK_MCHP_MCLKPERIPH_ID_SERCOM5_APB</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(9, 3, 1, 0x3f, 46)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="216" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="216" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a22d35327a659f86f3bbd1b86dfbd0bdc" prot="public" static="no">
+        <name>CLOCK_MCHP_MCLKPERIPH_ID_SERCOM6_APB</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(9, 3, 2, 0x3f, 47)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="217" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="217" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a476d7f837f1d5c092b9375864e895e7b" prot="public" static="no">
+        <name>CLOCK_MCHP_MCLKPERIPH_ID_SERCOM7_APB</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(9, 3, 3, 0x3f, 48)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="218" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="218" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a07f028c49e5174a320eba2f326c013b7" prot="public" static="no">
+        <name>CLOCK_MCHP_MCLKPERIPH_ID_TCC4_APB</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(9, 3, 4, 0x3f, 49)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="219" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="219" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1ac08c3fbc66ec7948bb78a7bbea684467" prot="public" static="no">
+        <name>CLOCK_MCHP_MCLKPERIPH_ID_TCC5_APB</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(9, 3, 5, 0x3f, 50)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="220" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="220" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1aabe0b18cb49f214748847d1fd6c9b0d4" prot="public" static="no">
+        <name>CLOCK_MCHP_MCLKPERIPH_ID_TCC6_APB</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(9, 3, 6, 0x3f, 51)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="221" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="221" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1ab3e026a71c9ecbf0b7508e2d58d51485" prot="public" static="no">
+        <name>CLOCK_MCHP_MCLKPERIPH_ID_TCC7_APB</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(9, 3, 7, 0x3f, 52)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="222" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="222" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a09bd059dfc0f111ccf5f1f3149363ed6" prot="public" static="no">
+        <name>CLOCK_MCHP_MCLKPERIPH_ID_ADC_APB</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(9, 3, 8, 0x3f, 53)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="223" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="223" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1affe3569727db011f6a21143af7b9e2a7" prot="public" static="no">
+        <name>CLOCK_MCHP_MCLKPERIPH_ID_AC_APB</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(9, 3, 9, 0x3f, 54)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="224" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="224" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a31de65a5228c7021bef57eb9edef0ee8" prot="public" static="no">
+        <name>CLOCK_MCHP_MCLKPERIPH_ID_PTC_APB</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(9, 3, 10, 0x3f, 55)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="225" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="225" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a2c6f9bd6f15c1c2518c578d192e9917c" prot="public" static="no">
+        <name>CLOCK_MCHP_MCLKPERIPH_ID_I2S_APB</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(9, 3, 11, 0x3f, 56)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="226" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="226" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1aa7f5424b104ff218e0abc29c45709ef5" prot="public" static="no">
+        <name>CLOCK_MCHP_MCLKPERIPH_ID_PCC_APB</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(9, 3, 12, 0x3f, 57)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="227" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="227" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a4f466eeed8fa57339509207c77fd6cf0" prot="public" static="no">
+        <name>CLOCK_MCHP_MCLKPERIPH_ID_CCL_APB</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(9, 3, 13, 0x3f, 58)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="228" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="228" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1ac97b177e0b4050c248416cbb09dc6693" prot="public" static="no">
+        <name>CLOCK_MCHP_MCLKPERIPH_ID_PDEC_APB</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(9, 3, 14, 0x3f, 59)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="229" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="229" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1aa6e14d78643d022467b3385bf930f349" prot="public" static="no">
+        <name>CLOCK_MCHP_MCLKPERIPH_ID_ETH_APB</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(9, 3, 15, 0x3f, 60)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="230" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="230" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a1f0b24f209cc2aeba54f770d9ad6f045" prot="public" static="no">
+        <name>CLOCK_MCHP_MCLKPERIPH_ID_TRNG_APB</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(9, 3, 16, 0x3f, 61)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="231" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="231" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1aae27b56b768f9c68bfb39f8a6ea3bd34" prot="public" static="no">
+        <name>CLOCK_MCHP_MCLKPERIPH_ID_USB_APB</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(9, 3, 17, 0x3f, 62)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="232" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="232" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a9fb89fb266e6bee7606a1de146a33d4f" prot="public" static="no">
+        <name>CLOCK_MCHP_MCLKPERIPH_ID_EBI_APB</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(9, 3, 18, 0x3f, 63)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="233" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="233" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a0819cfd2cae3f24367c9fda31718c240" prot="public" static="no">
+        <name>CLOCK_MCHP_MCLKPERIPH_ID_BSDAP_AHB</name>
+        <initializer><ref refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" kindref="member">MCHP_CLOCK_DERIVE_ID</ref>(9, 3, 19, 0x3f, 64)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="234" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="234" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mchp__pic32ck__sg__gc__clock_8h_1a5884aa8fb4b6841cf3b36f8df64136d1" prot="public" static="no">
+        <name>CLOCK_MCHP_MCLKPERIPH_ID_MAX</name>
+        <initializer>(64)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" line="235" column="9" bodyfile="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h" bodystart="235" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>List clock subsystem IDs for pic32ck_sg_gc family. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Clock subsystem IDs. To be used in devicetree nodes, and as argument for clock API. </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2026<sp/>Microchip<sp/>Technology<sp/>Inc.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>SPDX-License-Identifier:<sp/>Apache-2.0</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>INCLUDE_ZEPHYR_DT_BINDINGS_CLOCK_MCHP_PIC32CK_SG_GC_CLOCK_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INCLUDE_ZEPHYR_DT_BINDINGS_CLOCK_MCHP_PIC32CK_SG_GC_CLOCK_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="mchp__pic32ck__sg__gc__clock_8h_1a0ebea68f214a63653aa0eaab0cf9c419" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MCHP_CLOCK_DERIVE_ID(type,<sp/>mclkmaskreg,<sp/>mclkmaskbit,<sp/>gclkperiph,<sp/>inst)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="55"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(((type)<sp/>&lt;&lt;<sp/>26)<sp/>|<sp/>((mclkmaskreg)<sp/>&lt;&lt;<sp/>20)<sp/>|<sp/>((mclkmaskbit)<sp/>&lt;&lt;<sp/>14)<sp/>|<sp/>((gclkperiph)<sp/>&lt;&lt;<sp/>8)<sp/>|<sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="56"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>inst)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>XOSC_TYPE<sp/>ids<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="mchp__pic32ck__sg__gc__clock_8h_1a201012bb3a82a346aa0a98a5de91f320" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_XOSC_ID<sp/><sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(0,<sp/>0x3f,<sp/>0x3f,<sp/>0x3f,<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="mchp__pic32ck__sg__gc__clock_8h_1a301af797e998ab83173d2a2e66a1ea38" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_XOSC_ID_MAX<sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>DFLL48M_TYPE<sp/>ids<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="mchp__pic32ck__sg__gc__clock_8h_1a42e64149c30379ebe4bd72a501d08f23" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_DFLL48M_ID<sp/><sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(1,<sp/>0x3f,<sp/>0x3f,<sp/>0,<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="mchp__pic32ck__sg__gc__clock_8h_1a16b646af4fc7f989c4c7cc781a82e1b7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_DFLL48M_ID_MAX<sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>PLL_TYPE<sp/>ids<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="mchp__pic32ck__sg__gc__clock_8h_1acd48cc8da0678862a2d8e0af37799e1e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_PLL_ID_PLL0<sp/>MCHP_CLOCK_DERIVE_ID(2,<sp/>0x3f,<sp/>0x3f,<sp/>0,<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="mchp__pic32ck__sg__gc__clock_8h_1a5ef027c132316e0aa9fe06cc2e0f3b63" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_PLL_ID_MAX<sp/><sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>PLL0_OUT_TYPE<sp/>ids<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="mchp__pic32ck__sg__gc__clock_8h_1a12ddd4213583b011cf2ec8e5802ac3f2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_PLL0_ID_OUT0<sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(3,<sp/>0x3f,<sp/>0x3f,<sp/>0x3f,<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72" refid="mchp__pic32ck__sg__gc__clock_8h_1a24937208d2f707d32917b2293fe9e9e3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_PLL0_ID_OUT1<sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(3,<sp/>0x3f,<sp/>0x3f,<sp/>0x3f,<sp/>1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="mchp__pic32ck__sg__gc__clock_8h_1a9d67b9354cc244fc98303556530d711f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_PLL0_ID_OUT2<sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(3,<sp/>0x3f,<sp/>0x3f,<sp/>0x3f,<sp/>2)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="mchp__pic32ck__sg__gc__clock_8h_1aaba7d7ef85c02109d97d6c1098f84bc8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_PLL0_ID_OUT3<sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(3,<sp/>0x3f,<sp/>0x3f,<sp/>0x3f,<sp/>3)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="mchp__pic32ck__sg__gc__clock_8h_1a8c05b54dae36aa1f2c04a5dd05d12531" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_PLL0_ID_OUT4<sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(3,<sp/>0x3f,<sp/>0x3f,<sp/>0x3f,<sp/>4)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76" refid="mchp__pic32ck__sg__gc__clock_8h_1aa71217a134f7ad7b2ec49463fcf739f1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_PLL0_ID_OUT5<sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(3,<sp/>0x3f,<sp/>0x3f,<sp/>0x3f,<sp/>5)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="mchp__pic32ck__sg__gc__clock_8h_1a1566da9a6867acb8da4a3e4cf7e7ab5d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_PLL0_OUT_ID_MAX<sp/>(5)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>RTC_TYPE<sp/>ids<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="mchp__pic32ck__sg__gc__clock_8h_1aed47d2a2eccaea5ed5f5e99fa41afbbb" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_RTC_ID<sp/><sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(4,<sp/>0x3f,<sp/>0x3f,<sp/>0x3f,<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="mchp__pic32ck__sg__gc__clock_8h_1aa6dc48a4e2e1047734e02f8c060e9369" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_RTC_ID_MAX<sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>XOSC32K_TYPE<sp/>ids<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="mchp__pic32ck__sg__gc__clock_8h_1a3262be48f6349821c62498b0521226ff" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_XOSC32K_ID<sp/><sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(5,<sp/>0x3f,<sp/>0x3f,<sp/>0x3f,<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="mchp__pic32ck__sg__gc__clock_8h_1a09e1e2095d902fe6c82d7992a2eac5da" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_XOSC32K_ID_MAX<sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>GCLKGEN_TYPE<sp/>ids<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="mchp__pic32ck__sg__gc__clock_8h_1adc730b78bbb79a2de524288fb8f2a90f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_GCLKGEN_ID_GEN0<sp/><sp/>MCHP_CLOCK_DERIVE_ID(6,<sp/>0x3f,<sp/>0x3f,<sp/>0x3f,<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89" refid="mchp__pic32ck__sg__gc__clock_8h_1a7d1c402859c4f053d487b78002f0b16d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_GCLKGEN_ID_GEN1<sp/><sp/>MCHP_CLOCK_DERIVE_ID(6,<sp/>0x3f,<sp/>0x3f,<sp/>0x3f,<sp/>1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90" refid="mchp__pic32ck__sg__gc__clock_8h_1a2dda06b2509f1d33896bf82927da6f84" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_GCLKGEN_ID_GEN2<sp/><sp/>MCHP_CLOCK_DERIVE_ID(6,<sp/>0x3f,<sp/>0x3f,<sp/>0x3f,<sp/>2)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91" refid="mchp__pic32ck__sg__gc__clock_8h_1ac6c91333d8e736f9c25c765f05f4be66" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_GCLKGEN_ID_GEN3<sp/><sp/>MCHP_CLOCK_DERIVE_ID(6,<sp/>0x3f,<sp/>0x3f,<sp/>0x3f,<sp/>3)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92" refid="mchp__pic32ck__sg__gc__clock_8h_1a6bd03b027dab2c82624de849d355e3c7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_GCLKGEN_ID_GEN4<sp/><sp/>MCHP_CLOCK_DERIVE_ID(6,<sp/>0x3f,<sp/>0x3f,<sp/>0x3f,<sp/>4)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="mchp__pic32ck__sg__gc__clock_8h_1ae018b90957ec659f5225363264173348" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_GCLKGEN_ID_GEN5<sp/><sp/>MCHP_CLOCK_DERIVE_ID(6,<sp/>0x3f,<sp/>0x3f,<sp/>0x3f,<sp/>5)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94" refid="mchp__pic32ck__sg__gc__clock_8h_1a648ca2df6a086f43bbd79c76726b8acf" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_GCLKGEN_ID_GEN6<sp/><sp/>MCHP_CLOCK_DERIVE_ID(6,<sp/>0x3f,<sp/>0x3f,<sp/>0x3f,<sp/>6)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="mchp__pic32ck__sg__gc__clock_8h_1adcfc04767ae03fef19c1fa01adf73c60" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_GCLKGEN_ID_GEN7<sp/><sp/>MCHP_CLOCK_DERIVE_ID(6,<sp/>0x3f,<sp/>0x3f,<sp/>0x3f,<sp/>7)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96" refid="mchp__pic32ck__sg__gc__clock_8h_1a0e06ddf395b54a0c7b9b2d3f284e8449" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_GCLKGEN_ID_GEN8<sp/><sp/>MCHP_CLOCK_DERIVE_ID(6,<sp/>0x3f,<sp/>0x3f,<sp/>0x3f,<sp/>8)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97" refid="mchp__pic32ck__sg__gc__clock_8h_1a3da646cdf217d24807332b782c2056c9" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_GCLKGEN_ID_GEN9<sp/><sp/>MCHP_CLOCK_DERIVE_ID(6,<sp/>0x3f,<sp/>0x3f,<sp/>0x3f,<sp/>9)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98" refid="mchp__pic32ck__sg__gc__clock_8h_1ab9a58178e0fd1faa6804f35709ac4e94" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_GCLKGEN_ID_GEN10<sp/>MCHP_CLOCK_DERIVE_ID(6,<sp/>0x3f,<sp/>0x3f,<sp/>0x3f,<sp/>10)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99" refid="mchp__pic32ck__sg__gc__clock_8h_1a8fad76e8d57aa754d1237f4fae8be6ed" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_GCLKGEN_ID_GEN11<sp/>MCHP_CLOCK_DERIVE_ID(6,<sp/>0x3f,<sp/>0x3f,<sp/>0x3f,<sp/>11)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100" refid="mchp__pic32ck__sg__gc__clock_8h_1a67296972320d7cb9295cd67c9cf25c54" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_GCLKGEN_ID_MAX<sp/><sp/><sp/>(11)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>GCLKPERIPH_TYPE<sp/>ids<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103" refid="mchp__pic32ck__sg__gc__clock_8h_1a9447de6351b7f09b6a30d8df8e586d85" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_GCLKPERIPH_ID_FREQM_MSR0<sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(7,<sp/>0x3f,<sp/>0x3f,<sp/>2,<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104" refid="mchp__pic32ck__sg__gc__clock_8h_1ac6fc7ade933679db0f47c23fb27c6988" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_GCLKPERIPH_ID_FREQM_MSR1<sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(7,<sp/>0x3f,<sp/>0x3f,<sp/>3,<sp/>1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105" refid="mchp__pic32ck__sg__gc__clock_8h_1a0da9e951ad59ea7ffa1b3a0586203202" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_GCLKPERIPH_ID_FREQM_REF<sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(7,<sp/>0x3f,<sp/>0x3f,<sp/>4,<sp/>2)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106" refid="mchp__pic32ck__sg__gc__clock_8h_1aeaeb9a032e3fa5a00199ef27c2a5ec30" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_GCLKPERIPH_ID_EIC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(7,<sp/>0x3f,<sp/>0x3f,<sp/>5,<sp/>3)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107" refid="mchp__pic32ck__sg__gc__clock_8h_1a31aa9472c7182d16249ba7950b452c14" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_GCLKPERIPH_ID_EVSYS_CH0<sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(7,<sp/>0x3f,<sp/>0x3f,<sp/>6,<sp/>4)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108" refid="mchp__pic32ck__sg__gc__clock_8h_1a370930d5d12099ec34871a27cee5c8e2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_GCLKPERIPH_ID_EVSYS_CH1<sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(7,<sp/>0x3f,<sp/>0x3f,<sp/>7,<sp/>5)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109" refid="mchp__pic32ck__sg__gc__clock_8h_1a6966d71c9da4ce1803c48dc088818401" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_GCLKPERIPH_ID_EVSYS_CH2<sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(7,<sp/>0x3f,<sp/>0x3f,<sp/>8,<sp/>6)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110" refid="mchp__pic32ck__sg__gc__clock_8h_1a5d98273862a2323e050874755da0c840" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_GCLKPERIPH_ID_EVSYS_CH3<sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(7,<sp/>0x3f,<sp/>0x3f,<sp/>9,<sp/>7)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111" refid="mchp__pic32ck__sg__gc__clock_8h_1a24855b6b55dc3eb9efba6476d6d930e8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_GCLKPERIPH_ID_EVSYS_CH4<sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(7,<sp/>0x3f,<sp/>0x3f,<sp/>10,<sp/>8)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112" refid="mchp__pic32ck__sg__gc__clock_8h_1a6bb92b5d57c58e6b1ab083504bbb3756" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_GCLKPERIPH_ID_EVSYS_CH5<sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(7,<sp/>0x3f,<sp/>0x3f,<sp/>11,<sp/>9)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113" refid="mchp__pic32ck__sg__gc__clock_8h_1ae2404c8e3bce6bd9b01903a9ad942d35" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_GCLKPERIPH_ID_EVSYS_CH6<sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(7,<sp/>0x3f,<sp/>0x3f,<sp/>12,<sp/>10)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114" refid="mchp__pic32ck__sg__gc__clock_8h_1a852a5424cc73a5e75fcd7b151e7dd767" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_GCLKPERIPH_ID_EVSYS_CH7<sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(7,<sp/>0x3f,<sp/>0x3f,<sp/>13,<sp/>11)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115" refid="mchp__pic32ck__sg__gc__clock_8h_1a9ff8a7f89700d95e431e6d0c12869b56" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_GCLKPERIPH_ID_EVSYS_CH8<sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(7,<sp/>0x3f,<sp/>0x3f,<sp/>14,<sp/>12)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116" refid="mchp__pic32ck__sg__gc__clock_8h_1ad7112111ef68955636866ec0adb0e71e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_GCLKPERIPH_ID_EVSYS_CH9<sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(7,<sp/>0x3f,<sp/>0x3f,<sp/>15,<sp/>13)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117" refid="mchp__pic32ck__sg__gc__clock_8h_1aeb43cfd70588d9f660e8965516480191" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_GCLKPERIPH_ID_EVSYS_CH10<sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(7,<sp/>0x3f,<sp/>0x3f,<sp/>16,<sp/>14)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118" refid="mchp__pic32ck__sg__gc__clock_8h_1a93e2a650425a0bb9014c56d848c039bb" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_GCLKPERIPH_ID_EVSYS_CH11<sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(7,<sp/>0x3f,<sp/>0x3f,<sp/>17,<sp/>15)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119" refid="mchp__pic32ck__sg__gc__clock_8h_1af5855721c29be7a03686059ae3ca7f5e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_GCLKPERIPH_ID_SDMMC0_SLOW<sp/><sp/>MCHP_CLOCK_DERIVE_ID(7,<sp/>0x3f,<sp/>0x3f,<sp/>18,<sp/>16)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120" refid="mchp__pic32ck__sg__gc__clock_8h_1a1f495a4359379169060d5e1ac071aa1c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_GCLKPERIPH_ID_SDMMC1_SLOW<sp/><sp/>MCHP_CLOCK_DERIVE_ID(7,<sp/>0x3f,<sp/>0x3f,<sp/>18,<sp/>17)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121" refid="mchp__pic32ck__sg__gc__clock_8h_1a2bb7a4f72e45c2fb5f449b6b3f1b4520" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_GCLKPERIPH_ID_SERCOM0_SLOW<sp/>MCHP_CLOCK_DERIVE_ID(7,<sp/>0x3f,<sp/>0x3f,<sp/>18,<sp/>18)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122" refid="mchp__pic32ck__sg__gc__clock_8h_1a726fe192480ed57fbdc3e77cc1133c89" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_GCLKPERIPH_ID_SERCOM1_SLOW<sp/>MCHP_CLOCK_DERIVE_ID(7,<sp/>0x3f,<sp/>0x3f,<sp/>18,<sp/>19)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123" refid="mchp__pic32ck__sg__gc__clock_8h_1accbd9b23f933a8bae611a00019c5eb50" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_GCLKPERIPH_ID_SERCOM4_SLOW<sp/>MCHP_CLOCK_DERIVE_ID(7,<sp/>0x3f,<sp/>0x3f,<sp/>18,<sp/>20)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124" refid="mchp__pic32ck__sg__gc__clock_8h_1a99d3f0a1c9e10f405c761ae6f3bf2744" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_GCLKPERIPH_ID_SERCOM2_SLOW<sp/>MCHP_CLOCK_DERIVE_ID(7,<sp/>0x3f,<sp/>0x3f,<sp/>18,<sp/>21)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125" refid="mchp__pic32ck__sg__gc__clock_8h_1a08fb53b9b65e5743900bd6a4179925d3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_GCLKPERIPH_ID_SERCOM3_SLOW<sp/>MCHP_CLOCK_DERIVE_ID(7,<sp/>0x3f,<sp/>0x3f,<sp/>18,<sp/>22)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126" refid="mchp__pic32ck__sg__gc__clock_8h_1a680eff3630a7446292705a3c29098510" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_GCLKPERIPH_ID_SERCOM5_SLOW<sp/>MCHP_CLOCK_DERIVE_ID(7,<sp/>0x3f,<sp/>0x3f,<sp/>18,<sp/>23)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127" refid="mchp__pic32ck__sg__gc__clock_8h_1a8aaeb571901ab3b932c93aea8f67f39a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_GCLKPERIPH_ID_SERCOM6_SLOW<sp/>MCHP_CLOCK_DERIVE_ID(7,<sp/>0x3f,<sp/>0x3f,<sp/>18,<sp/>24)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128" refid="mchp__pic32ck__sg__gc__clock_8h_1a277cd1054793077c5c67551bf4a38df5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_GCLKPERIPH_ID_SERCOM7_SLOW<sp/>MCHP_CLOCK_DERIVE_ID(7,<sp/>0x3f,<sp/>0x3f,<sp/>18,<sp/>25)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129" refid="mchp__pic32ck__sg__gc__clock_8h_1a88f1128166176ebfc0a41dd496186300" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_GCLKPERIPH_ID_SERCOM0_CORE<sp/>MCHP_CLOCK_DERIVE_ID(7,<sp/>0x3f,<sp/>0x3f,<sp/>19,<sp/>26)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130" refid="mchp__pic32ck__sg__gc__clock_8h_1ab3ef99c62a821f4e5fe1f800de6561c2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_GCLKPERIPH_ID_SERCOM1_CORE<sp/>MCHP_CLOCK_DERIVE_ID(7,<sp/>0x3f,<sp/>0x3f,<sp/>20,<sp/>27)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131" refid="mchp__pic32ck__sg__gc__clock_8h_1ab0668a32e7385c8629b26cd396e6beaa" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_GCLKPERIPH_ID_SERCOM2_CORE<sp/>MCHP_CLOCK_DERIVE_ID(7,<sp/>0x3f,<sp/>0x3f,<sp/>21,<sp/>28)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132" refid="mchp__pic32ck__sg__gc__clock_8h_1a155a02aa8799940dd0c59efac25e5bbc" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_GCLKPERIPH_ID_SERCOM3_CORE<sp/>MCHP_CLOCK_DERIVE_ID(7,<sp/>0x3f,<sp/>0x3f,<sp/>22,<sp/>29)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133" refid="mchp__pic32ck__sg__gc__clock_8h_1af3614ec46e49df22dc37768df6e9c12b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_GCLKPERIPH_ID_TCC0<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(7,<sp/>0x3f,<sp/>0x3f,<sp/>23,<sp/>30)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134" refid="mchp__pic32ck__sg__gc__clock_8h_1a253908d056c2ac97302065d9c0eb1cc4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_GCLKPERIPH_ID_TCC1<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(7,<sp/>0x3f,<sp/>0x3f,<sp/>23,<sp/>31)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135" refid="mchp__pic32ck__sg__gc__clock_8h_1ae4ebf71771a1435faa34293290ed06f0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_GCLKPERIPH_ID_TCC2<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(7,<sp/>0x3f,<sp/>0x3f,<sp/>24,<sp/>32)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136" refid="mchp__pic32ck__sg__gc__clock_8h_1a363610cff7033e1bb7036d3b4ed21a0c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_GCLKPERIPH_ID_TCC3<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(7,<sp/>0x3f,<sp/>0x3f,<sp/>24,<sp/>33)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137" refid="mchp__pic32ck__sg__gc__clock_8h_1a77eb95730d000556c3b32a7bcf152913" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_GCLKPERIPH_ID_SERCOM4_CORE<sp/>MCHP_CLOCK_DERIVE_ID(7,<sp/>0x3f,<sp/>0x3f,<sp/>25,<sp/>34)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138" refid="mchp__pic32ck__sg__gc__clock_8h_1a4b1126fa67b001d9d086874d8536fb48" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_GCLKPERIPH_ID_SERCOM5_CORE<sp/>MCHP_CLOCK_DERIVE_ID(7,<sp/>0x3f,<sp/>0x3f,<sp/>26,<sp/>35)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139" refid="mchp__pic32ck__sg__gc__clock_8h_1a8b7161f3cedb7e5e39cc5d98498e262c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_GCLKPERIPH_ID_SERCOM6_CORE<sp/>MCHP_CLOCK_DERIVE_ID(7,<sp/>0x3f,<sp/>0x3f,<sp/>27,<sp/>36)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140" refid="mchp__pic32ck__sg__gc__clock_8h_1a12909dbedec1469b89c431395b9fb6eb" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_GCLKPERIPH_ID_SERCOM7_CORE<sp/>MCHP_CLOCK_DERIVE_ID(7,<sp/>0x3f,<sp/>0x3f,<sp/>28,<sp/>37)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141" refid="mchp__pic32ck__sg__gc__clock_8h_1a341713f50727d73e4275cc093061487e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_GCLKPERIPH_ID_TCC4<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(7,<sp/>0x3f,<sp/>0x3f,<sp/>29,<sp/>38)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142" refid="mchp__pic32ck__sg__gc__clock_8h_1a1cb0b9600a335a01ff00c7eaa64a1229" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_GCLKPERIPH_ID_TCC5<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(7,<sp/>0x3f,<sp/>0x3f,<sp/>30,<sp/>39)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143" refid="mchp__pic32ck__sg__gc__clock_8h_1a14a655c0aead0534f6915a1994a6ed1d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_GCLKPERIPH_ID_TCC6<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(7,<sp/>0x3f,<sp/>0x3f,<sp/>31,<sp/>40)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144" refid="mchp__pic32ck__sg__gc__clock_8h_1a89967af8e20803cdb7e41890c4a4a143" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_GCLKPERIPH_ID_TCC7<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(7,<sp/>0x3f,<sp/>0x3f,<sp/>32,<sp/>41)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145" refid="mchp__pic32ck__sg__gc__clock_8h_1a845a53053a861de67ebfa150bff389ff" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_GCLKPERIPH_ID_ADC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(7,<sp/>0x3f,<sp/>0x3f,<sp/>33,<sp/>42)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146" refid="mchp__pic32ck__sg__gc__clock_8h_1a8558308cb89c99326b165a7b12b14ff1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_GCLKPERIPH_ID_AC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(7,<sp/>0x3f,<sp/>0x3f,<sp/>34,<sp/>43)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147" refid="mchp__pic32ck__sg__gc__clock_8h_1a65c9bc79d0b5edd7dcc8a6178a600127" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_GCLKPERIPH_ID_PTC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(7,<sp/>0x3f,<sp/>0x3f,<sp/>35,<sp/>44)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148" refid="mchp__pic32ck__sg__gc__clock_8h_1a0730543904f07b779d0a4ecea9bb8b3e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_GCLKPERIPH_ID_SPI_IXS<sp/><sp/><sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(7,<sp/>0x3f,<sp/>0x3f,<sp/>36,<sp/>45)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149" refid="mchp__pic32ck__sg__gc__clock_8h_1a9f9af8bd8013d7536389a108851b0925" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_GCLKPERIPH_ID_CCL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(7,<sp/>0x3f,<sp/>0x3f,<sp/>37,<sp/>46)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150" refid="mchp__pic32ck__sg__gc__clock_8h_1abf9396d20ea2356d9963326cab64df02" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_GCLKPERIPH_ID_PDEC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(7,<sp/>0x3f,<sp/>0x3f,<sp/>38,<sp/>47)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151" refid="mchp__pic32ck__sg__gc__clock_8h_1ae251d4719eb378734e3cb01c9f5828d8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_GCLKPERIPH_ID_CAN0<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(7,<sp/>0x3f,<sp/>0x3f,<sp/>39,<sp/>48)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152" refid="mchp__pic32ck__sg__gc__clock_8h_1a2e77a06b25293f4152b0f2399ab32982" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_GCLKPERIPH_ID_CAN1<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(7,<sp/>0x3f,<sp/>0x3f,<sp/>40,<sp/>49)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153" refid="mchp__pic32ck__sg__gc__clock_8h_1a43d835c163dac2527c083c001fffd9aa" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_GCLKPERIPH_ID_ETH_TX<sp/><sp/><sp/><sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(7,<sp/>0x3f,<sp/>0x3f,<sp/>41,<sp/>50)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154" refid="mchp__pic32ck__sg__gc__clock_8h_1aa72adfa1befae033f3111e544978a621" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_GCLKPERIPH_ID_ETH_TSU<sp/><sp/><sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(7,<sp/>0x3f,<sp/>0x3f,<sp/>42,<sp/>51)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155" refid="mchp__pic32ck__sg__gc__clock_8h_1a1e5c49e89ef93f44610556597c2be205" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_GCLKPERIPH_ID_SQI<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(7,<sp/>0x3f,<sp/>0x3f,<sp/>43,<sp/>52)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156" refid="mchp__pic32ck__sg__gc__clock_8h_1a40318aa3aa6c1098d0432d2abfa46f0c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_GCLKPERIPH_ID_SDMMC0<sp/><sp/><sp/><sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(7,<sp/>0x3f,<sp/>0x3f,<sp/>44,<sp/>53)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157" refid="mchp__pic32ck__sg__gc__clock_8h_1a6c822629f1075df52bc4ba09021a9788" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_GCLKPERIPH_ID_SDMMC1<sp/><sp/><sp/><sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(7,<sp/>0x3f,<sp/>0x3f,<sp/>45,<sp/>54)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="158" refid="mchp__pic32ck__sg__gc__clock_8h_1a566c7babd5641f337fc00adb20367833" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_GCLKPERIPH_ID_USB<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(7,<sp/>0x3f,<sp/>0x3f,<sp/>46,<sp/>55)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159" refid="mchp__pic32ck__sg__gc__clock_8h_1a5f974f3ec705d29f83a0c41aeeff0169" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_GCLKPERIPH_ID_CPU0_TRACE<sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(7,<sp/>0x3f,<sp/>0x3f,<sp/>47,<sp/>56)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="160" refid="mchp__pic32ck__sg__gc__clock_8h_1a9fb0644f504a830a4e324f792815ae98" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_GCLKPERIPH_ID_MAX<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(56)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>MCLKDOMAIN_TYPE<sp/>ids<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163" refid="mchp__pic32ck__sg__gc__clock_8h_1a6de8b0b73f5ad847d3b4a1c2898ba534" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_MCLKCPU_ID<sp/><sp/>MCHP_CLOCK_DERIVE_ID(8,<sp/>0x3f,<sp/>0x3f,<sp/>0x3f,<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164" refid="mchp__pic32ck__sg__gc__clock_8h_1ad164589a2abc31000c96bd45a7eac9ba" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_MCLKCPU_MAX<sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>MCLKPERIPH_TYPE<sp/>ids<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167" refid="mchp__pic32ck__sg__gc__clock_8h_1a5f1c9309e3eb0586eb1f765536b4346e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_MCLKPERIPH_ID_DSU_AHB<sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(9,<sp/>0,<sp/>3,<sp/>0x3f,<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="168" refid="mchp__pic32ck__sg__gc__clock_8h_1af85028f923174b11e44d1fc9043c5c75" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_MCLKPERIPH_ID_FCR_AHB<sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(9,<sp/>0,<sp/>4,<sp/>0x3f,<sp/>1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169" refid="mchp__pic32ck__sg__gc__clock_8h_1a55391bcfa4db8dfdf6d7fbfbfbc9626f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_MCLKPERIPH_ID_FCW_AHB<sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(9,<sp/>0,<sp/>5,<sp/>0x3f,<sp/>2)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170" refid="mchp__pic32ck__sg__gc__clock_8h_1ad63bf9ad8a02a102f6cc0b4ebcecd8ae" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_MCLKPERIPH_ID_PAC_AHB<sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(9,<sp/>0,<sp/>6,<sp/>0x3f,<sp/>3)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171" refid="mchp__pic32ck__sg__gc__clock_8h_1a98a4fedf80bb2756cf890d8c33dc98cf" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_MCLKPERIPH_ID_DMA0_AHB<sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(9,<sp/>0,<sp/>8,<sp/>0x3f,<sp/>4)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="172" refid="mchp__pic32ck__sg__gc__clock_8h_1aefad014e192ff33d0a75ed69d3e99997" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_MCLKPERIPH_ID_DMA1_AHB<sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(9,<sp/>0,<sp/>9,<sp/>0x3f,<sp/>5)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173" refid="mchp__pic32ck__sg__gc__clock_8h_1a362ebd80cf078c91d39f7e37078445a9" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_MCLKPERIPH_ID_PRM_AHB<sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(9,<sp/>0,<sp/>12,<sp/>0x3f,<sp/>6)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="174" refid="mchp__pic32ck__sg__gc__clock_8h_1a020e0dd01728bbb323fd174eccb1509f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_MCLKPERIPH_ID_CAN0_AHB<sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(9,<sp/>0,<sp/>13,<sp/>0x3f,<sp/>7)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="175" refid="mchp__pic32ck__sg__gc__clock_8h_1a82eab8ef6506c116079b31528651ac8e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_MCLKPERIPH_ID_CAN1_AHB<sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(9,<sp/>0,<sp/>14,<sp/>0x3f,<sp/>8)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="176" refid="mchp__pic32ck__sg__gc__clock_8h_1aa4f92ad099bb80accb050b39876688c3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_MCLKPERIPH_ID_ETH_AHB<sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(9,<sp/>0,<sp/>15,<sp/>0x3f,<sp/>9)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="177" refid="mchp__pic32ck__sg__gc__clock_8h_1a29100f869118c250054725cdf72d58f8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_MCLKPERIPH_ID_SQI_AHB<sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(9,<sp/>0,<sp/>16,<sp/>0x3f,<sp/>10)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178" refid="mchp__pic32ck__sg__gc__clock_8h_1a4cd460b34dac65adf8e9c19fc7072149" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_MCLKPERIPH_ID_SDMMC0_AHB<sp/>MCHP_CLOCK_DERIVE_ID(9,<sp/>0,<sp/>17,<sp/>0x3f,<sp/>11)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="179" refid="mchp__pic32ck__sg__gc__clock_8h_1a0ff819df13afc3af15b8e593f9a027c4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_MCLKPERIPH_ID_SDMMC1_AHB<sp/>MCHP_CLOCK_DERIVE_ID(9,<sp/>0,<sp/>18,<sp/>0x3f,<sp/>12)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="180" refid="mchp__pic32ck__sg__gc__clock_8h_1a03f03076ce38c08aff0158f36e552bdb" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_MCLKPERIPH_ID_USBFS_AHB<sp/><sp/>MCHP_CLOCK_DERIVE_ID(9,<sp/>0,<sp/>19,<sp/>0x3f,<sp/>13)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181" refid="mchp__pic32ck__sg__gc__clock_8h_1a311c2b3b6b7c998cd03a0ad4caaf9b68" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_MCLKPERIPH_ID_USBHS_AHB<sp/><sp/>MCHP_CLOCK_DERIVE_ID(9,<sp/>0,<sp/>20,<sp/>0x3f,<sp/>14)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="182" refid="mchp__pic32ck__sg__gc__clock_8h_1ada6c6291b51b7fe41ee0925e31628ff9" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_MCLKPERIPH_ID_EBI_AHB<sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(9,<sp/>0,<sp/>21,<sp/>0x3f,<sp/>15)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="183" refid="mchp__pic32ck__sg__gc__clock_8h_1a37acd5942b619f4410efdebad1a29651" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_MCLKPERIPH_ID_HSM_AHB<sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(9,<sp/>0,<sp/>22,<sp/>0x3f,<sp/>16)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185" refid="mchp__pic32ck__sg__gc__clock_8h_1a25521d18a70eacc1ad5cc347feb0765e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_MCLKPERIPH_ID_DSU_APB<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(9,<sp/>1,<sp/>0,<sp/>0x3f,<sp/>17)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="186" refid="mchp__pic32ck__sg__gc__clock_8h_1a8427e8e5faebe7f66dbfe1554d024c6e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_MCLKPERIPH_ID_FCR_APB<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(9,<sp/>1,<sp/>1,<sp/>0x3f,<sp/>18)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="187" refid="mchp__pic32ck__sg__gc__clock_8h_1a979b800be2dabf8c744fef8295cf1bcc" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_MCLKPERIPH_ID_FCW_APB<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(9,<sp/>1,<sp/>2,<sp/>0x3f,<sp/>19)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="188" refid="mchp__pic32ck__sg__gc__clock_8h_1acd7a900e83eb1f4440f1a3bb19b64c87" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_MCLKPERIPH_ID_RSTC_APB<sp/><sp/><sp/><sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(9,<sp/>1,<sp/>5,<sp/>0x3f,<sp/>20)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="189" refid="mchp__pic32ck__sg__gc__clock_8h_1af1c5abfaa99c29512de8ad86d50436fa" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_MCLKPERIPH_ID_OSCCTRL_APB<sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(9,<sp/>1,<sp/>6,<sp/>0x3f,<sp/>21)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="190" refid="mchp__pic32ck__sg__gc__clock_8h_1a1d56390d443e73b0a3ff50b5375d053d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_MCLKPERIPH_ID_OSC32KCTRL_APB<sp/>MCHP_CLOCK_DERIVE_ID(9,<sp/>1,<sp/>7,<sp/>0x3f,<sp/>22)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="191" refid="mchp__pic32ck__sg__gc__clock_8h_1a7683dd70a6fd67b23950255a318a92c5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_MCLKPERIPH_ID_FREQM_APB<sp/><sp/><sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(9,<sp/>1,<sp/>10,<sp/>0x3f,<sp/>23)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="192" refid="mchp__pic32ck__sg__gc__clock_8h_1aea2b6485e25c10b439400ce5104a7be6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_MCLKPERIPH_ID_WDT_APB<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(9,<sp/>1,<sp/>11,<sp/>0x3f,<sp/>24)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="193" refid="mchp__pic32ck__sg__gc__clock_8h_1ad712b633caa2592437efda6d5fa9fddf" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_MCLKPERIPH_ID_RTC_APB<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(9,<sp/>1,<sp/>12,<sp/>0x3f,<sp/>25)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="194" refid="mchp__pic32ck__sg__gc__clock_8h_1a96f372b19d6097849c37795933d0822f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_MCLKPERIPH_ID_EIC_APB<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(9,<sp/>1,<sp/>13,<sp/>0x3f,<sp/>26)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="195" refid="mchp__pic32ck__sg__gc__clock_8h_1a574e9bee5faec84626fa1e9ef679e71a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_MCLKPERIPH_ID_PAC_APB<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(9,<sp/>1,<sp/>14,<sp/>0x3f,<sp/>27)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="196" refid="mchp__pic32ck__sg__gc__clock_8h_1a24b1be03ee41ef4d3e4ba72694d863b5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_MCLKPERIPH_ID_TRAM_APB<sp/><sp/><sp/><sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(9,<sp/>1,<sp/>15,<sp/>0x3f,<sp/>28)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="197" refid="mchp__pic32ck__sg__gc__clock_8h_1a0d19557ec776183aa0734c97d38cdbc6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_MCLKPERIPH_ID_MBISTINTF_APB<sp/><sp/>MCHP_CLOCK_DERIVE_ID(9,<sp/>1,<sp/>18,<sp/>0x3f,<sp/>29)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="198" refid="mchp__pic32ck__sg__gc__clock_8h_1ac8d026bae71eb4c033b8fd93b2e0fa2c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_MCLKPERIPH_ID_TDM_APB<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(9,<sp/>1,<sp/>19,<sp/>0x3f,<sp/>30)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200" refid="mchp__pic32ck__sg__gc__clock_8h_1acadb93a9913d4622db5b6e0b7d375ef1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_MCLKPERIPH_ID_PORT_APB<sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(9,<sp/>2,<sp/>0,<sp/>0x3f,<sp/>31)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="201" refid="mchp__pic32ck__sg__gc__clock_8h_1a003cccbd09694978168d83d06b25995f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_MCLKPERIPH_ID_DMA0_APB<sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(9,<sp/>2,<sp/>1,<sp/>0x3f,<sp/>32)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="202" refid="mchp__pic32ck__sg__gc__clock_8h_1aea8d908b0ffd05877a425b9b5085b6c8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_MCLKPERIPH_ID_DMA1_APB<sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(9,<sp/>2,<sp/>2,<sp/>0x3f,<sp/>33)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="203" refid="mchp__pic32ck__sg__gc__clock_8h_1a06eb4d6cb2bec066a15857648c259223" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_MCLKPERIPH_ID_PRM_APB<sp/><sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(9,<sp/>2,<sp/>4,<sp/>0x3f,<sp/>34)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="204" refid="mchp__pic32ck__sg__gc__clock_8h_1ae43a1ae1b9502fa64d0f2d679937a759" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_MCLKPERIPH_ID_IDAU_APB<sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(9,<sp/>2,<sp/>5,<sp/>0x3f,<sp/>35)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="205" refid="mchp__pic32ck__sg__gc__clock_8h_1a0beb2098f964c3ca55a9dca232e2f280" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_MCLKPERIPH_ID_EVSYS_APB<sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(9,<sp/>2,<sp/>6,<sp/>0x3f,<sp/>36)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="206" refid="mchp__pic32ck__sg__gc__clock_8h_1a47f3b5aa5a51664bb754a6bd409110a4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_MCLKPERIPH_ID_SERCOM0_APB<sp/>MCHP_CLOCK_DERIVE_ID(9,<sp/>2,<sp/>7,<sp/>0x3f,<sp/>37)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="207" refid="mchp__pic32ck__sg__gc__clock_8h_1af797c727eb17090ccefc52a22c5f5b51" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_MCLKPERIPH_ID_SERCOM1_APB<sp/>MCHP_CLOCK_DERIVE_ID(9,<sp/>2,<sp/>8,<sp/>0x3f,<sp/>38)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="208" refid="mchp__pic32ck__sg__gc__clock_8h_1ad809db56498079a4d2b01e393af7bd04" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_MCLKPERIPH_ID_SERCOM2_APB<sp/>MCHP_CLOCK_DERIVE_ID(9,<sp/>2,<sp/>9,<sp/>0x3f,<sp/>39)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="209" refid="mchp__pic32ck__sg__gc__clock_8h_1aff58338e2aa80841b910bebca63ca132" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_MCLKPERIPH_ID_SERCOM3_APB<sp/>MCHP_CLOCK_DERIVE_ID(9,<sp/>2,<sp/>10,<sp/>0x3f,<sp/>40)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="210" refid="mchp__pic32ck__sg__gc__clock_8h_1a09ddda66170546df3264fa6630c21ad9" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_MCLKPERIPH_ID_TCC0_APB<sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(9,<sp/>2,<sp/>11,<sp/>0x3f,<sp/>41)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="211" refid="mchp__pic32ck__sg__gc__clock_8h_1a426ad19aeeb116ceed471a6ffbe27ba6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_MCLKPERIPH_ID_TCC1_APB<sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(9,<sp/>2,<sp/>12,<sp/>0x3f,<sp/>42)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="212" refid="mchp__pic32ck__sg__gc__clock_8h_1a0c54ce51de3b7012abcfe6822cd81a58" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_MCLKPERIPH_ID_TCC2_APB<sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(9,<sp/>2,<sp/>13,<sp/>0x3f,<sp/>43)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="213" refid="mchp__pic32ck__sg__gc__clock_8h_1a1e301cdd4b8a60bff8b52eff03dcd6e6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_MCLKPERIPH_ID_TCC3_APB<sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(9,<sp/>2,<sp/>14,<sp/>0x3f,<sp/>44)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215" refid="mchp__pic32ck__sg__gc__clock_8h_1a75c42c1ce5bd4831739973617e5fedd4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_MCLKPERIPH_ID_SERCOM4_APB<sp/>MCHP_CLOCK_DERIVE_ID(9,<sp/>3,<sp/>0,<sp/>0x3f,<sp/>45)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="216" refid="mchp__pic32ck__sg__gc__clock_8h_1ac3f06e5a5b8a2d43465ff0ce073427e0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_MCLKPERIPH_ID_SERCOM5_APB<sp/>MCHP_CLOCK_DERIVE_ID(9,<sp/>3,<sp/>1,<sp/>0x3f,<sp/>46)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="217" refid="mchp__pic32ck__sg__gc__clock_8h_1a22d35327a659f86f3bbd1b86dfbd0bdc" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_MCLKPERIPH_ID_SERCOM6_APB<sp/>MCHP_CLOCK_DERIVE_ID(9,<sp/>3,<sp/>2,<sp/>0x3f,<sp/>47)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="218" refid="mchp__pic32ck__sg__gc__clock_8h_1a476d7f837f1d5c092b9375864e895e7b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_MCLKPERIPH_ID_SERCOM7_APB<sp/>MCHP_CLOCK_DERIVE_ID(9,<sp/>3,<sp/>3,<sp/>0x3f,<sp/>48)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="219" refid="mchp__pic32ck__sg__gc__clock_8h_1a07f028c49e5174a320eba2f326c013b7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_MCLKPERIPH_ID_TCC4_APB<sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(9,<sp/>3,<sp/>4,<sp/>0x3f,<sp/>49)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="220" refid="mchp__pic32ck__sg__gc__clock_8h_1ac08c3fbc66ec7948bb78a7bbea684467" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_MCLKPERIPH_ID_TCC5_APB<sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(9,<sp/>3,<sp/>5,<sp/>0x3f,<sp/>50)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="221" refid="mchp__pic32ck__sg__gc__clock_8h_1aabe0b18cb49f214748847d1fd6c9b0d4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_MCLKPERIPH_ID_TCC6_APB<sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(9,<sp/>3,<sp/>6,<sp/>0x3f,<sp/>51)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="222" refid="mchp__pic32ck__sg__gc__clock_8h_1ab3e026a71c9ecbf0b7508e2d58d51485" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_MCLKPERIPH_ID_TCC7_APB<sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(9,<sp/>3,<sp/>7,<sp/>0x3f,<sp/>52)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="223" refid="mchp__pic32ck__sg__gc__clock_8h_1a09bd059dfc0f111ccf5f1f3149363ed6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_MCLKPERIPH_ID_ADC_APB<sp/><sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(9,<sp/>3,<sp/>8,<sp/>0x3f,<sp/>53)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="224" refid="mchp__pic32ck__sg__gc__clock_8h_1affe3569727db011f6a21143af7b9e2a7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_MCLKPERIPH_ID_AC_APB<sp/><sp/><sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(9,<sp/>3,<sp/>9,<sp/>0x3f,<sp/>54)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="225" refid="mchp__pic32ck__sg__gc__clock_8h_1a31de65a5228c7021bef57eb9edef0ee8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_MCLKPERIPH_ID_PTC_APB<sp/><sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(9,<sp/>3,<sp/>10,<sp/>0x3f,<sp/>55)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="226" refid="mchp__pic32ck__sg__gc__clock_8h_1a2c6f9bd6f15c1c2518c578d192e9917c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_MCLKPERIPH_ID_I2S_APB<sp/><sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(9,<sp/>3,<sp/>11,<sp/>0x3f,<sp/>56)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="227" refid="mchp__pic32ck__sg__gc__clock_8h_1aa7f5424b104ff218e0abc29c45709ef5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_MCLKPERIPH_ID_PCC_APB<sp/><sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(9,<sp/>3,<sp/>12,<sp/>0x3f,<sp/>57)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="228" refid="mchp__pic32ck__sg__gc__clock_8h_1a4f466eeed8fa57339509207c77fd6cf0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_MCLKPERIPH_ID_CCL_APB<sp/><sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(9,<sp/>3,<sp/>13,<sp/>0x3f,<sp/>58)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="229" refid="mchp__pic32ck__sg__gc__clock_8h_1ac97b177e0b4050c248416cbb09dc6693" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_MCLKPERIPH_ID_PDEC_APB<sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(9,<sp/>3,<sp/>14,<sp/>0x3f,<sp/>59)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="230" refid="mchp__pic32ck__sg__gc__clock_8h_1aa6e14d78643d022467b3385bf930f349" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_MCLKPERIPH_ID_ETH_APB<sp/><sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(9,<sp/>3,<sp/>15,<sp/>0x3f,<sp/>60)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="231" refid="mchp__pic32ck__sg__gc__clock_8h_1a1f0b24f209cc2aeba54f770d9ad6f045" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_MCLKPERIPH_ID_TRNG_APB<sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(9,<sp/>3,<sp/>16,<sp/>0x3f,<sp/>61)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="232" refid="mchp__pic32ck__sg__gc__clock_8h_1aae27b56b768f9c68bfb39f8a6ea3bd34" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_MCLKPERIPH_ID_USB_APB<sp/><sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(9,<sp/>3,<sp/>17,<sp/>0x3f,<sp/>62)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="233" refid="mchp__pic32ck__sg__gc__clock_8h_1a9fb89fb266e6bee7606a1de146a33d4f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_MCLKPERIPH_ID_EBI_APB<sp/><sp/><sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(9,<sp/>3,<sp/>18,<sp/>0x3f,<sp/>63)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="234" refid="mchp__pic32ck__sg__gc__clock_8h_1a0819cfd2cae3f24367c9fda31718c240" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_MCLKPERIPH_ID_BSDAP_AHB<sp/><sp/><sp/>MCHP_CLOCK_DERIVE_ID(9,<sp/>3,<sp/>19,<sp/>0x3f,<sp/>64)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="235" refid="mchp__pic32ck__sg__gc__clock_8h_1a5884aa8fb4b6841cf3b36f8df64136d1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MCHP_MCLKPERIPH_ID_MAX<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(64)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>INCLUDE_ZEPHYR_DT_BINDINGS_CLOCK_MCHP_PIC32CK_SG_GC_CLOCK_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="zephyr/dt-bindings/clock/mchp_pic32ck_sg_gc_clock.h"/>
+  </compounddef>
+</doxygen>

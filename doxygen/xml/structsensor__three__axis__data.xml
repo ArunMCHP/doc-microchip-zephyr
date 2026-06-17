@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structsensor__three__axis__data" kind="struct" language="C++" prot="public">
+    <compoundname>sensor_three_axis_data</compoundname>
+    <includes refid="sensor__data__types_8h" local="no">zephyr/drivers/sensor_data_types.h</includes>
+    <innerclass refid="structsensor__three__axis__data_1_1sensor__three__axis__sample__data" prot="public">sensor_three_axis_data::sensor_three_axis_sample_data</innerclass>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structsensor__three__axis__data_1a6017fc7964204235e2222c4950f3650a" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structsensor__data__header" kindref="compound">sensor_data_header</ref></type>
+        <definition>struct sensor_data_header sensor_three_axis_data::header</definition>
+        <argsstring></argsstring>
+        <name>header</name>
+        <qualifiedname>sensor_three_axis_data::header</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/sensor_data_types.h" line="53" column="25" bodyfile="zephyr/drivers/sensor_data_types.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsensor__three__axis__data_1ade10fa0bd60d4b31eebed92e564539c5" prot="public" static="no" mutable="no">
+        <type><ref refid="stdint_8h_1accbd6432732c88ad6adc5365800433b6" kindref="member">int8_t</ref></type>
+        <definition>int8_t sensor_three_axis_data::shift</definition>
+        <argsstring></argsstring>
+        <name>shift</name>
+        <qualifiedname>sensor_three_axis_data::shift</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/sensor_data_types.h" line="54" column="8" bodyfile="zephyr/drivers/sensor_data_types.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsensor__three__axis__data_1ad1a498b1cc31b18b17e69300749bbbc0" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structsensor__three__axis__data_1_1sensor__three__axis__sample__data" kindref="compound">sensor_three_axis_data::sensor_three_axis_sample_data</ref></type>
+        <definition>struct sensor_three_axis_data::sensor_three_axis_sample_data sensor_three_axis_data::readings[1]</definition>
+        <argsstring>[1]</argsstring>
+        <name>readings</name>
+        <qualifiedname>sensor_three_axis_data::readings</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/sensor_data_types.h" line="66" column="13"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Data for a sensor channel which reports on three axes. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This is used by:<itemizedlist>
+<listitem><para>:c:enum:<computeroutput>SENSOR_CHAN_ACCEL_X</computeroutput></para>
+</listitem><listitem><para>:c:enum:<computeroutput>SENSOR_CHAN_ACCEL_Y</computeroutput></para>
+</listitem><listitem><para>:c:enum:<computeroutput>SENSOR_CHAN_ACCEL_Z</computeroutput></para>
+</listitem><listitem><para>:c:enum:<computeroutput>SENSOR_CHAN_ACCEL_XYZ</computeroutput></para>
+</listitem><listitem><para>:c:enum:<computeroutput>SENSOR_CHAN_GYRO_X</computeroutput></para>
+</listitem><listitem><para>:c:enum:<computeroutput>SENSOR_CHAN_GYRO_Y</computeroutput></para>
+</listitem><listitem><para>:c:enum:<computeroutput>SENSOR_CHAN_GYRO_Z</computeroutput></para>
+</listitem><listitem><para>:c:enum:<computeroutput>SENSOR_CHAN_GYRO_XYZ</computeroutput></para>
+</listitem><listitem><para>:c:enum:<computeroutput>SENSOR_CHAN_MAGN_X</computeroutput></para>
+</listitem><listitem><para>:c:enum:<computeroutput>SENSOR_CHAN_MAGN_Y</computeroutput></para>
+</listitem><listitem><para>:c:enum:<computeroutput>SENSOR_CHAN_MAGN_Z</computeroutput></para>
+</listitem><listitem><para>:c:enum:<computeroutput>SENSOR_CHAN_MAGN_XYZ</computeroutput></para>
+</listitem><listitem><para>:c:enum:<computeroutput>SENSOR_CHAN_POS_DX</computeroutput></para>
+</listitem><listitem><para>:c:enum:<computeroutput>SENSOR_CHAN_POS_DY</computeroutput></para>
+</listitem><listitem><para>:c:enum:<computeroutput>SENSOR_CHAN_POS_DZ</computeroutput></para>
+</listitem><listitem><para>:c:enum:<computeroutput>SENSOR_CHAN_POS_DXYZ</computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>sensor_data_header</label>
+        <link refid="structsensor__data__header"/>
+      </node>
+      <node id="1">
+        <label>sensor_three_axis_data</label>
+        <link refid="structsensor__three__axis__data"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>header</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>readings</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>sensor_three_axis_data::sensor_three_axis_sample_data</label>
+        <link refid="structsensor__three__axis__data_1_1sensor__three__axis__sample__data"/>
+      </node>
+    </collaborationgraph>
+    <location file="zephyr/drivers/sensor_data_types.h" line="52" column="1" bodyfile="zephyr/drivers/sensor_data_types.h" bodystart="52" bodyend="67"/>
+    <listofallmembers>
+      <member refid="structsensor__three__axis__data_1a6017fc7964204235e2222c4950f3650a" prot="public" virt="non-virtual"><scope>sensor_three_axis_data</scope><name>header</name></member>
+      <member refid="structsensor__three__axis__data_1ad1a498b1cc31b18b17e69300749bbbc0" prot="public" virt="non-virtual"><scope>sensor_three_axis_data</scope><name>readings</name></member>
+      <member refid="structsensor__three__axis__data_1ade10fa0bd60d4b31eebed92e564539c5" prot="public" virt="non-virtual"><scope>sensor_three_axis_data</scope><name>shift</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

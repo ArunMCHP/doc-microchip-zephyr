@@ -1,0 +1,259 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structcan__mcan__config" kind="struct" language="C++" prot="public">
+    <compoundname>can_mcan_config</compoundname>
+    <includes refid="can__mcan_8h" local="no">zephyr/drivers/can/can_mcan.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structcan__mcan__config_1a86a6f9a19db54c7368f16f72513db327" prot="public" static="no" mutable="no">
+        <type>const struct <ref refid="structcan__driver__config" kindref="compound">can_driver_config</ref></type>
+        <definition>const struct can_driver_config can_mcan_config::common</definition>
+        <argsstring></argsstring>
+        <name>common</name>
+        <qualifiedname>can_mcan_config::common</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/can/can_mcan.h" line="1234" column="30" bodyfile="zephyr/drivers/can/can_mcan.h" bodystart="1234" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcan__mcan__config_1aed10f9a4d2ddc0045bc6f37939973039" prot="public" static="no" mutable="no">
+        <type>const struct <ref refid="structcan__mcan__ops" kindref="compound">can_mcan_ops</ref> *</type>
+        <definition>const struct can_mcan_ops* can_mcan_config::ops</definition>
+        <argsstring></argsstring>
+        <name>ops</name>
+        <qualifiedname>can_mcan_config::ops</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/can/can_mcan.h" line="1235" column="25" bodyfile="zephyr/drivers/can/can_mcan.h" bodystart="1235" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcan__mcan__config_1a0c8500180fb8113e7bc36d446e4c39bb" prot="public" static="no" mutable="no">
+        <type>const struct <ref refid="structcan__mcan__callbacks" kindref="compound">can_mcan_callbacks</ref> *</type>
+        <definition>const struct can_mcan_callbacks* can_mcan_config::callbacks</definition>
+        <argsstring></argsstring>
+        <name>callbacks</name>
+        <qualifiedname>can_mcan_config::callbacks</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/can/can_mcan.h" line="1236" column="31" bodyfile="zephyr/drivers/can/can_mcan.h" bodystart="1236" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcan__mcan__config_1ab196bf74bf41fba65c0d076ff9070202" prot="public" static="no" mutable="no">
+        <type><ref refid="stdint_8h_1a5debae8b2a1ec20a6694c0c443ee399e" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t can_mcan_config::mram_elements[8]</definition>
+        <argsstring>[8]</argsstring>
+        <name>mram_elements</name>
+        <qualifiedname>can_mcan_config::mram_elements</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/can/can_mcan.h" line="1237" column="10" bodyfile="zephyr/drivers/can/can_mcan.h" bodystart="1237" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcan__mcan__config_1a412c0bb0b3d8158cd352d4c24a622401" prot="public" static="no" mutable="no">
+        <type><ref refid="stdint_8h_1a5debae8b2a1ec20a6694c0c443ee399e" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t can_mcan_config::mram_offsets[8]</definition>
+        <argsstring>[8]</argsstring>
+        <name>mram_offsets</name>
+        <qualifiedname>can_mcan_config::mram_offsets</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/can/can_mcan.h" line="1238" column="10" bodyfile="zephyr/drivers/can/can_mcan.h" bodystart="1238" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcan__mcan__config_1a10585712cd11d041829dca9c9c5446e1" prot="public" static="no" mutable="no">
+        <type><ref refid="retained__mem_8h_1a36713c339c3c5ec6d6bd481480bdb6f9" kindref="member">size_t</ref></type>
+        <definition>size_t can_mcan_config::mram_size</definition>
+        <argsstring></argsstring>
+        <name>mram_size</name>
+        <qualifiedname>can_mcan_config::mram_size</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/can/can_mcan.h" line="1239" column="8" bodyfile="zephyr/drivers/can/can_mcan.h" bodystart="1239" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcan__mcan__config_1a7b2d696b6839a8f958f705fb13a0f63d" prot="public" static="no" mutable="no">
+        <type>const void *</type>
+        <definition>const void* can_mcan_config::custom</definition>
+        <argsstring></argsstring>
+        <name>custom</name>
+        <qualifiedname>can_mcan_config::custom</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/can/can_mcan.h" line="1240" column="12" bodyfile="zephyr/drivers/can/can_mcan.h" bodystart="1240" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Bosch M_CAN driver internal configuration structure. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>can_driver_config</label>
+        <link refid="structcan__driver__config"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>phy</edgelabel>
+        </childnode>
+      </node>
+      <node id="14">
+        <label>can_mcan_callbacks</label>
+        <link refid="structcan__mcan__callbacks"/>
+        <childnode refid="15" relation="usage">
+          <edgelabel>tx</edgelabel>
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>ext</edgelabel>
+          <edgelabel>std</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>can_mcan_config</label>
+        <link refid="structcan__mcan__config"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>common</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>ops</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>callbacks</edgelabel>
+        </childnode>
+      </node>
+      <node id="13">
+        <label>can_mcan_ops</label>
+        <link refid="structcan__mcan__ops"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>clear_mram</edgelabel>
+          <edgelabel>read_mram</edgelabel>
+          <edgelabel>read_reg</edgelabel>
+          <edgelabel>write_mram</edgelabel>
+          <edgelabel>write_reg</edgelabel>
+        </childnode>
+      </node>
+      <node id="16">
+        <label>can_mcan_rx_callback</label>
+        <link refid="structcan__mcan__rx__callback"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>function</edgelabel>
+        </childnode>
+      </node>
+      <node id="15">
+        <label>can_mcan_tx_callback</label>
+        <link refid="structcan__mcan__tx__callback"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>function</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>device</label>
+        <link refid="structdevice"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>state</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>ops</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>pm_base</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>pm</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>pm_isr</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>device_ops</label>
+        <link refid="structdevice__ops"/>
+      </node>
+      <node id="4">
+        <label>device_state</label>
+        <link refid="structdevice__state"/>
+      </node>
+      <node id="9">
+        <label>k_event</label>
+        <link refid="structk__event"/>
+      </node>
+      <node id="8">
+        <label>k_sem</label>
+        <link refid="structk__sem"/>
+      </node>
+      <node id="12">
+        <label>k_spinlock</label>
+        <link refid="structk__spinlock"/>
+      </node>
+      <node id="10">
+        <label>k_work_delayable</label>
+        <link refid="structk__work__delayable"/>
+      </node>
+      <node id="7">
+        <label>pm_device</label>
+        <link refid="structpm__device"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>dev</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>lock</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>event</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>work</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>pm_device_base</label>
+        <link refid="structpm__device__base"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>action_cb</edgelabel>
+        </childnode>
+      </node>
+      <node id="11">
+        <label>pm_device_isr</label>
+        <link refid="structpm__device__isr"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>lock</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="zephyr/drivers/can/can_mcan.h" line="1233" column="1" bodyfile="zephyr/drivers/can/can_mcan.h" bodystart="1233" bodyend="1244"/>
+    <listofallmembers>
+      <member refid="structcan__mcan__config_1a0c8500180fb8113e7bc36d446e4c39bb" prot="public" virt="non-virtual"><scope>can_mcan_config</scope><name>callbacks</name></member>
+      <member refid="structcan__mcan__config_1a86a6f9a19db54c7368f16f72513db327" prot="public" virt="non-virtual"><scope>can_mcan_config</scope><name>common</name></member>
+      <member refid="structcan__mcan__config_1a7b2d696b6839a8f958f705fb13a0f63d" prot="public" virt="non-virtual"><scope>can_mcan_config</scope><name>custom</name></member>
+      <member refid="structcan__mcan__config_1ab196bf74bf41fba65c0d076ff9070202" prot="public" virt="non-virtual"><scope>can_mcan_config</scope><name>mram_elements</name></member>
+      <member refid="structcan__mcan__config_1a412c0bb0b3d8158cd352d4c24a622401" prot="public" virt="non-virtual"><scope>can_mcan_config</scope><name>mram_offsets</name></member>
+      <member refid="structcan__mcan__config_1a10585712cd11d041829dca9c9c5446e1" prot="public" virt="non-virtual"><scope>can_mcan_config</scope><name>mram_size</name></member>
+      <member refid="structcan__mcan__config_1aed10f9a4d2ddc0045bc6f37939973039" prot="public" virt="non-virtual"><scope>can_mcan_config</scope><name>ops</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

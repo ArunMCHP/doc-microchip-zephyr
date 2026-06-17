@@ -1,0 +1,207 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="group__math__dsp__basic__or" kind="group">
+    <compoundname>math_dsp_basic_or</compoundname>
+    <title>Vector bitwise OR</title>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="group__math__dsp__basic__or_1gab7915e71f4392e8fb68fe874546dce55" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dsp_8h_1a88feaebec50a9dcd42836439a9849bc7" kindref="member">DSP_FUNC_SCOPE</ref> void</type>
+        <definition>DSP_FUNC_SCOPE void zdsp_or_u8</definition>
+        <argsstring>(const DSP_DATA uint8_t *src_a, const DSP_DATA uint8_t *src_b, DSP_DATA uint8_t *dst, uint32_t block_size)</argsstring>
+        <name>zdsp_or_u8</name>
+        <param>
+          <type>const <ref refid="dsp_8h_1a2ba5cab25d6c097e55bbe14094a06c7c" kindref="member">DSP_DATA</ref> <ref refid="stdint_8h_1a3cb4a16b0e8d6af0af86d4fd6ba5fd9d" kindref="member">uint8_t</ref> *</type>
+          <declname>src_a</declname>
+        </param>
+        <param>
+          <type>const <ref refid="dsp_8h_1a2ba5cab25d6c097e55bbe14094a06c7c" kindref="member">DSP_DATA</ref> <ref refid="stdint_8h_1a3cb4a16b0e8d6af0af86d4fd6ba5fd9d" kindref="member">uint8_t</ref> *</type>
+          <declname>src_b</declname>
+        </param>
+        <param>
+          <type><ref refid="dsp_8h_1a2ba5cab25d6c097e55bbe14094a06c7c" kindref="member">DSP_DATA</ref> <ref refid="stdint_8h_1a3cb4a16b0e8d6af0af86d4fd6ba5fd9d" kindref="member">uint8_t</ref> *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type><ref refid="stdint_8h_1a0a8582351ac627ee8bde2973c825e47f" kindref="member">uint32_t</ref></type>
+          <declname>block_size</declname>
+        </param>
+        <briefdescription>
+<para>Compute the logical bitwise OR of two fixed-point vectors. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">src_a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to input vector A </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">src_b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to input vector B </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to output vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">block_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of samples in each vector </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dsp/basicmath.h" line="754" column="21" declfile="zephyr/dsp/basicmath.h" declline="754" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="group__math__dsp__basic__or_1gae9a45b9c832555cb6e5a5c3739b5943a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dsp_8h_1a88feaebec50a9dcd42836439a9849bc7" kindref="member">DSP_FUNC_SCOPE</ref> void</type>
+        <definition>DSP_FUNC_SCOPE void zdsp_or_u16</definition>
+        <argsstring>(const DSP_DATA uint16_t *src_a, const DSP_DATA uint16_t *src_b, DSP_DATA uint16_t *dst, uint32_t block_size)</argsstring>
+        <name>zdsp_or_u16</name>
+        <param>
+          <type>const <ref refid="dsp_8h_1a2ba5cab25d6c097e55bbe14094a06c7c" kindref="member">DSP_DATA</ref> <ref refid="stdint_8h_1a5debae8b2a1ec20a6694c0c443ee399e" kindref="member">uint16_t</ref> *</type>
+          <declname>src_a</declname>
+        </param>
+        <param>
+          <type>const <ref refid="dsp_8h_1a2ba5cab25d6c097e55bbe14094a06c7c" kindref="member">DSP_DATA</ref> <ref refid="stdint_8h_1a5debae8b2a1ec20a6694c0c443ee399e" kindref="member">uint16_t</ref> *</type>
+          <declname>src_b</declname>
+        </param>
+        <param>
+          <type><ref refid="dsp_8h_1a2ba5cab25d6c097e55bbe14094a06c7c" kindref="member">DSP_DATA</ref> <ref refid="stdint_8h_1a5debae8b2a1ec20a6694c0c443ee399e" kindref="member">uint16_t</ref> *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type><ref refid="stdint_8h_1a0a8582351ac627ee8bde2973c825e47f" kindref="member">uint32_t</ref></type>
+          <declname>block_size</declname>
+        </param>
+        <briefdescription>
+<para>Compute the logical bitwise OR of two fixed-point vectors. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">src_a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to input vector A </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">src_b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to input vector B </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to output vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">block_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of samples in each vector </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dsp/basicmath.h" line="764" column="21" declfile="zephyr/dsp/basicmath.h" declline="764" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="group__math__dsp__basic__or_1ga44a1b46b5f7d1f265f798395f77a3542" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dsp_8h_1a88feaebec50a9dcd42836439a9849bc7" kindref="member">DSP_FUNC_SCOPE</ref> void</type>
+        <definition>DSP_FUNC_SCOPE void zdsp_or_u32</definition>
+        <argsstring>(const DSP_DATA uint32_t *src_a, const DSP_DATA uint32_t *src_b, DSP_DATA uint32_t *dst, uint32_t block_size)</argsstring>
+        <name>zdsp_or_u32</name>
+        <param>
+          <type>const <ref refid="dsp_8h_1a2ba5cab25d6c097e55bbe14094a06c7c" kindref="member">DSP_DATA</ref> <ref refid="stdint_8h_1a0a8582351ac627ee8bde2973c825e47f" kindref="member">uint32_t</ref> *</type>
+          <declname>src_a</declname>
+        </param>
+        <param>
+          <type>const <ref refid="dsp_8h_1a2ba5cab25d6c097e55bbe14094a06c7c" kindref="member">DSP_DATA</ref> <ref refid="stdint_8h_1a0a8582351ac627ee8bde2973c825e47f" kindref="member">uint32_t</ref> *</type>
+          <declname>src_b</declname>
+        </param>
+        <param>
+          <type><ref refid="dsp_8h_1a2ba5cab25d6c097e55bbe14094a06c7c" kindref="member">DSP_DATA</ref> <ref refid="stdint_8h_1a0a8582351ac627ee8bde2973c825e47f" kindref="member">uint32_t</ref> *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type><ref refid="stdint_8h_1a0a8582351ac627ee8bde2973c825e47f" kindref="member">uint32_t</ref></type>
+          <declname>block_size</declname>
+        </param>
+        <briefdescription>
+<para>Compute the logical bitwise OR of two fixed-point vectors. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">src_a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to input vector A </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">src_b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to input vector B </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to output vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">block_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of samples in each vector </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/dsp/basicmath.h" line="774" column="21" declfile="zephyr/dsp/basicmath.h" declline="774" declcolumn="21"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Compute the logical bitwise OR. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>There are separate functions for uint32_t, uint16_t, and uint7_t data types. </para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

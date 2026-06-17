@@ -1,0 +1,1217 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="rtc_8h" kind="file" language="C++">
+    <compoundname>rtc.h</compoundname>
+    <includes refid="kernel_8h" local="no">zephyr/kernel.h</includes>
+    <includes refid="device_8h" local="no">zephyr/device.h</includes>
+    <includes refid="errno_8h" local="no">errno.h</includes>
+    <includes local="no">zephyr/syscalls/rtc.h</includes>
+    <includedby refid="rtc__fake_8h" local="no">zephyr/drivers/rtc/rtc_fake.h</includedby>
+    <includedby refid="rtc__max31331_8h" local="no">zephyr/drivers/rtc/rtc_max31331.h</includedby>
+    <incdepgraph>
+      <node id="63">
+        <label>zephyr/app_memory/mem_domain.h</label>
+        <link refid="mem__domain_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+      </node>
+      <node id="50">
+        <label>zephyr/arch/arch_inlines.h</label>
+        <link refid="arch__inlines_8h"/>
+      </node>
+      <node id="47">
+        <label>zephyr/arch/arch_interface.h</label>
+        <link refid="arch__interface_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>zephyr/arch/cpu.h</label>
+        <link refid="arch_2cpu_8h"/>
+        <childnode refid="47" relation="include">
+        </childnode>
+      </node>
+      <node id="59">
+        <label>zephyr/arch/exception.h</label>
+        <link refid="exception_8h"/>
+      </node>
+      <node id="35">
+        <label>zephyr/arch/structs.h</label>
+        <link refid="structs_8h"/>
+      </node>
+      <node id="42">
+        <label>zephyr/arch/syscall.h</label>
+        <link refid="arch_2syscall_8h"/>
+      </node>
+      <node id="75">
+        <label>zephyr/device.h</label>
+        <link refid="device_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="98" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="99" relation="include">
+        </childnode>
+        <childnode refid="100" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="105" relation="include">
+        </childnode>
+      </node>
+      <node id="76">
+        <label>zephyr/devicetree.h</label>
+        <link refid="devicetree_8h"/>
+        <childnode refid="77" relation="include">
+        </childnode>
+        <childnode refid="78" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="79" relation="include">
+        </childnode>
+        <childnode refid="80" relation="include">
+        </childnode>
+        <childnode refid="81" relation="include">
+        </childnode>
+        <childnode refid="82" relation="include">
+        </childnode>
+        <childnode refid="83" relation="include">
+        </childnode>
+        <childnode refid="84" relation="include">
+        </childnode>
+        <childnode refid="85" relation="include">
+        </childnode>
+        <childnode refid="86" relation="include">
+        </childnode>
+        <childnode refid="87" relation="include">
+        </childnode>
+        <childnode refid="88" relation="include">
+        </childnode>
+        <childnode refid="89" relation="include">
+        </childnode>
+        <childnode refid="90" relation="include">
+        </childnode>
+        <childnode refid="91" relation="include">
+        </childnode>
+        <childnode refid="92" relation="include">
+        </childnode>
+        <childnode refid="93" relation="include">
+        </childnode>
+        <childnode refid="94" relation="include">
+        </childnode>
+        <childnode refid="95" relation="include">
+        </childnode>
+        <childnode refid="96" relation="include">
+        </childnode>
+        <childnode refid="97" relation="include">
+        </childnode>
+      </node>
+      <node id="88">
+        <label>zephyr/devicetree/can.h</label>
+        <link refid="devicetree_2can_8h"/>
+      </node>
+      <node id="80">
+        <label>zephyr/devicetree/clocks.h</label>
+        <link refid="clocks_8h"/>
+      </node>
+      <node id="92">
+        <label>zephyr/devicetree/display.h</label>
+        <link refid="devicetree_2display_8h"/>
+      </node>
+      <node id="83">
+        <label>zephyr/devicetree/dma.h</label>
+        <link refid="devicetree_2dma_8h"/>
+      </node>
+      <node id="85">
+        <label>zephyr/devicetree/fixed-partitions.h</label>
+        <link refid="fixed-partitions_8h"/>
+      </node>
+      <node id="81">
+        <label>zephyr/devicetree/gpio.h</label>
+        <link refid="devicetree_2gpio_8h"/>
+      </node>
+      <node id="93">
+        <label>zephyr/devicetree/hwspinlock.h</label>
+        <link refid="devicetree_2hwspinlock_8h"/>
+      </node>
+      <node id="79">
+        <label>zephyr/devicetree/io-channels.h</label>
+        <link refid="io-channels_8h"/>
+      </node>
+      <node id="94">
+        <label>zephyr/devicetree/map.h</label>
+        <link refid="map_8h"/>
+      </node>
+      <node id="96">
+        <label>zephyr/devicetree/mapped-partition.h</label>
+        <link refid="mapped-partition_8h"/>
+      </node>
+      <node id="90">
+        <label>zephyr/devicetree/mbox.h</label>
+        <link refid="devicetree_2mbox_8h"/>
+      </node>
+      <node id="86">
+        <label>zephyr/devicetree/ordinals.h</label>
+        <link refid="ordinals_8h"/>
+      </node>
+      <node id="97">
+        <label>zephyr/devicetree/partitions.h</label>
+        <link refid="devicetree_2partitions_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="96" relation="include">
+        </childnode>
+        <childnode refid="85" relation="include">
+        </childnode>
+      </node>
+      <node id="87">
+        <label>zephyr/devicetree/pinctrl.h</label>
+        <link refid="devicetree_2pinctrl_8h"/>
+      </node>
+      <node id="91">
+        <label>zephyr/devicetree/port-endpoint.h</label>
+        <link refid="port-endpoint_8h"/>
+      </node>
+      <node id="84">
+        <label>zephyr/devicetree/pwms.h</label>
+        <link refid="pwms_8h"/>
+      </node>
+      <node id="89">
+        <label>zephyr/devicetree/reset.h</label>
+        <link refid="devicetree_2reset_8h"/>
+      </node>
+      <node id="82">
+        <label>zephyr/devicetree/spi.h</label>
+        <link refid="devicetree_2spi_8h"/>
+      </node>
+      <node id="95">
+        <label>zephyr/devicetree/wuc.h</label>
+        <link refid="devicetree_2wuc_8h"/>
+      </node>
+      <node id="1">
+        <label>zephyr/drivers/rtc.h</label>
+        <link refid="rtc_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="75" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="106" relation="include">
+        </childnode>
+      </node>
+      <node id="58">
+        <label>zephyr/fatal.h</label>
+        <link refid="fatal_8h"/>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+      </node>
+      <node id="60">
+        <label>zephyr/fatal_types.h</label>
+        <link refid="fatal__types_8h"/>
+      </node>
+      <node id="98">
+        <label>zephyr/init.h</label>
+        <link refid="init_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="61">
+        <label>zephyr/irq.h</label>
+        <link refid="irq_8h"/>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="78">
+        <label>zephyr/irq_multilevel.h</label>
+        <link refid="irq__multilevel_8h"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="48">
+        <label>zephyr/irq_offload.h</label>
+        <link refid="irq__offload_8h"/>
+      </node>
+      <node id="2">
+        <label>zephyr/kernel.h</label>
+        <link refid="kernel_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+        <childnode refid="74" relation="include">
+        </childnode>
+      </node>
+      <node id="102">
+        <label>zephyr/kernel/internal/mm.h</label>
+        <link refid="kernel_2internal_2mm_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="103" relation="include">
+        </childnode>
+      </node>
+      <node id="101">
+        <label>zephyr/kernel/mm.h</label>
+        <link refid="kernel_2mm_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="102" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>zephyr/kernel/obj_core.h</label>
+        <link refid="obj__core_8h"/>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>zephyr/kernel/stats.h</label>
+        <link refid="kernel_2stats_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="64">
+        <label>zephyr/kernel/thread.h</label>
+        <link refid="kernel_2thread_8h"/>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+      </node>
+      <node id="62">
+        <label>zephyr/kernel/thread_stack.h</label>
+        <link refid="kernel_2thread__stack_8h"/>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>zephyr/kernel_includes.h</label>
+        <link refid="kernel__includes_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>zephyr/kernel_structs.h</label>
+        <link refid="kernel__structs_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>zephyr/kernel_version.h</label>
+        <link refid="kernel__version_8h"/>
+      </node>
+      <node id="11">
+        <label>zephyr/linker/section_tags.h</label>
+        <link refid="section__tags_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>zephyr/linker/sections.h</label>
+        <link refid="sections_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="99">
+        <label>zephyr/pm/state.h</label>
+        <link refid="state_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>zephyr/posix/posix_limits.h</label>
+        <link refid="posix__limits_8h"/>
+      </node>
+      <node id="54">
+        <label>zephyr/spinlock.h</label>
+        <link refid="spinlock_8h"/>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>zephyr/sys/__assert.h</label>
+        <link refid="____assert_8h_source"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>zephyr/sys/atomic.h</label>
+        <link refid="sys_2atomic_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>zephyr/sys/atomic_types.h</label>
+        <link refid="atomic__types_8h"/>
+      </node>
+      <node id="52">
+        <label>zephyr/sys/clock.h</label>
+        <link refid="clock_8h"/>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+      </node>
+      <node id="100">
+        <label>zephyr/sys/device_mmio.h</label>
+        <link refid="device__mmio_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="101" relation="include">
+        </childnode>
+        <childnode refid="104" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>zephyr/sys/dlist.h</label>
+        <link refid="dlist_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="56">
+        <label>zephyr/sys/errno_private.h</label>
+        <link refid="errno__private_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+      </node>
+      <node id="67">
+        <label>zephyr/sys/internal/kobject_internal.h</label>
+        <link refid="kobject__internal_8h"/>
+      </node>
+      <node id="66">
+        <label>zephyr/sys/iterable_sections.h</label>
+        <link refid="sys_2iterable__sections_8h"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="65">
+        <label>zephyr/sys/kobject.h</label>
+        <link refid="kobject_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>list_gen.h</label>
+        <link refid="list__gen_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="103">
+        <label>zephyr/sys/mem_manage.h</label>
+        <link refid="mem__manage_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>zephyr/sys/mem_stats.h</label>
+        <link refid="mem__stats_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>zephyr/sys/printk.h</label>
+        <link refid="printk_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>zephyr/sys/rb.h</label>
+        <link refid="rb_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="70">
+        <label>zephyr/sys/ring_buffer.h</label>
+        <link refid="ring__buffer_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>zephyr/sys/sflist.h</label>
+        <link refid="sflist_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>zephyr/sys/slist.h</label>
+        <link refid="slist_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>zephyr/sys/sys_heap.h</label>
+        <link refid="sys__heap_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="104">
+        <label>zephyr/sys/sys_io.h</label>
+        <link refid="sys_2sys__io_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>zephyr/sys/time_units.h</label>
+        <link refid="time__units_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>zephyr/sys/util.h</label>
+        <link refid="sys_2util_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>zephyr/sys/util_internal.h</label>
+        <link refid="util__internal_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>util_internal_is_eq.h</label>
+        <link refid="util__internal__is__eq_8h"/>
+      </node>
+      <node id="22">
+        <label>util_internal_util_dec.h</label>
+        <link refid="util__internal__util__dec_8h"/>
+      </node>
+      <node id="21">
+        <label>util_internal_util_inc.h</label>
+        <link refid="util__internal__util__inc_8h"/>
+      </node>
+      <node id="23">
+        <label>util_internal_util_x2.h</label>
+        <link refid="util__internal__util__x2_8h"/>
+      </node>
+      <node id="19">
+        <label>util_listify.h</label>
+        <link refid="util__listify_8h"/>
+      </node>
+      <node id="18">
+        <label>util_loops.h</label>
+        <link refid="util__loops_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>zephyr/sys/util_macro.h</label>
+        <link refid="util__macro_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="51">
+        <label>zephyr/sys_clock.h</label>
+        <link refid="sys__clock_8h"/>
+        <childnode refid="52" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>zephyr/syscall.h</label>
+        <link refid="syscall_8h"/>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="49">
+        <label>zephyr/timing/types.h</label>
+        <link refid="include_2zephyr_2timing_2types_8h"/>
+      </node>
+      <node id="9">
+        <label>zephyr/toolchain.h</label>
+        <link refid="toolchain_8h"/>
+      </node>
+      <node id="72">
+        <label>zephyr/tracing/tracing.h</label>
+        <link refid="tracing_8h"/>
+        <childnode refid="73" relation="include">
+        </childnode>
+      </node>
+      <node id="69">
+        <label>zephyr/tracing/tracing_macros.h</label>
+        <link refid="tracing__macros_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="73">
+        <label>tracking.h</label>
+        <link refid="tracking_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>zephyr/types.h</label>
+        <link refid="include_2zephyr_2types_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="55">
+        <label>errno.h</label>
+        <link refid="errno_8h"/>
+        <childnode refid="56" relation="include">
+        </childnode>
+      </node>
+      <node id="45">
+        <label>inttypes.h</label>
+        <link refid="inttypes_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>limits.h</label>
+        <link refid="limits_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>stdbool.h</label>
+        <link refid="stdbool_8h"/>
+      </node>
+      <node id="6">
+        <label>stdint.h</label>
+        <link refid="stdint_8h"/>
+      </node>
+      <node id="25">
+        <label>string.h</label>
+        <link refid="string_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>alloca.h</label>
+      </node>
+      <node id="44">
+        <label>stdarg.h</label>
+      </node>
+      <node id="4">
+        <label>stddef.h</label>
+      </node>
+      <node id="77">
+        <label>zephyr/devicetree_generated.h</label>
+      </node>
+      <node id="71">
+        <label>zephyr/heap_constants.h</label>
+      </node>
+      <node id="41">
+        <label>zephyr/syscall_list.h</label>
+      </node>
+      <node id="53">
+        <label>zephyr/syscalls/clock.h</label>
+      </node>
+      <node id="105">
+        <label>zephyr/syscalls/device.h</label>
+      </node>
+      <node id="57">
+        <label>zephyr/syscalls/errno_private.h</label>
+      </node>
+      <node id="74">
+        <label>zephyr/syscalls/kernel.h</label>
+      </node>
+      <node id="68">
+        <label>zephyr/syscalls/kobject.h</label>
+      </node>
+      <node id="106">
+        <label>zephyr/syscalls/rtc.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>zephyr/drivers/rtc.h</label>
+        <link refid="rtc_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>zephyr/drivers/rtc/rtc_fake.h</label>
+        <link refid="rtc__fake_8h"/>
+      </node>
+      <node id="3">
+        <label>zephyr/drivers/rtc/rtc_max31331.h</label>
+        <link refid="rtc__max31331_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structrtc__time" prot="public">rtc_time</innerclass>
+    <innerclass refid="structrtc__driver__api" prot="public">rtc_driver_api</innerclass>
+    <sectiondef kind="user-defined">
+      <header>RTC Alarm Time Mask</header>
+      <description><para>Mask for alarm time fields to enable when setting alarm time</para>
+<para><anchor id="group__rtc__interface_1RTC_ALARM_TIME_MASK"/></para>
+</description>
+      <member refid="group__rtc__interface_1gaae487761ea0c904f5715748dab5b03db" kind="define"><name>RTC_ALARM_TIME_MASK_SECOND</name></member>
+      <member refid="group__rtc__interface_1ga72eb18edb7399ce82fa4693e1301fa94" kind="define"><name>RTC_ALARM_TIME_MASK_MINUTE</name></member>
+      <member refid="group__rtc__interface_1ga31c1ba78aebf43d539aed3ed107a8132" kind="define"><name>RTC_ALARM_TIME_MASK_HOUR</name></member>
+      <member refid="group__rtc__interface_1ga08fa103b0055eecd4b887973f06beed7" kind="define"><name>RTC_ALARM_TIME_MASK_MONTHDAY</name></member>
+      <member refid="group__rtc__interface_1ga2233ee12335b762b728d47afa6c72d02" kind="define"><name>RTC_ALARM_TIME_MASK_MONTH</name></member>
+      <member refid="group__rtc__interface_1ga2d4baf31c5ba6703ebe64dbd212883ee" kind="define"><name>RTC_ALARM_TIME_MASK_YEAR</name></member>
+      <member refid="group__rtc__interface_1ga8e3cb85959d06f9b8603142156556ca3" kind="define"><name>RTC_ALARM_TIME_MASK_WEEKDAY</name></member>
+      <member refid="group__rtc__interface_1gad72da3fb8be2c5726bab837fcb97a67e" kind="define"><name>RTC_ALARM_TIME_MASK_YEARDAY</name></member>
+      <member refid="group__rtc__interface_1gaf8efe72ee6c332b21827317dde6b9766" kind="define"><name>RTC_ALARM_TIME_MASK_NSEC</name></member>
+    </sectiondef>
+    <sectiondef kind="user-defined">
+      <header>RTC Interface Alarm</header>
+      <member refid="group__rtc__interface_1ga62f8ece98065b9bd892908e2f0b1f9bb" kind="function"><name>rtc_alarm_get_supported_fields</name></member>
+      <member refid="group__rtc__interface_1ga1fc9f0ec9642dfbf742ea541a20bdad5" kind="function"><name>rtc_alarm_set_time</name></member>
+      <member refid="group__rtc__interface_1gacba4edcec86ccbea5cd676924840c47a" kind="function"><name>rtc_alarm_get_time</name></member>
+      <member refid="group__rtc__interface_1ga531c379c437a91df44a45e95063700e8" kind="function"><name>rtc_alarm_is_pending</name></member>
+      <member refid="group__rtc__interface_1ga90d7f422ca15cf679aa7ba61fb5373f0" kind="function"><name>rtc_alarm_set_callback</name></member>
+    </sectiondef>
+    <sectiondef kind="user-defined">
+      <header>RTC Interface Update</header>
+      <member refid="group__rtc__interface_1ga0b2b2b44077dcdb73feb007f87cc47b3" kind="function"><name>rtc_update_set_callback</name></member>
+    </sectiondef>
+    <sectiondef kind="user-defined">
+      <header>RTC Interface Calibration</header>
+      <member refid="group__rtc__interface_1ga13395c6b38e06bcda23cc0e9c299c445" kind="function"><name>rtc_set_calibration</name></member>
+      <member refid="group__rtc__interface_1gab29bc6bcea5eb71e03d3e6181d4bec2f" kind="function"><name>rtc_get_calibration</name></member>
+    </sectiondef>
+    <sectiondef kind="user-defined">
+      <header>RTC Interface Helpers</header>
+      <member refid="group__rtc__interface_1gac2bb774a4b512f76c35a0a6723a7c807" kind="function"><name>rtc_time_to_tm</name></member>
+      <member refid="group__rtc__interface_1gacca437e504026d800aa481b870291fda" kind="function"><name>rtc_calibration_from_frequency</name></member>
+    </sectiondef>
+    <sectiondef kind="typedef">
+      <member refid="group__rtc__interface_1ga9d3eb555ac4ad86b7ff66d359652a29e" kind="typedef"><name>rtc_update_callback</name></member>
+      <member refid="group__rtc__interface_1ga090d68fb395ab088359f868c8a17e3cb" kind="typedef"><name>rtc_alarm_callback</name></member>
+      <member refid="group__rtc__interface__backend_1gab7194d9f9666d9f5ded71a73bc15fa73" kind="typedef"><name>rtc_api_set_time</name></member>
+      <member refid="group__rtc__interface__backend_1ga605d59d82688a6db53aca281a0d4356e" kind="typedef"><name>rtc_api_get_time</name></member>
+      <member refid="group__rtc__interface__backend_1gab25c9cad41595a566663a9464a817944" kind="typedef"><name>rtc_api_alarm_get_supported_fields</name></member>
+      <member refid="group__rtc__interface__backend_1gad7b54fd8fd4f5c79c2817d1c817a944e" kind="typedef"><name>rtc_api_alarm_set_time</name></member>
+      <member refid="group__rtc__interface__backend_1gac3170637191353afc0ff0e7271dda6a7" kind="typedef"><name>rtc_api_alarm_get_time</name></member>
+      <member refid="group__rtc__interface__backend_1ga6f66bf98a671eec31b6a17bb0998fa9a" kind="typedef"><name>rtc_api_alarm_is_pending</name></member>
+      <member refid="group__rtc__interface__backend_1ga2d2e12096c88ff32ebf50ac760aaf81c" kind="typedef"><name>rtc_api_alarm_set_callback</name></member>
+      <member refid="group__rtc__interface__backend_1ga0f5fa0e7cbe3c76d659f317275f018ea" kind="typedef"><name>rtc_api_update_set_callback</name></member>
+      <member refid="group__rtc__interface__backend_1ga57effd9aba800785b178b0498b0bbf8a" kind="typedef"><name>rtc_api_set_calibration</name></member>
+      <member refid="group__rtc__interface__backend_1gaba872622824bfdcc193485f96899437e" kind="typedef"><name>rtc_api_get_calibration</name></member>
+    </sectiondef>
+    <sectiondef kind="func">
+      <member refid="group__rtc__interface_1ga52982b434c740e86aa5f3e35e9bee4a7" kind="function"><name>rtc_set_time</name></member>
+      <member refid="group__rtc__interface_1ga208321104a1cdb39173317e6911aea87" kind="function"><name>rtc_get_time</name></member>
+    </sectiondef>
+    <briefdescription>
+<para>Main header file for real-time clock (RTC) driver API. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2023<sp/>Trackunit<sp/>Corporation</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2023<sp/>Bjarki<sp/>Arge<sp/>Andreasen</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>SPDX-License-Identifier:<sp/>Apache-2.0</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>ZEPHYR_INCLUDE_DRIVERS_RTC_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZEPHYR_INCLUDE_DRIVERS_RTC_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="kernel_8h" kindref="compound">zephyr/kernel.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="device_8h" kindref="compound">zephyr/device.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="errno_8h" kindref="compound">errno.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="group__rtc__interface_1gaae487761ea0c904f5715748dab5b03db" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RTC_ALARM_TIME_MASK_SECOND<sp/><sp/><sp/><sp/><sp/><sp/>BIT(0)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="group__rtc__interface_1ga72eb18edb7399ce82fa4693e1301fa94" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RTC_ALARM_TIME_MASK_MINUTE<sp/><sp/><sp/><sp/><sp/><sp/>BIT(1)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="group__rtc__interface_1ga31c1ba78aebf43d539aed3ed107a8132" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RTC_ALARM_TIME_MASK_HOUR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BIT(2)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="group__rtc__interface_1ga08fa103b0055eecd4b887973f06beed7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RTC_ALARM_TIME_MASK_MONTHDAY<sp/><sp/><sp/><sp/>BIT(3)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="group__rtc__interface_1ga2233ee12335b762b728d47afa6c72d02" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RTC_ALARM_TIME_MASK_MONTH<sp/><sp/><sp/><sp/><sp/><sp/><sp/>BIT(4)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="group__rtc__interface_1ga2d4baf31c5ba6703ebe64dbd212883ee" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RTC_ALARM_TIME_MASK_YEAR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BIT(5)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="group__rtc__interface_1ga8e3cb85959d06f9b8603142156556ca3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RTC_ALARM_TIME_MASK_WEEKDAY<sp/><sp/><sp/><sp/><sp/>BIT(6)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="group__rtc__interface_1gad72da3fb8be2c5726bab837fcb97a67e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RTC_ALARM_TIME_MASK_YEARDAY<sp/><sp/><sp/><sp/><sp/>BIT(7)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="group__rtc__interface_1gaf8efe72ee6c332b21827317dde6b9766" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RTC_ALARM_TIME_MASK_NSEC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BIT(8)<sp/></highlight></codeline>
+<codeline lineno="62" refid="structrtc__time" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structrtc__time" kindref="compound">rtc_time</ref><sp/>{</highlight></codeline>
+<codeline lineno="63" refid="structrtc__time_1aed2640702991b684601d1771847bb50f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structrtc__time_1aed2640702991b684601d1771847bb50f" kindref="member">tm_sec</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="64" refid="structrtc__time_1a927b7e67b64708f671c1fe9409e9d794" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structrtc__time_1a927b7e67b64708f671c1fe9409e9d794" kindref="member">tm_min</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="65" refid="structrtc__time_1aee14d277ac0339f587f4b946be53dc09" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structrtc__time_1aee14d277ac0339f587f4b946be53dc09" kindref="member">tm_hour</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="66" refid="structrtc__time_1af56ccbce4cca252d2ab0d7516cc5e2db" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structrtc__time_1af56ccbce4cca252d2ab0d7516cc5e2db" kindref="member">tm_mday</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="67" refid="structrtc__time_1aa17515d6d722d1e6e4427a129c8de9f8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structrtc__time_1aa17515d6d722d1e6e4427a129c8de9f8" kindref="member">tm_mon</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="68" refid="structrtc__time_1ad3fcf9be156258688742a511e8b36277" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structrtc__time_1ad3fcf9be156258688742a511e8b36277" kindref="member">tm_year</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="69" refid="structrtc__time_1ac44442e37e069314e2b6bae0f0747f49" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structrtc__time_1ac44442e37e069314e2b6bae0f0747f49" kindref="member">tm_wday</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="70" refid="structrtc__time_1a5a7837a78fb662831fa3186377d63375" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structrtc__time_1a5a7837a78fb662831fa3186377d63375" kindref="member">tm_yday</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="71" refid="structrtc__time_1aa26da32caecabf386e9a204937d9f786" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structrtc__time_1aa26da32caecabf386e9a204937d9f786" kindref="member">tm_isdst</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="72" refid="structrtc__time_1a876a66e76c713ead7c5eb2cc65d141ed" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structrtc__time_1a876a66e76c713ead7c5eb2cc65d141ed" kindref="member">tm_nsec</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="73"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="group__rtc__interface_1ga9d3eb555ac4ad86b7ff66d359652a29e" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/>(*<ref refid="group__rtc__interface_1ga9d3eb555ac4ad86b7ff66d359652a29e" kindref="member">rtc_update_callback</ref>)(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdevice" kindref="compound">device</ref><sp/>*dev,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*user_data);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92" refid="group__rtc__interface_1ga090d68fb395ab088359f868c8a17e3cb" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/>(*<ref refid="group__rtc__interface_1ga090d68fb395ab088359f868c8a17e3cb" kindref="member">rtc_alarm_callback</ref>)(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdevice" kindref="compound">device</ref><sp/>*dev,<sp/><ref refid="stdint_8h_1a5debae8b2a1ec20a6694c0c443ee399e" kindref="member">uint16_t</ref><sp/>id,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*user_data);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106" refid="group__rtc__interface__backend_1gab7194d9f9666d9f5ded71a73bc15fa73" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int<sp/>(*<ref refid="group__rtc__interface__backend_1gab7194d9f9666d9f5ded71a73bc15fa73" kindref="member">rtc_api_set_time</ref>)(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdevice" kindref="compound">device</ref><sp/>*dev,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structrtc__time" kindref="compound">rtc_time</ref><sp/>*timeptr);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114" refid="group__rtc__interface__backend_1ga605d59d82688a6db53aca281a0d4356e" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int<sp/>(*<ref refid="group__rtc__interface__backend_1ga605d59d82688a6db53aca281a0d4356e" kindref="member">rtc_api_get_time</ref>)(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdevice" kindref="compound">device</ref><sp/>*dev,<sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structrtc__time" kindref="compound">rtc_time</ref><sp/>*timeptr);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122" refid="group__rtc__interface__backend_1gab25c9cad41595a566663a9464a817944" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int<sp/>(*<ref refid="group__rtc__interface__backend_1gab25c9cad41595a566663a9464a817944" kindref="member">rtc_api_alarm_get_supported_fields</ref>)(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdevice" kindref="compound">device</ref><sp/>*dev,<sp/><ref refid="stdint_8h_1a5debae8b2a1ec20a6694c0c443ee399e" kindref="member">uint16_t</ref><sp/>id,</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdint_8h_1a5debae8b2a1ec20a6694c0c443ee399e" kindref="member">uint16_t</ref><sp/>*mask);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131" refid="group__rtc__interface__backend_1gad7b54fd8fd4f5c79c2817d1c817a944e" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int<sp/>(*<ref refid="group__rtc__interface__backend_1gad7b54fd8fd4f5c79c2817d1c817a944e" kindref="member">rtc_api_alarm_set_time</ref>)(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdevice" kindref="compound">device</ref><sp/>*dev,<sp/><ref refid="stdint_8h_1a5debae8b2a1ec20a6694c0c443ee399e" kindref="member">uint16_t</ref><sp/>id,<sp/><ref refid="stdint_8h_1a5debae8b2a1ec20a6694c0c443ee399e" kindref="member">uint16_t</ref><sp/>mask,</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structrtc__time" kindref="compound">rtc_time</ref><sp/>*timeptr);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140" refid="group__rtc__interface__backend_1gac3170637191353afc0ff0e7271dda6a7" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int<sp/>(*<ref refid="group__rtc__interface__backend_1gac3170637191353afc0ff0e7271dda6a7" kindref="member">rtc_api_alarm_get_time</ref>)(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdevice" kindref="compound">device</ref><sp/>*dev,<sp/><ref refid="stdint_8h_1a5debae8b2a1ec20a6694c0c443ee399e" kindref="member">uint16_t</ref><sp/>id,<sp/><ref refid="stdint_8h_1a5debae8b2a1ec20a6694c0c443ee399e" kindref="member">uint16_t</ref><sp/>*mask,</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structrtc__time" kindref="compound">rtc_time</ref><sp/>*timeptr);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149" refid="group__rtc__interface__backend_1ga6f66bf98a671eec31b6a17bb0998fa9a" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int<sp/>(*<ref refid="group__rtc__interface__backend_1ga6f66bf98a671eec31b6a17bb0998fa9a" kindref="member">rtc_api_alarm_is_pending</ref>)(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdevice" kindref="compound">device</ref><sp/>*dev,<sp/><ref refid="stdint_8h_1a5debae8b2a1ec20a6694c0c443ee399e" kindref="member">uint16_t</ref><sp/>id);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157" refid="group__rtc__interface__backend_1ga2d2e12096c88ff32ebf50ac760aaf81c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int<sp/>(*<ref refid="group__rtc__interface__backend_1ga2d2e12096c88ff32ebf50ac760aaf81c" kindref="member">rtc_api_alarm_set_callback</ref>)(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdevice" kindref="compound">device</ref><sp/>*dev,<sp/><ref refid="stdint_8h_1a5debae8b2a1ec20a6694c0c443ee399e" kindref="member">uint16_t</ref><sp/>id,</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__rtc__interface_1ga090d68fb395ab088359f868c8a17e3cb" kindref="member">rtc_alarm_callback</ref><sp/>callback,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*user_data);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166" refid="group__rtc__interface__backend_1ga0f5fa0e7cbe3c76d659f317275f018ea" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int<sp/>(*<ref refid="group__rtc__interface__backend_1ga0f5fa0e7cbe3c76d659f317275f018ea" kindref="member">rtc_api_update_set_callback</ref>)(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdevice" kindref="compound">device</ref><sp/>*dev,</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__rtc__interface_1ga9d3eb555ac4ad86b7ff66d359652a29e" kindref="member">rtc_update_callback</ref><sp/>callback,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*user_data);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175" refid="group__rtc__interface__backend_1ga57effd9aba800785b178b0498b0bbf8a" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int<sp/>(*<ref refid="group__rtc__interface__backend_1ga57effd9aba800785b178b0498b0bbf8a" kindref="member">rtc_api_set_calibration</ref>)(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdevice" kindref="compound">device</ref><sp/>*dev,<sp/><ref refid="stdint_8h_1a0c18914b3041c2f583aba76f418399c2" kindref="member">int32_t</ref><sp/>calibration);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183" refid="group__rtc__interface__backend_1gaba872622824bfdcc193485f96899437e" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int<sp/>(*<ref refid="group__rtc__interface__backend_1gaba872622824bfdcc193485f96899437e" kindref="member">rtc_api_get_calibration</ref>)(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdevice" kindref="compound">device</ref><sp/>*dev,<sp/><ref refid="stdint_8h_1a0c18914b3041c2f583aba76f418399c2" kindref="member">int32_t</ref><sp/>*calibration);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188" refid="structrtc__driver__api" refkind="compound"><highlight class="normal">__subsystem<sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structrtc__driver__api" kindref="compound">rtc_driver_api</ref><sp/>{</highlight></codeline>
+<codeline lineno="190" refid="structrtc__driver__api_1a7a26a0e87655b7076db8c32a93c6d29d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__rtc__interface__backend_1gab7194d9f9666d9f5ded71a73bc15fa73" kindref="member">rtc_api_set_time</ref><sp/><ref refid="structrtc__driver__api_1a7a26a0e87655b7076db8c32a93c6d29d" kindref="member">set_time</ref>;</highlight></codeline>
+<codeline lineno="192" refid="structrtc__driver__api_1a7ec880ce2db64052c7637668acfcbb1e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__rtc__interface__backend_1ga605d59d82688a6db53aca281a0d4356e" kindref="member">rtc_api_get_time</ref><sp/><ref refid="structrtc__driver__api_1a7ec880ce2db64052c7637668acfcbb1e" kindref="member">get_time</ref>;</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(CONFIG_RTC_ALARM)<sp/>||<sp/>defined(__DOXYGEN__)</highlight></codeline>
+<codeline lineno="198" refid="structrtc__driver__api_1a3000e870dbd40047b23b6f8cde2d8d7a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__rtc__interface__backend_1gab25c9cad41595a566663a9464a817944" kindref="member">rtc_api_alarm_get_supported_fields</ref><sp/><ref refid="structrtc__driver__api_1a3000e870dbd40047b23b6f8cde2d8d7a" kindref="member">alarm_get_supported_fields</ref>;</highlight></codeline>
+<codeline lineno="203" refid="structrtc__driver__api_1a1c4177f7cfcdc5072ba74c236383145c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__rtc__interface__backend_1gad7b54fd8fd4f5c79c2817d1c817a944e" kindref="member">rtc_api_alarm_set_time</ref><sp/><ref refid="structrtc__driver__api_1a1c4177f7cfcdc5072ba74c236383145c" kindref="member">alarm_set_time</ref>;</highlight></codeline>
+<codeline lineno="208" refid="structrtc__driver__api_1a541233564093dc18fcb9a517338d8642" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__rtc__interface__backend_1gac3170637191353afc0ff0e7271dda6a7" kindref="member">rtc_api_alarm_get_time</ref><sp/><ref refid="structrtc__driver__api_1a541233564093dc18fcb9a517338d8642" kindref="member">alarm_get_time</ref>;</highlight></codeline>
+<codeline lineno="213" refid="structrtc__driver__api_1ac021a793f620d9a51511cf97c76aeed8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__rtc__interface__backend_1ga6f66bf98a671eec31b6a17bb0998fa9a" kindref="member">rtc_api_alarm_is_pending</ref><sp/><ref refid="structrtc__driver__api_1ac021a793f620d9a51511cf97c76aeed8" kindref="member">alarm_is_pending</ref>;</highlight></codeline>
+<codeline lineno="218" refid="structrtc__driver__api_1a5ad93273289755c7913ae1a0e87f9b0c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__rtc__interface__backend_1ga2d2e12096c88ff32ebf50ac760aaf81c" kindref="member">rtc_api_alarm_set_callback</ref><sp/><ref refid="structrtc__driver__api_1a5ad93273289755c7913ae1a0e87f9b0c" kindref="member">alarm_set_callback</ref>;</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>CONFIG_RTC_ALARM<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(CONFIG_RTC_UPDATE)<sp/>||<sp/>defined(__DOXYGEN__)</highlight></codeline>
+<codeline lineno="225" refid="structrtc__driver__api_1a7597ce8edc1ddb02c5756c4edeffeebc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__rtc__interface__backend_1ga0f5fa0e7cbe3c76d659f317275f018ea" kindref="member">rtc_api_update_set_callback</ref><sp/><ref refid="structrtc__driver__api_1a7597ce8edc1ddb02c5756c4edeffeebc" kindref="member">update_set_callback</ref>;</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>CONFIG_RTC_UPDATE<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(CONFIG_RTC_CALIBRATION)<sp/>||<sp/>defined(__DOXYGEN__)</highlight></codeline>
+<codeline lineno="232" refid="structrtc__driver__api_1afa2d05d6eee13c0f1c815c1ef84e8e75" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__rtc__interface__backend_1ga57effd9aba800785b178b0498b0bbf8a" kindref="member">rtc_api_set_calibration</ref><sp/><ref refid="structrtc__driver__api_1afa2d05d6eee13c0f1c815c1ef84e8e75" kindref="member">set_calibration</ref>;</highlight></codeline>
+<codeline lineno="237" refid="structrtc__driver__api_1abebab4458bc49da16f417f9009f31fdf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__rtc__interface__backend_1gaba872622824bfdcc193485f96899437e" kindref="member">rtc_api_get_calibration</ref><sp/><ref refid="structrtc__driver__api_1abebab4458bc49da16f417f9009f31fdf" kindref="member">get_calibration</ref>;</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>CONFIG_RTC_CALIBRATION<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight></codeline>
+<codeline lineno="253" refid="group__rtc__interface_1ga52982b434c740e86aa5f3e35e9bee4a7" refkind="member"><highlight class="normal">__syscall<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__rtc__interface_1ga52982b434c740e86aa5f3e35e9bee4a7" kindref="member">rtc_set_time</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structdevice" kindref="compound">device</ref><sp/>*dev,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structrtc__time" kindref="compound">rtc_time</ref><sp/>*timeptr);</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>z_impl_rtc_set_time(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structdevice" kindref="compound">device</ref><sp/>*dev,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structrtc__time" kindref="compound">rtc_time</ref><sp/>*timeptr)</highlight></codeline>
+<codeline lineno="256"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="device_8h_1a9907e8ee5e7be8c3b5d52b13bd33970a" kindref="member">DEVICE_API_GET</ref>(rtc,<sp/>dev)-&gt;set_time(dev,<sp/>timeptr);</highlight></codeline>
+<codeline lineno="258"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"></highlight></codeline>
+<codeline lineno="270" refid="group__rtc__interface_1ga208321104a1cdb39173317e6911aea87" refkind="member"><highlight class="normal">__syscall<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__rtc__interface_1ga208321104a1cdb39173317e6911aea87" kindref="member">rtc_get_time</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structdevice" kindref="compound">device</ref><sp/>*dev,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structrtc__time" kindref="compound">rtc_time</ref><sp/>*timeptr);</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight></codeline>
+<codeline lineno="272"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>z_impl_rtc_get_time(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structdevice" kindref="compound">device</ref><sp/>*dev,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structrtc__time" kindref="compound">rtc_time</ref><sp/>*timeptr)</highlight></codeline>
+<codeline lineno="273"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="device_8h_1a9907e8ee5e7be8c3b5d52b13bd33970a" kindref="member">DEVICE_API_GET</ref>(rtc,<sp/>dev)-&gt;get_time(dev,<sp/>timeptr);</highlight></codeline>
+<codeline lineno="275"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"></highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(CONFIG_RTC_ALARM)<sp/>||<sp/>defined(__DOXYGEN__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight></codeline>
+<codeline lineno="297" refid="group__rtc__interface_1ga62f8ece98065b9bd892908e2f0b1f9bb" refkind="member"><highlight class="normal">__syscall<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__rtc__interface_1ga62f8ece98065b9bd892908e2f0b1f9bb" kindref="member">rtc_alarm_get_supported_fields</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structdevice" kindref="compound">device</ref><sp/>*dev,<sp/><ref refid="stdint_8h_1a5debae8b2a1ec20a6694c0c443ee399e" kindref="member">uint16_t</ref><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdint_8h_1a5debae8b2a1ec20a6694c0c443ee399e" kindref="member">uint16_t</ref><sp/>*mask);</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"></highlight></codeline>
+<codeline lineno="300"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>z_impl_rtc_alarm_get_supported_fields(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structdevice" kindref="compound">device</ref><sp/>*dev,<sp/><ref refid="stdint_8h_1a5debae8b2a1ec20a6694c0c443ee399e" kindref="member">uint16_t</ref><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdint_8h_1a5debae8b2a1ec20a6694c0c443ee399e" kindref="member">uint16_t</ref><sp/>*mask)</highlight></codeline>
+<codeline lineno="302"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="device_8h_1a9907e8ee5e7be8c3b5d52b13bd33970a" kindref="member">DEVICE_API_GET</ref>(rtc,<sp/>dev)-&gt;alarm_get_supported_fields<sp/>==<sp/><ref refid="iar__missing__defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-<ref refid="group__system__errno_1ga43785b9969e0bd1af532dbde06c5540b" kindref="member">ENOSYS</ref>;</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"></highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="device_8h_1a9907e8ee5e7be8c3b5d52b13bd33970a" kindref="member">DEVICE_API_GET</ref>(rtc,<sp/>dev)-&gt;alarm_get_supported_fields(dev,<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/>mask);</highlight></codeline>
+<codeline lineno="308"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"></highlight></codeline>
+<codeline lineno="333" refid="group__rtc__interface_1ga1fc9f0ec9642dfbf742ea541a20bdad5" refkind="member"><highlight class="normal">__syscall<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__rtc__interface_1ga1fc9f0ec9642dfbf742ea541a20bdad5" kindref="member">rtc_alarm_set_time</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structdevice" kindref="compound">device</ref><sp/>*dev,<sp/><ref refid="stdint_8h_1a5debae8b2a1ec20a6694c0c443ee399e" kindref="member">uint16_t</ref><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/><ref refid="stdint_8h_1a5debae8b2a1ec20a6694c0c443ee399e" kindref="member">uint16_t</ref><sp/>mask,</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structrtc__time" kindref="compound">rtc_time</ref><sp/>*timeptr);</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"></highlight></codeline>
+<codeline lineno="336"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>z_impl_rtc_alarm_set_time(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structdevice" kindref="compound">device</ref><sp/>*dev,<sp/><ref refid="stdint_8h_1a5debae8b2a1ec20a6694c0c443ee399e" kindref="member">uint16_t</ref><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/><ref refid="stdint_8h_1a5debae8b2a1ec20a6694c0c443ee399e" kindref="member">uint16_t</ref><sp/>mask,</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structrtc__time" kindref="compound">rtc_time</ref><sp/>*timeptr)</highlight></codeline>
+<codeline lineno="338"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="device_8h_1a9907e8ee5e7be8c3b5d52b13bd33970a" kindref="member">DEVICE_API_GET</ref>(rtc,<sp/>dev)-&gt;alarm_set_time<sp/>==<sp/><ref refid="iar__missing__defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-<ref refid="group__system__errno_1ga43785b9969e0bd1af532dbde06c5540b" kindref="member">ENOSYS</ref>;</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"></highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="device_8h_1a9907e8ee5e7be8c3b5d52b13bd33970a" kindref="member">DEVICE_API_GET</ref>(rtc,<sp/>dev)-&gt;alarm_set_time(dev,<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/>mask,<sp/>timeptr);</highlight></codeline>
+<codeline lineno="344"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"></highlight></codeline>
+<codeline lineno="361" refid="group__rtc__interface_1gacba4edcec86ccbea5cd676924840c47a" refkind="member"><highlight class="normal">__syscall<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__rtc__interface_1gacba4edcec86ccbea5cd676924840c47a" kindref="member">rtc_alarm_get_time</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structdevice" kindref="compound">device</ref><sp/>*dev,<sp/><ref refid="stdint_8h_1a5debae8b2a1ec20a6694c0c443ee399e" kindref="member">uint16_t</ref><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/><ref refid="stdint_8h_1a5debae8b2a1ec20a6694c0c443ee399e" kindref="member">uint16_t</ref><sp/>*mask,</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structrtc__time" kindref="compound">rtc_time</ref><sp/>*timeptr);</highlight></codeline>
+<codeline lineno="363"><highlight class="normal"></highlight></codeline>
+<codeline lineno="364"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>z_impl_rtc_alarm_get_time(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structdevice" kindref="compound">device</ref><sp/>*dev,<sp/><ref refid="stdint_8h_1a5debae8b2a1ec20a6694c0c443ee399e" kindref="member">uint16_t</ref><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/><ref refid="stdint_8h_1a5debae8b2a1ec20a6694c0c443ee399e" kindref="member">uint16_t</ref><sp/>*mask,</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structrtc__time" kindref="compound">rtc_time</ref><sp/>*timeptr)</highlight></codeline>
+<codeline lineno="366"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="device_8h_1a9907e8ee5e7be8c3b5d52b13bd33970a" kindref="member">DEVICE_API_GET</ref>(rtc,<sp/>dev)-&gt;alarm_get_time<sp/>==<sp/><ref refid="iar__missing__defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-<ref refid="group__system__errno_1ga43785b9969e0bd1af532dbde06c5540b" kindref="member">ENOSYS</ref>;</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="370"><highlight class="normal"></highlight></codeline>
+<codeline lineno="371"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="device_8h_1a9907e8ee5e7be8c3b5d52b13bd33970a" kindref="member">DEVICE_API_GET</ref>(rtc,<sp/>dev)-&gt;alarm_get_time(dev,<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/>mask,<sp/>timeptr);</highlight></codeline>
+<codeline lineno="372"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="373"><highlight class="normal"></highlight></codeline>
+<codeline lineno="389" refid="group__rtc__interface_1ga531c379c437a91df44a45e95063700e8" refkind="member"><highlight class="normal">__syscall<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__rtc__interface_1ga531c379c437a91df44a45e95063700e8" kindref="member">rtc_alarm_is_pending</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structdevice" kindref="compound">device</ref><sp/>*dev,<sp/><ref refid="stdint_8h_1a5debae8b2a1ec20a6694c0c443ee399e" kindref="member">uint16_t</ref><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="390"><highlight class="normal"></highlight></codeline>
+<codeline lineno="391"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>z_impl_rtc_alarm_is_pending(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structdevice" kindref="compound">device</ref><sp/>*dev,<sp/><ref refid="stdint_8h_1a5debae8b2a1ec20a6694c0c443ee399e" kindref="member">uint16_t</ref><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="392"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="393"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="device_8h_1a9907e8ee5e7be8c3b5d52b13bd33970a" kindref="member">DEVICE_API_GET</ref>(rtc,<sp/>dev)-&gt;alarm_is_pending<sp/>==<sp/><ref refid="iar__missing__defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="394"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-<ref refid="group__system__errno_1ga43785b9969e0bd1af532dbde06c5540b" kindref="member">ENOSYS</ref>;</highlight></codeline>
+<codeline lineno="395"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="396"><highlight class="normal"></highlight></codeline>
+<codeline lineno="397"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="device_8h_1a9907e8ee5e7be8c3b5d52b13bd33970a" kindref="member">DEVICE_API_GET</ref>(rtc,<sp/>dev)-&gt;alarm_is_pending(dev,<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="398"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="399"><highlight class="normal"></highlight></codeline>
+<codeline lineno="426" refid="group__rtc__interface_1ga90d7f422ca15cf679aa7ba61fb5373f0" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__rtc__interface_1ga90d7f422ca15cf679aa7ba61fb5373f0" kindref="member">rtc_alarm_set_callback</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structdevice" kindref="compound">device</ref><sp/>*dev,<sp/><ref refid="stdint_8h_1a5debae8b2a1ec20a6694c0c443ee399e" kindref="member">uint16_t</ref><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="427"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__rtc__interface_1ga090d68fb395ab088359f868c8a17e3cb" kindref="member">rtc_alarm_callback</ref><sp/>callback,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*user_data)</highlight></codeline>
+<codeline lineno="428"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="429"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="device_8h_1a9907e8ee5e7be8c3b5d52b13bd33970a" kindref="member">DEVICE_API_GET</ref>(rtc,<sp/>dev)-&gt;alarm_set_callback<sp/>==<sp/><ref refid="iar__missing__defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="430"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-<ref refid="group__system__errno_1ga43785b9969e0bd1af532dbde06c5540b" kindref="member">ENOSYS</ref>;</highlight></codeline>
+<codeline lineno="431"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="432"><highlight class="normal"></highlight></codeline>
+<codeline lineno="433"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="device_8h_1a9907e8ee5e7be8c3b5d52b13bd33970a" kindref="member">DEVICE_API_GET</ref>(rtc,<sp/>dev)-&gt;alarm_set_callback(dev,<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/>callback,<sp/>user_data);</highlight></codeline>
+<codeline lineno="434"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="435"><highlight class="normal"></highlight></codeline>
+<codeline lineno="436"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>CONFIG_RTC_ALARM<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="445"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(CONFIG_RTC_UPDATE)<sp/>||<sp/>defined(__DOXYGEN__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="446"><highlight class="normal"></highlight></codeline>
+<codeline lineno="466" refid="group__rtc__interface_1ga0b2b2b44077dcdb73feb007f87cc47b3" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__rtc__interface_1ga0b2b2b44077dcdb73feb007f87cc47b3" kindref="member">rtc_update_set_callback</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structdevice" kindref="compound">device</ref><sp/>*dev,</highlight></codeline>
+<codeline lineno="467"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__rtc__interface_1ga9d3eb555ac4ad86b7ff66d359652a29e" kindref="member">rtc_update_callback</ref><sp/>callback,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*user_data)</highlight></codeline>
+<codeline lineno="468"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="469"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="device_8h_1a9907e8ee5e7be8c3b5d52b13bd33970a" kindref="member">DEVICE_API_GET</ref>(rtc,<sp/>dev)-&gt;update_set_callback<sp/>==<sp/><ref refid="iar__missing__defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="470"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-<ref refid="group__system__errno_1ga43785b9969e0bd1af532dbde06c5540b" kindref="member">ENOSYS</ref>;</highlight></codeline>
+<codeline lineno="471"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="472"><highlight class="normal"></highlight></codeline>
+<codeline lineno="473"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="device_8h_1a9907e8ee5e7be8c3b5d52b13bd33970a" kindref="member">DEVICE_API_GET</ref>(rtc,<sp/>dev)-&gt;update_set_callback(dev,<sp/>callback,<sp/>user_data);</highlight></codeline>
+<codeline lineno="474"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="475"><highlight class="normal"></highlight></codeline>
+<codeline lineno="476"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>CONFIG_RTC_UPDATE<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="485"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(CONFIG_RTC_CALIBRATION)<sp/>||<sp/>defined(__DOXYGEN__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="486"><highlight class="normal"></highlight></codeline>
+<codeline lineno="505" refid="group__rtc__interface_1ga13395c6b38e06bcda23cc0e9c299c445" refkind="member"><highlight class="normal">__syscall<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__rtc__interface_1ga13395c6b38e06bcda23cc0e9c299c445" kindref="member">rtc_set_calibration</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structdevice" kindref="compound">device</ref><sp/>*dev,<sp/><ref refid="stdint_8h_1a0c18914b3041c2f583aba76f418399c2" kindref="member">int32_t</ref><sp/>calibration);</highlight></codeline>
+<codeline lineno="506"><highlight class="normal"></highlight></codeline>
+<codeline lineno="507"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>z_impl_rtc_set_calibration(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structdevice" kindref="compound">device</ref><sp/>*dev,<sp/><ref refid="stdint_8h_1a0c18914b3041c2f583aba76f418399c2" kindref="member">int32_t</ref><sp/>calibration)</highlight></codeline>
+<codeline lineno="508"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="509"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="device_8h_1a9907e8ee5e7be8c3b5d52b13bd33970a" kindref="member">DEVICE_API_GET</ref>(rtc,<sp/>dev)-&gt;set_calibration<sp/>==<sp/><ref refid="iar__missing__defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="510"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-<ref refid="group__system__errno_1ga43785b9969e0bd1af532dbde06c5540b" kindref="member">ENOSYS</ref>;</highlight></codeline>
+<codeline lineno="511"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="512"><highlight class="normal"></highlight></codeline>
+<codeline lineno="513"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="device_8h_1a9907e8ee5e7be8c3b5d52b13bd33970a" kindref="member">DEVICE_API_GET</ref>(rtc,<sp/>dev)-&gt;set_calibration(dev,<sp/>calibration);</highlight></codeline>
+<codeline lineno="514"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="515"><highlight class="normal"></highlight></codeline>
+<codeline lineno="526" refid="group__rtc__interface_1gab29bc6bcea5eb71e03d3e6181d4bec2f" refkind="member"><highlight class="normal">__syscall<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__rtc__interface_1gab29bc6bcea5eb71e03d3e6181d4bec2f" kindref="member">rtc_get_calibration</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structdevice" kindref="compound">device</ref><sp/>*dev,<sp/><ref refid="stdint_8h_1a0c18914b3041c2f583aba76f418399c2" kindref="member">int32_t</ref><sp/>*calibration);</highlight></codeline>
+<codeline lineno="527"><highlight class="normal"></highlight></codeline>
+<codeline lineno="528"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>z_impl_rtc_get_calibration(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structdevice" kindref="compound">device</ref><sp/>*dev,<sp/><ref refid="stdint_8h_1a0c18914b3041c2f583aba76f418399c2" kindref="member">int32_t</ref><sp/>*calibration)</highlight></codeline>
+<codeline lineno="529"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="530"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="device_8h_1a9907e8ee5e7be8c3b5d52b13bd33970a" kindref="member">DEVICE_API_GET</ref>(rtc,<sp/>dev)-&gt;get_calibration<sp/>==<sp/><ref refid="iar__missing__defs_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="531"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-<ref refid="group__system__errno_1ga43785b9969e0bd1af532dbde06c5540b" kindref="member">ENOSYS</ref>;</highlight></codeline>
+<codeline lineno="532"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="533"><highlight class="normal"></highlight></codeline>
+<codeline lineno="534"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="device_8h_1a9907e8ee5e7be8c3b5d52b13bd33970a" kindref="member">DEVICE_API_GET</ref>(rtc,<sp/>dev)-&gt;get_calibration(dev,<sp/>calibration);</highlight></codeline>
+<codeline lineno="535"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="536"><highlight class="normal"></highlight></codeline>
+<codeline lineno="537"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>CONFIG_RTC_CALIBRATION<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="550"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structtm" kindref="compound">tm</ref>;</highlight></codeline>
+<codeline lineno="551"><highlight class="normal"></highlight></codeline>
+<codeline lineno="556" refid="group__rtc__interface_1gac2bb774a4b512f76c35a0a6723a7c807" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structtm" kindref="compound">tm</ref><sp/>*<ref refid="group__rtc__interface_1gac2bb774a4b512f76c35a0a6723a7c807" kindref="member">rtc_time_to_tm</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structrtc__time" kindref="compound">rtc_time</ref><sp/>*timeptr)</highlight></codeline>
+<codeline lineno="557"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="558"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structtm" kindref="compound">tm</ref><sp/>*)timeptr;</highlight></codeline>
+<codeline lineno="559"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="560"><highlight class="normal"></highlight></codeline>
+<codeline lineno="568" refid="group__rtc__interface_1gacca437e504026d800aa481b870291fda" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="stdint_8h_1a0c18914b3041c2f583aba76f418399c2" kindref="member">int32_t</ref><sp/><ref refid="group__rtc__interface_1gacca437e504026d800aa481b870291fda" kindref="member">rtc_calibration_from_frequency</ref>(<ref refid="stdint_8h_1a0a8582351ac627ee8bde2973c825e47f" kindref="member">uint32_t</ref><sp/>frequency)</highlight></codeline>
+<codeline lineno="569"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="570"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__ASSERT_NO_MSG(frequency<sp/>&gt;<sp/>0);</highlight></codeline>
+<codeline lineno="571"><highlight class="normal"></highlight></codeline>
+<codeline lineno="572"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="stdint_8h_1a0c18914b3041c2f583aba76f418399c2" kindref="member">int32_t</ref>)((1000000000000000000LL<sp/>/<sp/>frequency)<sp/>-<sp/>1000000000);</highlight></codeline>
+<codeline lineno="573"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="574"><highlight class="normal"></highlight></codeline>
+<codeline lineno="583"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="584"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="585"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="586"><highlight class="normal"></highlight></codeline>
+<codeline lineno="587"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/syscalls/rtc.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="588"><highlight class="normal"></highlight></codeline>
+<codeline lineno="589"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>ZEPHYR_INCLUDE_DRIVERS_RTC_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="zephyr/drivers/rtc.h"/>
+  </compounddef>
+</doxygen>

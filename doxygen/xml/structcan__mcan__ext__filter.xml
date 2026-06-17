@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structcan__mcan__ext__filter" kind="struct" language="C++" prot="public">
+    <compoundname>can_mcan_ext_filter</compoundname>
+    <includes refid="can__mcan_8h" local="no">zephyr/drivers/can/can_mcan.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structcan__mcan__ext__filter_1a54b3ac39e57cb02136a5d1bf5af1c75b" prot="public" static="no" mutable="no">
+        <type><ref refid="stdint_8h_1a0a8582351ac627ee8bde2973c825e47f" kindref="member">uint32_t</ref></type>
+        <definition>uint32_t can_mcan_ext_filter::efid1</definition>
+        <argsstring></argsstring>
+        <name>efid1</name>
+        <qualifiedname>can_mcan_ext_filter::efid1</qualifiedname>
+        <bitfield> 29</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/can/can_mcan.h" line="1053" column="10" bodyfile="zephyr/drivers/can/can_mcan.h" bodystart="1053" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcan__mcan__ext__filter_1a6a3042f7b236fb2d06334c4c5bc91530" prot="public" static="no" mutable="no">
+        <type><ref refid="stdint_8h_1a0a8582351ac627ee8bde2973c825e47f" kindref="member">uint32_t</ref></type>
+        <definition>uint32_t can_mcan_ext_filter::efec</definition>
+        <argsstring></argsstring>
+        <name>efec</name>
+        <qualifiedname>can_mcan_ext_filter::efec</qualifiedname>
+        <bitfield> 3</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/can/can_mcan.h" line="1054" column="10" bodyfile="zephyr/drivers/can/can_mcan.h" bodystart="1054" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcan__mcan__ext__filter_1a12147937f9889e835cf89f5a99ab62d8" prot="public" static="no" mutable="no">
+        <type><ref refid="stdint_8h_1a0a8582351ac627ee8bde2973c825e47f" kindref="member">uint32_t</ref></type>
+        <definition>uint32_t can_mcan_ext_filter::efid2</definition>
+        <argsstring></argsstring>
+        <name>efid2</name>
+        <qualifiedname>can_mcan_ext_filter::efid2</qualifiedname>
+        <bitfield> 29</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/can/can_mcan.h" line="1055" column="10" bodyfile="zephyr/drivers/can/can_mcan.h" bodystart="1055" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcan__mcan__ext__filter_1a2e2c2d57015bf7aabbbe510660430bd7" prot="public" static="no" mutable="no">
+        <type><ref refid="stdint_8h_1a0a8582351ac627ee8bde2973c825e47f" kindref="member">uint32_t</ref></type>
+        <definition>uint32_t can_mcan_ext_filter::esync</definition>
+        <argsstring></argsstring>
+        <name>esync</name>
+        <qualifiedname>can_mcan_ext_filter::esync</qualifiedname>
+        <bitfield> 1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/can/can_mcan.h" line="1056" column="10" bodyfile="zephyr/drivers/can/can_mcan.h" bodystart="1056" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcan__mcan__ext__filter_1aa94145f8e7f7d8668f383f174f6420b8" prot="public" static="no" mutable="no">
+        <type><ref refid="stdint_8h_1a0a8582351ac627ee8bde2973c825e47f" kindref="member">uint32_t</ref></type>
+        <definition>uint32_t can_mcan_ext_filter::eft</definition>
+        <argsstring></argsstring>
+        <name>eft</name>
+        <qualifiedname>can_mcan_ext_filter::eft</qualifiedname>
+        <bitfield> 2</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/can/can_mcan.h" line="1057" column="10" bodyfile="zephyr/drivers/can/can_mcan.h" bodystart="1057" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Bosch M_CAN Extended Message ID Filter Element. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>See Bosch M_CAN Users Manual section 2.4.6 for details. </para>
+    </detaileddescription>
+    <location file="zephyr/drivers/can/can_mcan.h" line="1052" column="1" bodyfile="zephyr/drivers/can/can_mcan.h" bodystart="1052" bodyend="1058"/>
+    <listofallmembers>
+      <member refid="structcan__mcan__ext__filter_1a6a3042f7b236fb2d06334c4c5bc91530" prot="public" virt="non-virtual"><scope>can_mcan_ext_filter</scope><name>efec</name></member>
+      <member refid="structcan__mcan__ext__filter_1a54b3ac39e57cb02136a5d1bf5af1c75b" prot="public" virt="non-virtual"><scope>can_mcan_ext_filter</scope><name>efid1</name></member>
+      <member refid="structcan__mcan__ext__filter_1a12147937f9889e835cf89f5a99ab62d8" prot="public" virt="non-virtual"><scope>can_mcan_ext_filter</scope><name>efid2</name></member>
+      <member refid="structcan__mcan__ext__filter_1aa94145f8e7f7d8668f383f174f6420b8" prot="public" virt="non-virtual"><scope>can_mcan_ext_filter</scope><name>eft</name></member>
+      <member refid="structcan__mcan__ext__filter_1a2e2c2d57015bf7aabbbe510660430bd7" prot="public" virt="non-virtual"><scope>can_mcan_ext_filter</scope><name>esync</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

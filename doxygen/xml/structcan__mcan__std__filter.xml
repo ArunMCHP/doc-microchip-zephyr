@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structcan__mcan__std__filter" kind="struct" language="C++" prot="public">
+    <compoundname>can_mcan_std_filter</compoundname>
+    <includes refid="can__mcan_8h" local="no">zephyr/drivers/can/can_mcan.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structcan__mcan__std__filter_1a050f5018825d3afa350b35d101569f50" prot="public" static="no" mutable="no">
+        <type><ref refid="stdint_8h_1a0a8582351ac627ee8bde2973c825e47f" kindref="member">uint32_t</ref></type>
+        <definition>uint32_t can_mcan_std_filter::sfid2</definition>
+        <argsstring></argsstring>
+        <name>sfid2</name>
+        <qualifiedname>can_mcan_std_filter::sfid2</qualifiedname>
+        <bitfield> 11</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/can/can_mcan.h" line="1034" column="10" bodyfile="zephyr/drivers/can/can_mcan.h" bodystart="1034" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcan__mcan__std__filter_1adb5bb096566c3fecf9727a800dbfe3cd" prot="public" static="no" mutable="no">
+        <type><ref refid="stdint_8h_1a0a8582351ac627ee8bde2973c825e47f" kindref="member">uint32_t</ref></type>
+        <definition>uint32_t can_mcan_std_filter::res</definition>
+        <argsstring></argsstring>
+        <name>res</name>
+        <qualifiedname>can_mcan_std_filter::res</qualifiedname>
+        <bitfield> 5</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/can/can_mcan.h" line="1035" column="10" bodyfile="zephyr/drivers/can/can_mcan.h" bodystart="1035" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcan__mcan__std__filter_1a7d80d641985ab67e09eb4d11015af2b3" prot="public" static="no" mutable="no">
+        <type><ref refid="stdint_8h_1a0a8582351ac627ee8bde2973c825e47f" kindref="member">uint32_t</ref></type>
+        <definition>uint32_t can_mcan_std_filter::sfid1</definition>
+        <argsstring></argsstring>
+        <name>sfid1</name>
+        <qualifiedname>can_mcan_std_filter::sfid1</qualifiedname>
+        <bitfield> 11</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/can/can_mcan.h" line="1036" column="10" bodyfile="zephyr/drivers/can/can_mcan.h" bodystart="1036" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcan__mcan__std__filter_1ad943ff357a00cca569f164599b9f49e5" prot="public" static="no" mutable="no">
+        <type><ref refid="stdint_8h_1a0a8582351ac627ee8bde2973c825e47f" kindref="member">uint32_t</ref></type>
+        <definition>uint32_t can_mcan_std_filter::sfec</definition>
+        <argsstring></argsstring>
+        <name>sfec</name>
+        <qualifiedname>can_mcan_std_filter::sfec</qualifiedname>
+        <bitfield> 3</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/can/can_mcan.h" line="1037" column="10" bodyfile="zephyr/drivers/can/can_mcan.h" bodystart="1037" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcan__mcan__std__filter_1afb89a40ac7c585c75d6bbaf3705e913a" prot="public" static="no" mutable="no">
+        <type><ref refid="stdint_8h_1a0a8582351ac627ee8bde2973c825e47f" kindref="member">uint32_t</ref></type>
+        <definition>uint32_t can_mcan_std_filter::sft</definition>
+        <argsstring></argsstring>
+        <name>sft</name>
+        <qualifiedname>can_mcan_std_filter::sft</qualifiedname>
+        <bitfield> 2</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/can/can_mcan.h" line="1038" column="10" bodyfile="zephyr/drivers/can/can_mcan.h" bodystart="1038" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Bosch M_CAN Standard Message ID Filter Element. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>See Bosch M_CAN Users Manual section 2.4.5 for details. </para>
+    </detaileddescription>
+    <location file="zephyr/drivers/can/can_mcan.h" line="1033" column="1" bodyfile="zephyr/drivers/can/can_mcan.h" bodystart="1033" bodyend="1039"/>
+    <listofallmembers>
+      <member refid="structcan__mcan__std__filter_1adb5bb096566c3fecf9727a800dbfe3cd" prot="public" virt="non-virtual"><scope>can_mcan_std_filter</scope><name>res</name></member>
+      <member refid="structcan__mcan__std__filter_1ad943ff357a00cca569f164599b9f49e5" prot="public" virt="non-virtual"><scope>can_mcan_std_filter</scope><name>sfec</name></member>
+      <member refid="structcan__mcan__std__filter_1a7d80d641985ab67e09eb4d11015af2b3" prot="public" virt="non-virtual"><scope>can_mcan_std_filter</scope><name>sfid1</name></member>
+      <member refid="structcan__mcan__std__filter_1a050f5018825d3afa350b35d101569f50" prot="public" virt="non-virtual"><scope>can_mcan_std_filter</scope><name>sfid2</name></member>
+      <member refid="structcan__mcan__std__filter_1afb89a40ac7c585c75d6bbaf3705e913a" prot="public" virt="non-virtual"><scope>can_mcan_std_filter</scope><name>sft</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

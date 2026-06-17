@@ -1,0 +1,482 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta content="Use the flash API to erase, write and read back data from flash memory." name="description" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flash Read/Write &mdash; Zephyr Project Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/graphviz.css?v=4ae1632d" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/doxytooltip.css?v=07852572" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css?v=9c3e77be" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/custom.css?v=b2ece5be" />
+
+  
+    <link rel="shortcut icon" href="../../../../_static/favicon.png"/>
+    <link rel="canonical" href="https://docs.zephyrproject.org/latest/samples/drivers/flash/flash_read_write/README.html" />
+      <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../../_static/documentation_options.js?v=2f20d6c1"></script>
+      <script src="../../../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../../../_static/tippy/popper.min.js?v=f051b558"></script>
+      <script src="../../../../_static/tippy/tippy-bundle.umd.min.js?v=873d6056"></script>
+      <script src="../../../../_static/doxytooltip.js?v=ab77ca7a"></script>
+      <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../../../_static/copybutton.js?v=761fddf6"></script>
+      <script src="../../../../_static/js/custom.js?v=1603dd89"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../../../_static/togglebutton.js?v=b8b12719"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+  <meta name="color-scheme" content="dark light">
+  
+  <noscript id="dark-mode-toggle-stylesheets">
+    <link rel="stylesheet" href="../../../../_static/css/light.css" type="text/css" media="(prefers-color-scheme: light)"/>
+    <link rel="stylesheet" href="../../../../_static/css/dark.css" type="text/css" media="(prefers-color-scheme: dark)"/>
+  </noscript>
+  <script src="../../../../_static/js/dark-mode-toggle-stylesheets-loader.min.js"></script>
+  <script type="module" src="../../../../_static/js/dark-mode-toggle.min.mjs"></script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html">
+            
+              <img src="../../../../_static/logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div class="search-container" role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="search" name="q" placeholder="Search docs"
+           aria-label="Search docs" />
+    <span id="search-se-settings-icon" class="fa fa-gear" role="button" tabindex="0"
+          title="Search settings" aria-label="Search settings"
+          aria-haspopup="menu" aria-controls="search-se-menu" aria-expanded="false"
+          onclick="toggleSearchEngineSettingsMenu()">
+    </span>
+    <div id="search-se-menu" role="menu" aria-labelledby="search-se-settings-icon">
+      <ul>
+        <li id="search-se-menuitem-sphinx" role="menuitemradio" tabindex="-1"
+            aria-label="Built-in search" onclick="switchSearchEngine('sphinx')">
+          Built-in search <span class="fa fa-check"></span>
+        </li>
+        <li id="search-se-menuitem-google" role="menuitemradio" tabindex="-1"
+            aria-label="Google search" onclick="switchSearchEngine('google')">
+          Google search <span class="fa fa-check"></span>
+        </li>
+      </ul>
+    </div>
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+<script>
+(function () {
+  var form = document.getElementById("rtd-search-form");
+  var searchMenu = document.getElementById("search-se-menu");
+  var isBrowsingLatest = window.location.pathname.startsWith("/latest");
+  var preferenceKey = "search-se-" + (isBrowsingLatest ? "latest" : "default");
+  var query = new URLSearchParams(window.location.search).get("q");
+
+  if (query !== null) {
+    form.q.value = query;
+    form.q.focus();
+  }
+
+  // Load the saved search preference. Defaults to Google when browsing "/latest" documentation,
+  // built-in Sphinx search otherwise.
+  var engine = localStorage.getItem(preferenceKey);
+  if (engine === null) {
+    engine = isBrowsingLatest ? "google" : "sphinx";
+  }
+  setActiveSearchEngine(engine);
+
+  setSearchEngineSettingsMenuVisibility = function (visible) {
+    searchMenu.style.display = visible ? "block" : "none";
+    document
+      .getElementById("search-se-settings-icon")
+      .setAttribute("aria-expanded", visible ? "true" : "false");
+  };
+  setSearchEngineSettingsMenuVisibility(false);
+
+  window.toggleSearchEngineSettingsMenu = function () {
+    isVisible = searchMenu.style.display === "block";
+    setSearchEngineSettingsMenuVisibility(!isVisible);
+  };
+
+  function setActiveSearchEngine(engine) {
+    if(engine === "sphinx") {
+      form.action = "../../../../search.html";
+      form.q.placeholder = "Search docs (built-in search)";
+    } else {
+      form.action = "../../../../gsearch.html";
+      form.q.placeholder = "Search docs (powered by Google)";
+    }
+
+    var selectedElement = document.getElementById("search-se-menuitem-" + engine);
+    var otherElement = document.getElementById(
+      "search-se-menuitem-" + (engine === "sphinx" ? "google" : "sphinx")
+    );
+
+    selectedElement.classList.add("selected");
+    selectedElement.setAttribute("aria-checked", "true");
+    otherElement.classList.remove("selected");
+    otherElement.setAttribute("aria-checked", "false");
+  }
+
+  window.switchSearchEngine = function (engine) {
+    setActiveSearchEngine(engine);
+    localStorage.setItem(preferenceKey, engine);
+    setSearchEngineSettingsMenuVisibility(false);
+    form.q.focus();
+    if (form.q.value !== "") {
+      form.submit();
+    }
+  };
+
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function (event) {
+    if (!event.target.matches("#search-se-settings-icon")) {
+      if (searchMenu.style.display === "block") {
+        setSearchEngineSettingsMenuVisibility(false);
+      }
+    }
+  };
+
+  document.addEventListener("keydown", function (event) {
+    if(searchMenu.style.display === "none") return;
+
+    let menuItems = document.querySelectorAll('[role="menuitemradio"]');
+    let currentIndex = Array.from(menuItems).findIndex((item) => item === document.activeElement);
+
+    if (event.key === "ArrowDown" || event.key === "ArrowUp") {
+      let nextIndex = event.key === "ArrowDown" ? currentIndex + 1 : currentIndex - 1;
+
+      if (nextIndex >= menuItems.length) nextIndex = 0;
+      if (nextIndex < 0) nextIndex = menuItems.length - 1;
+
+      menuItems[nextIndex].focus();
+      event.preventDefault();
+    } else if (event.key === "Enter") {
+      let activeItem = document.activeElement;
+      if (activeItem && activeItem.getAttribute("role") === "menuitemradio") {
+        activeItem.click();
+        event.preventDefault();
+      }
+    }
+  });
+})();
+</script>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+  <div data-nosnippet>
+    
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book"> Zephyr Project</span>
+      v: latest
+      <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+      <dl>
+        <dt>Document Release Versions</dt>
+        
+          <dd><a href="/">latest</a></dd>
+        
+          <dd><a href="/4.4.0/">4.4.0</a></dd>
+        
+          <dd><a href="/4.3.0/">4.3.0</a></dd>
+        
+          <dd><a href="/3.7.0/">3.7.0 (LTS)</a></dd>
+        
+      </dl>
+      <dl>
+        <dt>Downloads</dt>
+        
+        <dd><a href="/latest/zephyr.pdf">PDF</a></dd>
+      </dl>
+      <dl>
+        <dt>zephyrproject.org Links</dt>
+          <dd>
+            <a href="https://www.zephyrproject.org/">Project Home</a>
+          </dd>
+          <dd>
+            <a href="https://github.com/zephyrproject-rtos/sdk-ng/releases">SDK</a>
+          </dd>
+          <dd>
+            <a href="https://github.com/zephyrproject-rtos/zephyr/releases">Releases</a>
+          </dd>
+      </dl>
+    </div>
+  </div>
+    
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../introduction/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../develop/index.html">Developing with Zephyr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../kernel/index.html">Kernel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../services/index.html">OS Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../build/index.html">Build and Configuration Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../connectivity/index.html">Connectivity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../hardware/index.html">Hardware Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../contribute/index.html">Contributing to Zephyr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../project/index.html">Project and Governance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../security/index.html">Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../safety/index.html">Safety</a></li>
+<li class="toctree-l1"><a class="category-link reference internal" href="../../../index.html">Samples and Demos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../boards/index.html">Supported Boards and Shields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../releases/index.html">Releases</a></li>
+</ul>
+
+    
+    <div class="toctree-wrapper compound">
+      <p class="caption"><span class="caption-text">Reference</span></p>
+      <ul>
+        
+        <li class="toctree-l1">
+          <a class="reference internal" href="/doxygen/html/index.html">API</a>
+        </li>
+        
+        <li class="toctree-l1">
+          <a class="reference internal" href="/kconfig.html">Kconfig Options</a>
+        </li>
+        
+        <li class="toctree-l1">
+          <a class="reference internal" href="/build/dts/api/bindings.html">Devicetree Bindings</a>
+        </li>
+        
+        <li class="toctree-l1">
+          <a class="reference internal" href="/develop/manifest/index.html">West Projects</a>
+        </li>
+        
+        <li class="toctree-l1">
+          <a class="reference internal" href="/glossary.html">Glossary</a>
+        </li>
+        
+      </ul>
+    </div>
+    
+  </div>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">Zephyr Project</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+  <!-- Docs / Latest -->
+  
+  
+
+  <li><a href="../../../../index.html">Docs / Latest</a> &raquo;</li>
+  
+  <li>Flash Read/Write</li>
+
+
+  <li class="wy-breadcrumbs-aside">
+    <dark-mode-toggle id="dark-mode-toggle" appearance="three-way" permanent="true"/>
+  </li>
+  <li class="wy-breadcrumbs-aside">
+      
+      
+        <a href="https://github.com/zephyrproject-rtos/zephyr/blob/main//samples/drivers/flash/flash_read_write/README.rst" class="fa fa-github"> Open on GitHub</a>
+      
+        <a href="https://github.com/zephyrproject-rtos/zephyr/issues/new?template=001_bug_report.yml&title=doc%3A+Documentation+issue+in+%27samples%2Fdrivers%2Fflash%2Fflash_read_write%2FREADME%27&labels=bug%2Carea%3A+Documentation%2Carea%3A+Samples&env=-+Page%3A+samples%2Fdrivers%2Fflash%2Fflash_read_write%2FREADME%0A-+Version%3A+main%0A-+SHA-1%3A+825cc429f95aae8786da922242bda195108c8077&context=This+issue+was+reported+from+the+online+documentation+page+using+the+%27Report+an+issue%27+button." class="fa fa-bug">
+          Report an issue with this page
+        </a>
+      
+    
+  </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+  
+  
+           <div itemprop="articleBody">
+             
+  <section id="flash_read_write">
+<h1>Flash Read/Write<a class="headerlink" href="#flash_read_write" title="Link to this heading"></a></h1>
+<p>
+                <a href="https://github.com/zephyrproject-rtos/zephyr/blob/main//samples/drivers/flash/flash_read_write/README.rst/.." class="btn btn-info fa fa-github"
+                    target="_blank" style="text-align: center;">
+                    Browse source code on GitHub
+                </a>
+                </p>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>This sample demonstrates using the <a class="reference internal" href="../../../../hardware/peripherals/flash.html#flash-api"><span class="std std-ref">flash API</span></a> to perform
+basic erase, write and read operations on the internal flash of a device.</p>
+<p>A single generic test function (<code class="docutils literal notranslate"><span class="pre">flash_region_test</span></code>) receives the flash
+device, byte offset, length and a region name, then runs the full
+erase/verify/write/read/verify cycle.  The sample invokes it twice:</p>
+<ol class="arabic simple">
+<li><p><strong>PFM storage</strong> – the <code class="docutils literal notranslate"><span class="pre">storage_partition</span></code> in Program Flash (flash1).</p></li>
+<li><p><strong>BFM top</strong> – the last page of Boot Flash Memory (flash0), exercising
+the upper address boundary.</p></li>
+</ol>
+<p>All sizes (page size, write block size) are queried at runtime from the flash
+driver, so the sample works across different devices (e.g. PIC32CK, PIC32CZ)
+without modification.</p>
+<section id="test-steps">
+<h3>Test steps<a class="headerlink" href="#test-steps" title="Link to this heading"></a></h3>
+<p>For each region the following five operations are performed:</p>
+<ol class="arabic simple">
+<li><p>Erase one flash page</p></li>
+<li><p>Verify the erased region reads back as the erase value</p></li>
+<li><p>Write a test pattern</p></li>
+<li><p>Read back the written data</p></li>
+<li><p>Verify the data matches</p></li>
+</ol>
+</section>
+</section>
+<section id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Link to this heading"></a></h2>
+<p>The board must have:</p>
+<ul class="simple">
+<li><p>A flash controller with driver support in Zephyr</p></li>
+<li><p>A <code class="docutils literal notranslate"><span class="pre">storage_partition</span></code> defined in the board devicetree</p></li>
+</ul>
+</section>
+<section id="building-and-running">
+<h2>Building and Running<a class="headerlink" href="#building-and-running" title="Link to this heading"></a></h2>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>west<span class="w"> </span>build<span class="w"> </span>-b<span class="w"> </span>None<span class="w"> </span>samples/drivers/flash/flash_read_write
+west<span class="w"> </span>flash
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Flash Read/Write sample for pic32ck_sg01_cult</span>
+<span class="go">==========================</span>
+
+<span class="go">--- PFM storage test ---</span>
+
+<span class="go">PFM storage: flash device is ready.</span>
+<span class="go">PFM storage parameters:</span>
+<span class="go">  Write block size : 8 bytes</span>
+<span class="go">  Erase value      : 0xff</span>
+<span class="go">  Erase block size : 4096 bytes</span>
+<span class="go">  Page start offset: 0x1f8000</span>
+<span class="go">  Page index       : 508</span>
+<span class="go">  Total pages      : 512</span>
+<span class="go">  Test offset      : 0x1f8000</span>
+<span class="go">  Test size        : 4096 bytes</span>
+
+<span class="go">Test 1: PFM storage erase</span>
+<span class="go">  Erasing 4096 bytes at offset 0x1f8000 ...</span>
+<span class="go">  PFM storage erase succeeded!</span>
+
+<span class="go">Test 2: PFM storage erase verification</span>
+<span class="go">  PFM storage erase verification succeeded!</span>
+
+<span class="go">Test 3: PFM storage write</span>
+<span class="go">  Writing 4096 bytes (write block = 8 bytes) ...</span>
+<span class="go">  PFM storage write succeeded!</span>
+
+<span class="go">Test 4: PFM storage read</span>
+<span class="go">  Reading back 4096 bytes ...</span>
+<span class="go">  PFM storage read succeeded!</span>
+
+<span class="go">Test 5: PFM storage data verification</span>
+<span class="go">  PFM storage data read matches data written. Good!!</span>
+
+<span class="go">--- BFM top test ---</span>
+
+<span class="go">BFM top: flash device is ready.</span>
+<span class="go">BFM top parameters:</span>
+<span class="go">  Write block size : 8 bytes</span>
+<span class="go">  Erase value      : 0xff</span>
+<span class="go">  Erase block size : 4096 bytes</span>
+<span class="go">  Page start offset: 0x1f000</span>
+<span class="go">  Page index       : 31</span>
+<span class="go">  Total pages      : 32</span>
+<span class="go">  Test offset      : 0x1f000</span>
+<span class="go">  Test size        : 4096 bytes</span>
+
+<span class="go">Test 6: BFM top erase</span>
+<span class="go">  Erasing 4096 bytes at offset 0x1f000 ...</span>
+<span class="go">  BFM top erase succeeded!</span>
+
+<span class="go">Test 7: BFM top erase verification</span>
+<span class="go">  BFM top erase verification succeeded!</span>
+
+<span class="go">Test 8: BFM top write</span>
+<span class="go">  Writing 4096 bytes (write block = 8 bytes) ...</span>
+<span class="go">  BFM top write succeeded!</span>
+
+<span class="go">Test 9: BFM top read</span>
+<span class="go">  Reading back 4096 bytes ...</span>
+<span class="go">  BFM top read succeeded!</span>
+
+<span class="go">Test 10: BFM top data verification</span>
+<span class="go">  BFM top data read matches data written. Good!!</span>
+
+<span class="go">==========================</span>
+<span class="go">All flash tests PASSED.</span>
+</pre></div>
+</div>
+</section>
+<section id="see-also">
+<h2>See also<a class="headerlink" href="#see-also" title="Link to this heading"></a></h2>
+<dl>
+<dt class="sig sig-object c">
+<a class="doxygroup reference internal" href="../../../../doxygen/html/group__flash__interface.html" title=""><span class="pre">Flash</span></a></dt>
+</dl>
+
+</section>
+</section>
+<script type="application/ld+json">
+                {"@context": "http://schema.org", "@type": "SoftwareSourceCode", "name": "Flash Read/Write", "description": "Use the flash API to erase, write and read back data from flash memory.", "codeSampleType": "full", "codeRepository": "https://github.com/zephyrproject-rtos/zephyr/blob/main//samples/drivers/flash/flash_read_write/README.rst"}
+                </script>
+
+           </div>
+          </div>
+
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+<p>
+  &#169; Copyright 2015-2026 Zephyr Project members and individual contributors.
+  <div class="lastupdated">
+    Last generated: Jun 16, 2026.
+    Last source update: Jun 10, 2026.
+  </div></p>
+
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

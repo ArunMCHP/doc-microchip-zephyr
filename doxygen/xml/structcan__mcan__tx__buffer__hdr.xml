@@ -1,0 +1,254 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structcan__mcan__tx__buffer__hdr" kind="struct" language="C++" prot="public">
+    <compoundname>can_mcan_tx_buffer_hdr</compoundname>
+    <includes refid="can__mcan_8h" local="no">zephyr/drivers/can/can_mcan.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structcan__mcan__tx__buffer__hdr_1ab4800365c1f2cd76c2e19c27b8d72956" prot="public" static="no" mutable="no">
+        <type><ref refid="stdint_8h_1a0a8582351ac627ee8bde2973c825e47f" kindref="member">uint32_t</ref></type>
+        <definition>uint32_t can_mcan_tx_buffer_hdr::ext_id</definition>
+        <argsstring></argsstring>
+        <name>ext_id</name>
+        <qualifiedname>can_mcan_tx_buffer_hdr::ext_id</qualifiedname>
+        <bitfield> 29</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/can/can_mcan.h" line="953" column="10" bodyfile="zephyr/drivers/can/can_mcan.h" bodystart="953" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcan__mcan__tx__buffer__hdr_1a6ef37c0a073550c2b99ec29fdb834ca1" prot="public" static="no" mutable="no">
+        <type><ref refid="stdint_8h_1a0a8582351ac627ee8bde2973c825e47f" kindref="member">uint32_t</ref></type>
+        <definition>uint32_t can_mcan_tx_buffer_hdr::rtr</definition>
+        <argsstring></argsstring>
+        <name>rtr</name>
+        <qualifiedname>can_mcan_tx_buffer_hdr::rtr</qualifiedname>
+        <bitfield> 1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/can/can_mcan.h" line="954" column="10" bodyfile="zephyr/drivers/can/can_mcan.h" bodystart="954" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcan__mcan__tx__buffer__hdr_1a0ee2e857b6f63c2d70179d89398ffb9a" prot="public" static="no" mutable="no">
+        <type><ref refid="stdint_8h_1a0a8582351ac627ee8bde2973c825e47f" kindref="member">uint32_t</ref></type>
+        <definition>uint32_t can_mcan_tx_buffer_hdr::xtd</definition>
+        <argsstring></argsstring>
+        <name>xtd</name>
+        <qualifiedname>can_mcan_tx_buffer_hdr::xtd</qualifiedname>
+        <bitfield> 1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/can/can_mcan.h" line="955" column="10" bodyfile="zephyr/drivers/can/can_mcan.h" bodystart="955" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcan__mcan__tx__buffer__hdr_1ae30ffd52da3ea38188fa04ace20054ad" prot="public" static="no" mutable="no">
+        <type><ref refid="stdint_8h_1a0a8582351ac627ee8bde2973c825e47f" kindref="member">uint32_t</ref></type>
+        <definition>uint32_t can_mcan_tx_buffer_hdr::esi</definition>
+        <argsstring></argsstring>
+        <name>esi</name>
+        <qualifiedname>can_mcan_tx_buffer_hdr::esi</qualifiedname>
+        <bitfield> 1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/can/can_mcan.h" line="956" column="10" bodyfile="zephyr/drivers/can/can_mcan.h" bodystart="956" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcan__mcan__tx__buffer__hdr_1ac78c3e0f4dda2eddc25ae8066cc29134" prot="public" static="no" mutable="no">
+        <type><ref refid="stdint_8h_1a0a8582351ac627ee8bde2973c825e47f" kindref="member">uint32_t</ref></type>
+        <definition>uint32_t can_mcan_tx_buffer_hdr::pad1</definition>
+        <argsstring></argsstring>
+        <name>pad1</name>
+        <qualifiedname>can_mcan_tx_buffer_hdr::pad1</qualifiedname>
+        <bitfield> 18</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/can/can_mcan.h" line="959" column="10" bodyfile="zephyr/drivers/can/can_mcan.h" bodystart="959" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcan__mcan__tx__buffer__hdr_1a9b1f4f0f66d1de07cf6ed212baa713be" prot="public" static="no" mutable="no">
+        <type><ref refid="stdint_8h_1a0a8582351ac627ee8bde2973c825e47f" kindref="member">uint32_t</ref></type>
+        <definition>uint32_t can_mcan_tx_buffer_hdr::std_id</definition>
+        <argsstring></argsstring>
+        <name>std_id</name>
+        <qualifiedname>can_mcan_tx_buffer_hdr::std_id</qualifiedname>
+        <bitfield> 11</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/can/can_mcan.h" line="960" column="10" bodyfile="zephyr/drivers/can/can_mcan.h" bodystart="960" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcan__mcan__tx__buffer__hdr_1aa43b5da1708dbf49794c586ca3af7365" prot="public" static="no" mutable="no">
+        <type><ref refid="stdint_8h_1a0a8582351ac627ee8bde2973c825e47f" kindref="member">uint32_t</ref></type>
+        <definition>uint32_t can_mcan_tx_buffer_hdr::pad2</definition>
+        <argsstring></argsstring>
+        <name>pad2</name>
+        <qualifiedname>can_mcan_tx_buffer_hdr::pad2</qualifiedname>
+        <bitfield> 3</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/can/can_mcan.h" line="961" column="10" bodyfile="zephyr/drivers/can/can_mcan.h" bodystart="961" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcan__mcan__tx__buffer__hdr_1a1683279324cd29fda4d849b913f9f495" prot="public" static="no" mutable="no">
+        <type>union <ref refid="structcan__mcan__tx__buffer__hdr" kindref="compound">can_mcan_tx_buffer_hdr</ref></type>
+        <definition>union can_mcan_tx_buffer_hdr can_mcan_tx_buffer_hdr</definition>
+        <argsstring></argsstring>
+        <name></name>
+        <qualifiedname>can_mcan_tx_buffer_hdr</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/can/can_mcan.h" line="963" column="1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcan__mcan__tx__buffer__hdr_1a4bd206867f0ba937b93888285ea4095a" prot="public" static="no" mutable="no">
+        <type><ref refid="stdint_8h_1a5debae8b2a1ec20a6694c0c443ee399e" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t can_mcan_tx_buffer_hdr::res1</definition>
+        <argsstring></argsstring>
+        <name>res1</name>
+        <qualifiedname>can_mcan_tx_buffer_hdr::res1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/can/can_mcan.h" line="964" column="10" bodyfile="zephyr/drivers/can/can_mcan.h" bodystart="964" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcan__mcan__tx__buffer__hdr_1a9b96b8b75d4ff4c9df3192a244dabc82" prot="public" static="no" mutable="no">
+        <type><ref refid="stdint_8h_1a3cb4a16b0e8d6af0af86d4fd6ba5fd9d" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t can_mcan_tx_buffer_hdr::dlc</definition>
+        <argsstring></argsstring>
+        <name>dlc</name>
+        <qualifiedname>can_mcan_tx_buffer_hdr::dlc</qualifiedname>
+        <bitfield> 4</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/can/can_mcan.h" line="965" column="9" bodyfile="zephyr/drivers/can/can_mcan.h" bodystart="965" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcan__mcan__tx__buffer__hdr_1af6554e36649326a1ee01757096e1c68f" prot="public" static="no" mutable="no">
+        <type><ref refid="stdint_8h_1a3cb4a16b0e8d6af0af86d4fd6ba5fd9d" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t can_mcan_tx_buffer_hdr::brs</definition>
+        <argsstring></argsstring>
+        <name>brs</name>
+        <qualifiedname>can_mcan_tx_buffer_hdr::brs</qualifiedname>
+        <bitfield> 1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/can/can_mcan.h" line="966" column="9" bodyfile="zephyr/drivers/can/can_mcan.h" bodystart="966" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcan__mcan__tx__buffer__hdr_1a7ac73d1c09b84267a4701b5d4fa7c920" prot="public" static="no" mutable="no">
+        <type><ref refid="stdint_8h_1a3cb4a16b0e8d6af0af86d4fd6ba5fd9d" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t can_mcan_tx_buffer_hdr::fdf</definition>
+        <argsstring></argsstring>
+        <name>fdf</name>
+        <qualifiedname>can_mcan_tx_buffer_hdr::fdf</qualifiedname>
+        <bitfield> 1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/can/can_mcan.h" line="967" column="9" bodyfile="zephyr/drivers/can/can_mcan.h" bodystart="967" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcan__mcan__tx__buffer__hdr_1a053c1a8d986dd4537398c052712d394d" prot="public" static="no" mutable="no">
+        <type><ref refid="stdint_8h_1a3cb4a16b0e8d6af0af86d4fd6ba5fd9d" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t can_mcan_tx_buffer_hdr::tsce</definition>
+        <argsstring></argsstring>
+        <name>tsce</name>
+        <qualifiedname>can_mcan_tx_buffer_hdr::tsce</qualifiedname>
+        <bitfield> 1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/can/can_mcan.h" line="968" column="9" bodyfile="zephyr/drivers/can/can_mcan.h" bodystart="968" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcan__mcan__tx__buffer__hdr_1a6f760970f0483dc16aa8ecc0715591d3" prot="public" static="no" mutable="no">
+        <type><ref refid="stdint_8h_1a3cb4a16b0e8d6af0af86d4fd6ba5fd9d" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t can_mcan_tx_buffer_hdr::efc</definition>
+        <argsstring></argsstring>
+        <name>efc</name>
+        <qualifiedname>can_mcan_tx_buffer_hdr::efc</qualifiedname>
+        <bitfield> 1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/can/can_mcan.h" line="969" column="9" bodyfile="zephyr/drivers/can/can_mcan.h" bodystart="969" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcan__mcan__tx__buffer__hdr_1ac76ce5728912347d0193c4ed5f467c92" prot="public" static="no" mutable="no">
+        <type><ref refid="stdint_8h_1a3cb4a16b0e8d6af0af86d4fd6ba5fd9d" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t can_mcan_tx_buffer_hdr::mm</definition>
+        <argsstring></argsstring>
+        <name>mm</name>
+        <qualifiedname>can_mcan_tx_buffer_hdr::mm</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/can/can_mcan.h" line="970" column="9" bodyfile="zephyr/drivers/can/can_mcan.h" bodystart="970" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Bosch M_CAN Tx Buffer Element header. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>See Bosch M_CAN Users Manual section 2.4.3 for details. </para>
+    </detaileddescription>
+    <location file="zephyr/drivers/can/can_mcan.h" line="950" column="1" bodyfile="zephyr/drivers/can/can_mcan.h" bodystart="950" bodyend="971"/>
+    <listofallmembers>
+      <member refid="structcan__mcan__tx__buffer__hdr_1af6554e36649326a1ee01757096e1c68f" prot="public" virt="non-virtual"><scope>can_mcan_tx_buffer_hdr</scope><name>brs</name></member>
+      <member refid="structcan__mcan__tx__buffer__hdr_1a9b96b8b75d4ff4c9df3192a244dabc82" prot="public" virt="non-virtual"><scope>can_mcan_tx_buffer_hdr</scope><name>dlc</name></member>
+      <member refid="structcan__mcan__tx__buffer__hdr_1a6f760970f0483dc16aa8ecc0715591d3" prot="public" virt="non-virtual"><scope>can_mcan_tx_buffer_hdr</scope><name>efc</name></member>
+      <member refid="structcan__mcan__tx__buffer__hdr_1ae30ffd52da3ea38188fa04ace20054ad" prot="public" virt="non-virtual"><scope>can_mcan_tx_buffer_hdr</scope><name>esi</name></member>
+      <member refid="structcan__mcan__tx__buffer__hdr_1ab4800365c1f2cd76c2e19c27b8d72956" prot="public" virt="non-virtual"><scope>can_mcan_tx_buffer_hdr</scope><name>ext_id</name></member>
+      <member refid="structcan__mcan__tx__buffer__hdr_1a7ac73d1c09b84267a4701b5d4fa7c920" prot="public" virt="non-virtual"><scope>can_mcan_tx_buffer_hdr</scope><name>fdf</name></member>
+      <member refid="structcan__mcan__tx__buffer__hdr_1ac76ce5728912347d0193c4ed5f467c92" prot="public" virt="non-virtual"><scope>can_mcan_tx_buffer_hdr</scope><name>mm</name></member>
+      <member refid="structcan__mcan__tx__buffer__hdr_1ac78c3e0f4dda2eddc25ae8066cc29134" prot="public" virt="non-virtual"><scope>can_mcan_tx_buffer_hdr</scope><name>pad1</name></member>
+      <member refid="structcan__mcan__tx__buffer__hdr_1aa43b5da1708dbf49794c586ca3af7365" prot="public" virt="non-virtual"><scope>can_mcan_tx_buffer_hdr</scope><name>pad2</name></member>
+      <member refid="structcan__mcan__tx__buffer__hdr_1a4bd206867f0ba937b93888285ea4095a" prot="public" virt="non-virtual"><scope>can_mcan_tx_buffer_hdr</scope><name>res1</name></member>
+      <member refid="structcan__mcan__tx__buffer__hdr_1a6ef37c0a073550c2b99ec29fdb834ca1" prot="public" virt="non-virtual"><scope>can_mcan_tx_buffer_hdr</scope><name>rtr</name></member>
+      <member refid="structcan__mcan__tx__buffer__hdr_1a9b1f4f0f66d1de07cf6ed212baa713be" prot="public" virt="non-virtual"><scope>can_mcan_tx_buffer_hdr</scope><name>std_id</name></member>
+      <member refid="structcan__mcan__tx__buffer__hdr_1a053c1a8d986dd4537398c052712d394d" prot="public" virt="non-virtual"><scope>can_mcan_tx_buffer_hdr</scope><name>tsce</name></member>
+      <member refid="structcan__mcan__tx__buffer__hdr_1a0ee2e857b6f63c2d70179d89398ffb9a" prot="public" virt="non-virtual"><scope>can_mcan_tx_buffer_hdr</scope><name>xtd</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

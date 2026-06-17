@@ -1,0 +1,157 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structcan__sja1000__rx__filter" kind="struct" language="C++" prot="public">
+    <compoundname>can_sja1000_rx_filter</compoundname>
+    <includes refid="can__sja1000_8h" local="no">zephyr/drivers/can/can_sja1000.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structcan__sja1000__rx__filter_1aee19675d5cc25ed7adec2bff84b347e5" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structcan__filter" kindref="compound">can_filter</ref></type>
+        <definition>struct can_filter can_sja1000_rx_filter::filter</definition>
+        <argsstring></argsstring>
+        <name>filter</name>
+        <qualifiedname>can_sja1000_rx_filter::filter</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/can/can_sja1000.h" line="156" column="17" bodyfile="zephyr/drivers/can/can_sja1000.h" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcan__sja1000__rx__filter_1a7f312ad2aa06e836928da30ea012d797" prot="public" static="no" mutable="no">
+        <type><ref refid="group__can__controller_1gaab9525fafab78c0da0a78a2dae39bd6f" kindref="member">can_rx_callback_t</ref></type>
+        <definition>can_rx_callback_t can_sja1000_rx_filter::callback</definition>
+        <argsstring></argsstring>
+        <name>callback</name>
+        <qualifiedname>can_sja1000_rx_filter::callback</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/can/can_sja1000.h" line="157" column="19" bodyfile="zephyr/drivers/can/can_sja1000.h" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcan__sja1000__rx__filter_1addc5b07b6aa6a144ae0d2e792523f4df" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* can_sja1000_rx_filter::user_data</definition>
+        <argsstring></argsstring>
+        <name>user_data</name>
+        <qualifiedname>can_sja1000_rx_filter::user_data</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/can/can_sja1000.h" line="158" column="6" bodyfile="zephyr/drivers/can/can_sja1000.h" bodystart="158" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>SJA1000 driver internal RX filter structure. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>can_filter</label>
+        <link refid="structcan__filter"/>
+      </node>
+      <node id="1">
+        <label>can_sja1000_rx_filter</label>
+        <link refid="structcan__sja1000__rx__filter"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>filter</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>callback</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>device</label>
+        <link refid="structdevice"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>state</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>ops</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>pm_base</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>pm</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>pm_isr</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>device_ops</label>
+        <link refid="structdevice__ops"/>
+      </node>
+      <node id="4">
+        <label>device_state</label>
+        <link refid="structdevice__state"/>
+      </node>
+      <node id="9">
+        <label>k_event</label>
+        <link refid="structk__event"/>
+      </node>
+      <node id="8">
+        <label>k_sem</label>
+        <link refid="structk__sem"/>
+      </node>
+      <node id="12">
+        <label>k_spinlock</label>
+        <link refid="structk__spinlock"/>
+      </node>
+      <node id="10">
+        <label>k_work_delayable</label>
+        <link refid="structk__work__delayable"/>
+      </node>
+      <node id="7">
+        <label>pm_device</label>
+        <link refid="structpm__device"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>dev</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>lock</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>event</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>work</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>pm_device_base</label>
+        <link refid="structpm__device__base"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>action_cb</edgelabel>
+        </childnode>
+      </node>
+      <node id="11">
+        <label>pm_device_isr</label>
+        <link refid="structpm__device__isr"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>lock</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="zephyr/drivers/can/can_sja1000.h" line="155" column="1" bodyfile="zephyr/drivers/can/can_sja1000.h" bodystart="155" bodyend="159"/>
+    <listofallmembers>
+      <member refid="structcan__sja1000__rx__filter_1a7f312ad2aa06e836928da30ea012d797" prot="public" virt="non-virtual"><scope>can_sja1000_rx_filter</scope><name>callback</name></member>
+      <member refid="structcan__sja1000__rx__filter_1aee19675d5cc25ed7adec2bff84b347e5" prot="public" virt="non-virtual"><scope>can_sja1000_rx_filter</scope><name>filter</name></member>
+      <member refid="structcan__sja1000__rx__filter_1addc5b07b6aa6a144ae0d2e792523f4df" prot="public" virt="non-virtual"><scope>can_sja1000_rx_filter</scope><name>user_data</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

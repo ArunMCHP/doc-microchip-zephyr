@@ -1,0 +1,238 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structcan__mcan__tx__event__fifo" kind="struct" language="C++" prot="public">
+    <compoundname>can_mcan_tx_event_fifo</compoundname>
+    <includes refid="can__mcan_8h" local="no">zephyr/drivers/can/can_mcan.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structcan__mcan__tx__event__fifo_1a3b4c61b9edcd1720235c3784131693d1" prot="public" static="no" mutable="no">
+        <type><ref refid="stdint_8h_1a0a8582351ac627ee8bde2973c825e47f" kindref="member">uint32_t</ref></type>
+        <definition>uint32_t can_mcan_tx_event_fifo::ext_id</definition>
+        <argsstring></argsstring>
+        <name>ext_id</name>
+        <qualifiedname>can_mcan_tx_event_fifo::ext_id</qualifiedname>
+        <bitfield> 29</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/can/can_mcan.h" line="994" column="10" bodyfile="zephyr/drivers/can/can_mcan.h" bodystart="994" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcan__mcan__tx__event__fifo_1a17d5b6caf6519bf199dc179c11550abb" prot="public" static="no" mutable="no">
+        <type><ref refid="stdint_8h_1a0a8582351ac627ee8bde2973c825e47f" kindref="member">uint32_t</ref></type>
+        <definition>uint32_t can_mcan_tx_event_fifo::rtr</definition>
+        <argsstring></argsstring>
+        <name>rtr</name>
+        <qualifiedname>can_mcan_tx_event_fifo::rtr</qualifiedname>
+        <bitfield> 1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/can/can_mcan.h" line="995" column="10" bodyfile="zephyr/drivers/can/can_mcan.h" bodystart="995" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcan__mcan__tx__event__fifo_1aac19c259f3e966d771c0088a32cbe47d" prot="public" static="no" mutable="no">
+        <type><ref refid="stdint_8h_1a0a8582351ac627ee8bde2973c825e47f" kindref="member">uint32_t</ref></type>
+        <definition>uint32_t can_mcan_tx_event_fifo::xtd</definition>
+        <argsstring></argsstring>
+        <name>xtd</name>
+        <qualifiedname>can_mcan_tx_event_fifo::xtd</qualifiedname>
+        <bitfield> 1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/can/can_mcan.h" line="996" column="10" bodyfile="zephyr/drivers/can/can_mcan.h" bodystart="996" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcan__mcan__tx__event__fifo_1a796967d04c60cd9cf423d904c6118944" prot="public" static="no" mutable="no">
+        <type><ref refid="stdint_8h_1a0a8582351ac627ee8bde2973c825e47f" kindref="member">uint32_t</ref></type>
+        <definition>uint32_t can_mcan_tx_event_fifo::esi</definition>
+        <argsstring></argsstring>
+        <name>esi</name>
+        <qualifiedname>can_mcan_tx_event_fifo::esi</qualifiedname>
+        <bitfield> 1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/can/can_mcan.h" line="997" column="10" bodyfile="zephyr/drivers/can/can_mcan.h" bodystart="997" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcan__mcan__tx__event__fifo_1a6be85a808788bd611055235b00a9b1f4" prot="public" static="no" mutable="no">
+        <type><ref refid="stdint_8h_1a0a8582351ac627ee8bde2973c825e47f" kindref="member">uint32_t</ref></type>
+        <definition>uint32_t can_mcan_tx_event_fifo::pad1</definition>
+        <argsstring></argsstring>
+        <name>pad1</name>
+        <qualifiedname>can_mcan_tx_event_fifo::pad1</qualifiedname>
+        <bitfield> 18</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/can/can_mcan.h" line="1000" column="10" bodyfile="zephyr/drivers/can/can_mcan.h" bodystart="1000" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcan__mcan__tx__event__fifo_1a7698679cf93c707b423e9c695209f072" prot="public" static="no" mutable="no">
+        <type><ref refid="stdint_8h_1a0a8582351ac627ee8bde2973c825e47f" kindref="member">uint32_t</ref></type>
+        <definition>uint32_t can_mcan_tx_event_fifo::std_id</definition>
+        <argsstring></argsstring>
+        <name>std_id</name>
+        <qualifiedname>can_mcan_tx_event_fifo::std_id</qualifiedname>
+        <bitfield> 11</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/can/can_mcan.h" line="1001" column="10" bodyfile="zephyr/drivers/can/can_mcan.h" bodystart="1001" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcan__mcan__tx__event__fifo_1a461d68069593b42d6961d6ff0525f783" prot="public" static="no" mutable="no">
+        <type><ref refid="stdint_8h_1a0a8582351ac627ee8bde2973c825e47f" kindref="member">uint32_t</ref></type>
+        <definition>uint32_t can_mcan_tx_event_fifo::pad2</definition>
+        <argsstring></argsstring>
+        <name>pad2</name>
+        <qualifiedname>can_mcan_tx_event_fifo::pad2</qualifiedname>
+        <bitfield> 3</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/can/can_mcan.h" line="1002" column="10" bodyfile="zephyr/drivers/can/can_mcan.h" bodystart="1002" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcan__mcan__tx__event__fifo_1a67fd193f47b84ecddbe5056c77179bec" prot="public" static="no" mutable="no">
+        <type>union <ref refid="structcan__mcan__tx__event__fifo" kindref="compound">can_mcan_tx_event_fifo</ref></type>
+        <definition>union can_mcan_tx_event_fifo can_mcan_tx_event_fifo</definition>
+        <argsstring></argsstring>
+        <name></name>
+        <qualifiedname>can_mcan_tx_event_fifo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/can/can_mcan.h" line="1004" column="1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcan__mcan__tx__event__fifo_1aacc10d577c20325baf54d7bb20e32583" prot="public" static="no" mutable="no">
+        <type><ref refid="stdint_8h_1a5debae8b2a1ec20a6694c0c443ee399e" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t can_mcan_tx_event_fifo::txts</definition>
+        <argsstring></argsstring>
+        <name>txts</name>
+        <qualifiedname>can_mcan_tx_event_fifo::txts</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/can/can_mcan.h" line="1005" column="10" bodyfile="zephyr/drivers/can/can_mcan.h" bodystart="1005" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcan__mcan__tx__event__fifo_1a96aa98b30f603a5c5676e6a244f5d6c9" prot="public" static="no" mutable="no">
+        <type><ref refid="stdint_8h_1a3cb4a16b0e8d6af0af86d4fd6ba5fd9d" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t can_mcan_tx_event_fifo::dlc</definition>
+        <argsstring></argsstring>
+        <name>dlc</name>
+        <qualifiedname>can_mcan_tx_event_fifo::dlc</qualifiedname>
+        <bitfield> 4</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/can/can_mcan.h" line="1006" column="9" bodyfile="zephyr/drivers/can/can_mcan.h" bodystart="1006" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcan__mcan__tx__event__fifo_1ac3924771aeb8885b4ad8d59758131b1a" prot="public" static="no" mutable="no">
+        <type><ref refid="stdint_8h_1a3cb4a16b0e8d6af0af86d4fd6ba5fd9d" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t can_mcan_tx_event_fifo::brs</definition>
+        <argsstring></argsstring>
+        <name>brs</name>
+        <qualifiedname>can_mcan_tx_event_fifo::brs</qualifiedname>
+        <bitfield> 1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/can/can_mcan.h" line="1007" column="9" bodyfile="zephyr/drivers/can/can_mcan.h" bodystart="1007" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcan__mcan__tx__event__fifo_1a4075852d322da2eb4e3acb9d7c2e6d64" prot="public" static="no" mutable="no">
+        <type><ref refid="stdint_8h_1a3cb4a16b0e8d6af0af86d4fd6ba5fd9d" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t can_mcan_tx_event_fifo::fdf</definition>
+        <argsstring></argsstring>
+        <name>fdf</name>
+        <qualifiedname>can_mcan_tx_event_fifo::fdf</qualifiedname>
+        <bitfield> 1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/can/can_mcan.h" line="1008" column="9" bodyfile="zephyr/drivers/can/can_mcan.h" bodystart="1008" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcan__mcan__tx__event__fifo_1a23ff309d6fb887166da2290646df200c" prot="public" static="no" mutable="no">
+        <type><ref refid="stdint_8h_1a3cb4a16b0e8d6af0af86d4fd6ba5fd9d" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t can_mcan_tx_event_fifo::et</definition>
+        <argsstring></argsstring>
+        <name>et</name>
+        <qualifiedname>can_mcan_tx_event_fifo::et</qualifiedname>
+        <bitfield> 2</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/can/can_mcan.h" line="1009" column="9" bodyfile="zephyr/drivers/can/can_mcan.h" bodystart="1009" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcan__mcan__tx__event__fifo_1a4a706b7da7d9354ffc559ec65e1701ca" prot="public" static="no" mutable="no">
+        <type><ref refid="stdint_8h_1a3cb4a16b0e8d6af0af86d4fd6ba5fd9d" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t can_mcan_tx_event_fifo::mm</definition>
+        <argsstring></argsstring>
+        <name>mm</name>
+        <qualifiedname>can_mcan_tx_event_fifo::mm</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zephyr/drivers/can/can_mcan.h" line="1010" column="9" bodyfile="zephyr/drivers/can/can_mcan.h" bodystart="1010" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Bosch M_CAN Tx Event FIFO Element. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>See Bosch M_CAN Users Manual section 2.4.4 for details. </para>
+    </detaileddescription>
+    <location file="zephyr/drivers/can/can_mcan.h" line="991" column="1" bodyfile="zephyr/drivers/can/can_mcan.h" bodystart="991" bodyend="1011"/>
+    <listofallmembers>
+      <member refid="structcan__mcan__tx__event__fifo_1ac3924771aeb8885b4ad8d59758131b1a" prot="public" virt="non-virtual"><scope>can_mcan_tx_event_fifo</scope><name>brs</name></member>
+      <member refid="structcan__mcan__tx__event__fifo_1a96aa98b30f603a5c5676e6a244f5d6c9" prot="public" virt="non-virtual"><scope>can_mcan_tx_event_fifo</scope><name>dlc</name></member>
+      <member refid="structcan__mcan__tx__event__fifo_1a796967d04c60cd9cf423d904c6118944" prot="public" virt="non-virtual"><scope>can_mcan_tx_event_fifo</scope><name>esi</name></member>
+      <member refid="structcan__mcan__tx__event__fifo_1a23ff309d6fb887166da2290646df200c" prot="public" virt="non-virtual"><scope>can_mcan_tx_event_fifo</scope><name>et</name></member>
+      <member refid="structcan__mcan__tx__event__fifo_1a3b4c61b9edcd1720235c3784131693d1" prot="public" virt="non-virtual"><scope>can_mcan_tx_event_fifo</scope><name>ext_id</name></member>
+      <member refid="structcan__mcan__tx__event__fifo_1a4075852d322da2eb4e3acb9d7c2e6d64" prot="public" virt="non-virtual"><scope>can_mcan_tx_event_fifo</scope><name>fdf</name></member>
+      <member refid="structcan__mcan__tx__event__fifo_1a4a706b7da7d9354ffc559ec65e1701ca" prot="public" virt="non-virtual"><scope>can_mcan_tx_event_fifo</scope><name>mm</name></member>
+      <member refid="structcan__mcan__tx__event__fifo_1a6be85a808788bd611055235b00a9b1f4" prot="public" virt="non-virtual"><scope>can_mcan_tx_event_fifo</scope><name>pad1</name></member>
+      <member refid="structcan__mcan__tx__event__fifo_1a461d68069593b42d6961d6ff0525f783" prot="public" virt="non-virtual"><scope>can_mcan_tx_event_fifo</scope><name>pad2</name></member>
+      <member refid="structcan__mcan__tx__event__fifo_1a17d5b6caf6519bf199dc179c11550abb" prot="public" virt="non-virtual"><scope>can_mcan_tx_event_fifo</scope><name>rtr</name></member>
+      <member refid="structcan__mcan__tx__event__fifo_1a7698679cf93c707b423e9c695209f072" prot="public" virt="non-virtual"><scope>can_mcan_tx_event_fifo</scope><name>std_id</name></member>
+      <member refid="structcan__mcan__tx__event__fifo_1aacc10d577c20325baf54d7bb20e32583" prot="public" virt="non-virtual"><scope>can_mcan_tx_event_fifo</scope><name>txts</name></member>
+      <member refid="structcan__mcan__tx__event__fifo_1aac19c259f3e966d771c0088a32cbe47d" prot="public" virt="non-virtual"><scope>can_mcan_tx_event_fifo</scope><name>xtd</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
